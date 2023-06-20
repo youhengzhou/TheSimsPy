@@ -1,6 +1,7 @@
 {
     "roles": {
         "0": {
+<<<<<<< HEAD
             "type": "falconian female uncommon",
             "look": "attractive normal simple",
             "skill": "diplomacy",
@@ -22,6 +23,42 @@
                 "archetype": "lyonian tundra",
                 "campfire": "share with others",
                 "dark place": "monster cavern"
+=======
+            "type": "tigian female archaic",
+            "look": "attractive normal stylish",
+            "skill": "diplomacy",
+            "history": {
+                "type": "priest",
+                "archetype": "local",
+                "plague": "welcomed",
+                "temptress": "sinned",
+                "reward": "cardinal"
+            }
+        },
+        "1": {
+            "type": "falconian female noble",
+            "look": "stern small stylish",
+            "skill": "diplomacy",
+            "history": {
+                "type": "monk",
+                "archetype": "knowledge",
+                "studies": "gain faith",
+                "mentor": "life wisdom",
+                "reward": "fortified mind"
+            }
+        },
+        "2": {
+            "type": "borderlander male uncommon",
+            "look": "attractive normal simple",
+            "skill": "subterfuge",
+            "history": {
+                "type": "soldier",
+                "archetype": "cavalry",
+                "skirmish": "fall back",
+                "smuggling": "denounce",
+                "pitch battle": "scarred",
+                "reward": "weapon proficiency"
+>>>>>>> 9a5fa13f92247d3dd24e63eb534752e1badc9a52
             }
         },
         "2": {
@@ -35,6 +72,7 @@
             }
         },
         "3": {
+<<<<<<< HEAD
             "type": "draconian male uncommon",
             "look": "stern muscular stylish",
             "skill": "subterfuge",
@@ -44,11 +82,23 @@
                 "mentor": "scientific knowledge",
                 "studies": "gain faith",
                 "reward": "great archives"
+=======
+            "type": "draconian female common",
+            "look": "attractive muscular stylish",
+            "skill": "learning",
+            "history": {
+                "type": "mercenary",
+                "archetype": "great company",
+                "pitch battle": "reward",
+                "outnumbered": "tactical decision",
+                "reward": "stallion"
+>>>>>>> 9a5fa13f92247d3dd24e63eb534752e1badc9a52
             }
         }
     },
     "places": {
         "0": {
+<<<<<<< HEAD
             "type": "fallen kingdom"
         },
         "1": {
@@ -59,6 +109,18 @@
         },
         "3": {
             "type": "minor duchy"
+=======
+            "type": "temperate plain"
+        },
+        "1": {
+            "type": "mason alley"
+        },
+        "2": {
+            "type": "upstart horde"
+        },
+        "3": {
+            "type": "tavern apartment"
+>>>>>>> 9a5fa13f92247d3dd24e63eb534752e1badc9a52
         }
     }
 }
