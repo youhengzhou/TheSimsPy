@@ -37,16 +37,6 @@
                 "reward": "weapon proficiency"
             }
         },
-        "2": {
-            "type": "falconian male common",
-            "look": "plain muscular simple",
-            "skill": "diplomacy",
-            "history": {
-                "type": "priest",
-                "archetype": "local",
-                "plague": "sent away"
-            }
-        },
         "3": {
             "type": "draconian female common",
             "look": "attractive muscular stylish",
