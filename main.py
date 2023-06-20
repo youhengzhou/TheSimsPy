@@ -36,7 +36,7 @@ while simTime < 2000:
     currTime, currEvent = heapq.heappop(futureEventList)
 
     # handle events
-    print(f"{currTime},          {worldTension},               {currEvent}")
+    print(f"{currTime} - {worldTension} - {currEvent}")
 
     if currEvent in chillEvents:
         worldTension += random.randint(-5,10)
