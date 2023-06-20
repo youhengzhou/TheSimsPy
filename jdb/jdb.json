@@ -1,29 +1,6 @@
 {
     "roles": {
         "0": {
-<<<<<<< HEAD
-            "type": "falconian female uncommon",
-            "look": "attractive normal simple",
-            "skill": "diplomacy",
-            "history": {
-                "type": "soldier",
-                "archetype": "infantry",
-                "smuggling": "partake",
-                "skirmish": "repel",
-                "outnumbered": "tactical decision",
-                "reward": "survival"
-            }
-        },
-        "1": {
-            "type": "lyonian male common",
-            "look": "stern normal heavy",
-            "skill": "subterfuge",
-            "history": {
-                "type": "pilgrim",
-                "archetype": "lyonian tundra",
-                "campfire": "share with others",
-                "dark place": "monster cavern"
-=======
             "type": "tigian female archaic",
             "look": "attractive normal stylish",
             "skill": "diplomacy",
@@ -58,7 +35,6 @@
                 "smuggling": "denounce",
                 "pitch battle": "scarred",
                 "reward": "weapon proficiency"
->>>>>>> 9a5fa13f92247d3dd24e63eb534752e1badc9a52
             }
         },
         "2": {
@@ -72,17 +48,6 @@
             }
         },
         "3": {
-<<<<<<< HEAD
-            "type": "draconian male uncommon",
-            "look": "stern muscular stylish",
-            "skill": "subterfuge",
-            "history": {
-                "type": "monk",
-                "archetype": "redemption",
-                "mentor": "scientific knowledge",
-                "studies": "gain faith",
-                "reward": "great archives"
-=======
             "type": "draconian female common",
             "look": "attractive muscular stylish",
             "skill": "learning",
@@ -92,24 +57,11 @@
                 "pitch battle": "reward",
                 "outnumbered": "tactical decision",
                 "reward": "stallion"
->>>>>>> 9a5fa13f92247d3dd24e63eb534752e1badc9a52
             }
         }
     },
     "places": {
         "0": {
-<<<<<<< HEAD
-            "type": "fallen kingdom"
-        },
-        "1": {
-            "type": "sky forest"
-        },
-        "2": {
-            "type": "tavern estate"
-        },
-        "3": {
-            "type": "minor duchy"
-=======
             "type": "temperate plain"
         },
         "1": {
@@ -120,7 +72,6 @@
         },
         "3": {
             "type": "tavern apartment"
->>>>>>> 9a5fa13f92247d3dd24e63eb534752e1badc9a52
         }
     }
 }
