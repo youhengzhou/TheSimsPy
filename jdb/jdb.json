@@ -1,62 +1,67 @@
 {
     "roles": {
         "0": {
-            "type": "lyonian male common",
-            "look": "soft lean incognito",
-            "skill": "subterfuge",
+            "type": "tigian female archaic",
+            "look": "attractive normal stylish",
+            "skill": "diplomacy",
             "history": {
-                "type": "mercenary",
-                "archetype": "falconian holy knights",
-                "downtime": "new vices",
-                "pitch battle": "reward",
-                "reward": "stallion"
+                "type": "priest",
+                "archetype": "local",
+                "plague": "welcomed",
+                "temptress": "sinned",
+                "reward": "cardinal"
             }
         },
         "1": {
-            "type": "falconian male noble",
-            "look": "soft normal simple",
-            "skill": "learning",
+            "type": "falconian female noble",
+            "look": "stern small stylish",
+            "skill": "diplomacy",
             "history": {
-                "type": "citizen",
-                "archetype": "service",
-                "profits": "new connections",
-                "reward": "expansion"
+                "type": "monk",
+                "archetype": "knowledge",
+                "studies": "gain faith",
+                "mentor": "life wisdom",
+                "reward": "fortified mind"
             }
         },
         "2": {
-            "type": "lyonian female archaic",
-            "look": "soft normal incognito",
-            "skill": "martial",
+            "type": "borderlander male uncommon",
+            "look": "attractive normal simple",
+            "skill": "subterfuge",
             "history": {
-                "type": "pilgrim",
-                "archetype": "falconian coast",
-                "campfire": "join with others",
-                "dark place": "monster cavern"
+                "type": "soldier",
+                "archetype": "cavalry",
+                "skirmish": "fall back",
+                "smuggling": "denounce",
+                "pitch battle": "scarred",
+                "reward": "weapon proficiency"
             }
         },
         "3": {
-            "type": "borderlander female noble",
+            "type": "draconian female common",
             "look": "attractive muscular stylish",
-            "skill": "subterfuge",
+            "skill": "learning",
             "history": {
                 "type": "mercenary",
-                "archetype": "falconian holy knights",
-                "outnumbered": "tactical decision"
+                "archetype": "great company",
+                "pitch battle": "reward",
+                "outnumbered": "tactical decision",
+                "reward": "stallion"
             }
         }
     },
     "places": {
         "0": {
-            "type": "jeweler mansion"
+            "type": "temperate plain"
         },
         "1": {
-            "type": "upstart republic"
+            "type": "mason alley"
         },
         "2": {
-            "type": "engineer park"
+            "type": "upstart horde"
         },
         "3": {
-            "type": "mason house"
+            "type": "tavern apartment"
         }
     }
 }
