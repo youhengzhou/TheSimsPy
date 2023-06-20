@@ -1,0 +1,62 @@
+{
+    "roles": {
+        "0": {
+            "type": "lyonian male common",
+            "look": "soft lean incognito",
+            "skill": "subterfuge",
+            "history": {
+                "type": "mercenary",
+                "archetype": "falconian holy knights",
+                "downtime": "new vices",
+                "pitch battle": "reward",
+                "reward": "stallion"
+            }
+        },
+        "1": {
+            "type": "falconian male noble",
+            "look": "soft normal simple",
+            "skill": "learning",
+            "history": {
+                "type": "citizen",
+                "archetype": "service",
+                "profits": "new connections",
+                "reward": "expansion"
+            }
+        },
+        "2": {
+            "type": "lyonian female archaic",
+            "look": "soft normal incognito",
+            "skill": "martial",
+            "history": {
+                "type": "pilgrim",
+                "archetype": "falconian coast",
+                "campfire": "join with others",
+                "dark place": "monster cavern"
+            }
+        },
+        "3": {
+            "type": "borderlander female noble",
+            "look": "attractive muscular stylish",
+            "skill": "subterfuge",
+            "history": {
+                "type": "mercenary",
+                "archetype": "falconian holy knights",
+                "outnumbered": "tactical decision"
+            }
+        }
+    },
+    "places": {
+        "0": {
+            "type": "jeweler mansion"
+        },
+        "1": {
+            "type": "upstart republic"
+        },
+        "2": {
+            "type": "engineer park"
+        },
+        "3": {
+            "type": "mason house"
+        }
+    }
+}
