@@ -160,6 +160,54 @@ class BallRoomRogue(Role):
          'rewards': ['title','estate','forbidden knowledge']
     }
 
+class Wizard(Role):
+    roleData = {
+        'type': 'wizard',
+        'archetype': ['elementalist', 'enchanter', 'necromancer', 'illusionist'],
+        'events': {
+            'apprenticeship': ['wise master', 'rivalry'],
+            'arcane experiment': ['success', 'disaster'],
+            'forbidden knowledge': ['embrace', 'reject']
+        },
+        'rewards': ['spellbook', 'familiar', 'arcane artifact']
+    }
+
+class Assassin(Role):
+    roleData = {
+        'type': 'assassin',
+        'archetype': ['silent blade', 'poisoner', 'shadow dancer', 'contract killer'],
+        'events': {
+            'training': ['master assassin', 'rivalry'],
+            'target elimination': ['successful', 'failed'],
+            'betrayal': ['loyal', 'double-cross']
+        },
+        'rewards': ['secrets', 'hidden resources', 'legendary weapon']
+    }
+
+class Noble(Role):
+    roleData = {
+        'type': 'noble',
+        'archetype': ['king', 'queen', 'duke', 'duchess'],
+        'events': {
+            'inheritance': ['wealth', 'debt'],
+            'political intrigue': ['manipulate', 'betray'],
+            'court scandal': ['survive', 'exile']
+        },
+        'rewards': ['power', 'prestige', 'land']
+    }
+
+class Bard(Role):
+    roleData = {
+        'type': 'bard',
+        'archetype': ['troubadour', 'minstrel', 'jester', 'skald'],
+        'events': {
+            'musical apprenticeship': ['masterful mentor', 'rivalry'],
+            'performance success': ['adored by audience', 'heckled off stage'],
+            'bardic tale': ['legendary ballad', 'forgotten verse']
+        },
+        'rewards': ['fame', 'inspiration', 'musical instrument']
+    }
+
 class CivSmall(Place):
     placeData = {
         'type': ['periphery','borderland','common','minor'],
@@ -190,9 +238,21 @@ class BuildingRich(Place):
         'archetype': ['apartment','mansion','estate','park']
     }
 
+class AncientRuins(Place):
+    placeData = {
+        'type': ['forgotten', 'crumbling', 'ruined'],
+        'archetype': ['temple', 'citadel', 'palace']
+    }
+
+class EnchantedForest(Place):
+    placeData = {
+        'type': ['mystical', 'magical', 'enchanted'],
+        'archetype': ['grove', 'glade', 'thicket']
+    }
+
 class Create:
-    roles = [Soldier,Mercenary,Pilgrim,Monk,Priest,Citizen,Thug]
-    places = [CivSmall,CivLarge,Geo,BuildingPoor,BuildingRich]
+    roles = [Soldier,Mercenary,Pilgrim,Monk,Priest,Citizen,Thug,Wizard,Assassin,Noble,Bard]
+    places = [CivSmall,CivLarge,Geo,BuildingPoor,BuildingRich,AncientRuins,EnchantedForest]
     def createRoles(self):
         out = {}
         for i in range(random.randint(4,4)):
