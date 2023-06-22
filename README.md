@@ -2,9 +2,30 @@
 
 Sims game in Python, built to learn reusable software design patterns
 
-# Requirements
+# Development Environment
 
-`pip install jsoneng`
+## Getting started
+Create a Python virtual environment and install necessary packages
+```
+# Create .venv directory
+python3 -m venv .venv
+# Activate Python virtual environment
+source .venv/bin/activate
+# Install dependencies
+python install -r requirements.txt
+```
+
+## Updating dependencies
+To update the project dependencies, update requirements.txt
+```
+pip freeze > requirements.txt
+```
+
+## Exiting the virtual environment
+To exit the virtual environment
+```
+source deactivate
+```
 
 # Schemas
 
