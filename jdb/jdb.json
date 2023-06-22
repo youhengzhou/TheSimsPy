@@ -1,67 +1,66 @@
 {
     "roles": {
         "0": {
-            "type": "tigian female archaic",
-            "look": "attractive normal stylish",
+            "type": "lyonian male archaic",
+            "look": "soft normal incognito",
             "skill": "diplomacy",
             "history": {
-                "type": "priest",
-                "archetype": "local",
-                "plague": "welcomed",
-                "temptress": "sinned",
-                "reward": "cardinal"
+                "type": "assassin",
+                "archetype": "silent blade",
+                "betrayal": "loyal",
+                "training": "master assassin",
+                "reward": "hidden resources"
             }
         },
         "1": {
-            "type": "falconian female noble",
-            "look": "stern small stylish",
-            "skill": "diplomacy",
+            "type": "borderlander female common",
+            "look": "plain lean heavy",
+            "skill": "subterfuge",
             "history": {
-                "type": "monk",
-                "archetype": "knowledge",
-                "studies": "gain faith",
-                "mentor": "life wisdom",
-                "reward": "fortified mind"
+                "type": "assassin",
+                "archetype": "shadow dancer",
+                "training": "rivalry",
+                "betrayal": "double-cross",
+                "reward": "hidden resources"
             }
         },
         "2": {
-            "type": "borderlander male uncommon",
-            "look": "attractive normal simple",
+            "type": "lyonian female noble",
+            "look": "soft lean incognito",
             "skill": "subterfuge",
             "history": {
                 "type": "soldier",
                 "archetype": "cavalry",
-                "skirmish": "fall back",
-                "smuggling": "denounce",
-                "pitch battle": "scarred",
-                "reward": "weapon proficiency"
+                "pitch battle": "reward",
+                "outnumbered": "tactical decision",
+                "reward": "survival"
             }
         },
         "3": {
-            "type": "draconian female common",
-            "look": "attractive muscular stylish",
-            "skill": "learning",
+            "type": "lyonian male uncommon",
+            "look": "soft normal stylish",
+            "skill": "martial",
             "history": {
-                "type": "mercenary",
-                "archetype": "great company",
-                "pitch battle": "reward",
-                "outnumbered": "tactical decision",
-                "reward": "stallion"
+                "type": "monk",
+                "archetype": "redemption",
+                "studies": "gain doubts",
+                "mentor": "scientific knowledge",
+                "reward": "fortified mind"
             }
         }
     },
     "places": {
         "0": {
-            "type": "temperate plain"
-        },
-        "1": {
             "type": "mason alley"
         },
+        "1": {
+            "type": "cold forest"
+        },
         "2": {
-            "type": "upstart horde"
+            "type": "enchanted glade"
         },
         "3": {
-            "type": "tavern apartment"
+            "type": "lawyer estate"
         }
     }
 }
