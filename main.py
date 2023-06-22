@@ -1,50 +1,61 @@
 import heapq
 import random
 import jsoneng
+from dotenv import load_dotenv
+import os
+
+load_dotenv()
 
 # jdb = jsoneng.JsonDB('game')
 
 # jdb.create({'hello':'world'})
 
-simTime = 1900
-worldTension = 0
-futureEventList = []
+def get_next_event(chillEvents, sweatyEvents, chillEventProbability):
+    if random.randint(1, 100) < chillEventProbability:
+        return random.choice(chillEvents)
+    return random.choice(sweatyEvents)
 
-print(f"{'sim time'}, {'world tension'}, {'sim event'}")
+def run_simulation(startSimTime, endSimTime):
+    simTime = startSimTime
+    worldTension = 0
+    futureEventList = []
 
-while simTime < 2000:
-    # create events
-    # events = ['sunny day','rainy day','heavy frost','dust storm','clear day','meteor shower','auroras']
-    chillEvents = ['denmark invents lego']
-    sweatyEvents = ['increased housing price','increaed taxes']
+    print(f"{'sim time'}, {'world tension'}, {'sim event'}")
 
-    newTime = simTime + random.randint(1,25)
-    if worldTension < 10:
-        if random.randint(1,100) < 75:
-            newEvent = random.choice(chillEvents)
+    while simTime < endSimTime:
+        # create events
+        # events = ['sunny day','rainy day','heavy frost','dust storm','clear day','meteor shower','auroras']
+        chillEvents = ['denmark invents lego']
+        sweatyEvents = ['increased housing price','increaed taxes']
+
+        newTime = simTime + random.randint(1,25)
+        if worldTension < 10:
+            # probability of 75% for chill event
+            chillEventProbability = 75
         else:
-            newEvent = random.choice(sweatyEvents)
-    else:
-        if random.randint(1,100) < 90:
-            newEvent = random.choice(sweatyEvents)
+            # probability of 90% for sweaty event
+            chillEventProbability = 10
+
+        newEvent = get_next_event(chillEvents, sweatyEvents, chillEventProbability)
+
+        heapq.heappush(futureEventList, [newTime, newEvent])
+
+        # pop next event
+        currTime, currEvent = heapq.heappop(futureEventList)
+
+        # handle events
+        print(f"{currTime} - {worldTension} - {currEvent}")
+
+        if currEvent in chillEvents:
+            worldTension += random.randint(-5,10)
         else:
-            newEvent = random.choice(chillEvents)
+            worldTension += random.randint(1,10)
 
-    heapq.heappush(futureEventList, [newTime, newEvent])
+        simTime = currTime
 
-    # pop next event
-    currTime, currEvent = heapq.heappop(futureEventList)
 
-    # handle events
-    print(f"{currTime} - {worldTension} - {currEvent}")
+if __name__ == "__main__":
+    startSimTime = int(os.environ.get("START_SIM_TIME"))
+    endSimTime = int(os.environ.get("END_SIM_TIME"))
 
-    if currEvent in chillEvents:
-        worldTension += random.randint(-5,10)
-    else:
-        worldTension += random.randint(1,10)
-
-    simTime = currTime
-
-# print(random.randint(0,1))
-
-# while simTime < 1000:
+    run_simulation(startSimTime, endSimTime)
