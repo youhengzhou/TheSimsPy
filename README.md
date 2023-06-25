@@ -10,9 +10,9 @@ Create a Python virtual environment and install necessary packages
 # Create .venv directory
 python3 -m venv .venv
 # Activate Python virtual environment
-source .venv/bin/activate
+.venv/Scripts/activate
 # Install dependencies
-python install -r requirements.txt
+pip install -r requirements.txt
 ```
 
 ## Updating dependencies
