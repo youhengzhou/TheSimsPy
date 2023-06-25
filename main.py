@@ -1,8 +1,6 @@
-import heapq
-import random
+import os
 import jsoneng
 from dotenv import load_dotenv
-import os
 from lib import FutureEventList
 
 if __name__ == "__main__":

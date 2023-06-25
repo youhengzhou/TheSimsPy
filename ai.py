@@ -7,18 +7,45 @@ import jsoneng
 import micrograd.engine
 
 def f(x):
-  return 3*x**2 - 4*x + 5
-f(3.0)
+    return x * 2
 
-xs = np.arange(-5, 5, 0.25)
-ys = f(xs)
+h = 0.0001
 
-print(xs)
-print(ys)
+input('''
+def f(x):
+    return x * 2
 
-# plt.plot(xs, ys)
-# plt.show()
+h = 0.0001
+''')
 
-h = 0.00001
-x = 3.0
-print((f(x+h) - f(x))/h)
+input('(f(4+h) - f(4))/h')
+
+input("what do you think this evaluates to?")
+
+input((f(4+h) - f(4))/h)
+
+input('h')
+
+input("what is h exactly?")
+
+input("a very small number")
+
+input('dy/dx in f(x)')
+
+input("what is dy/dx exactly?")
+
+input('change on h at x in f(x)')
+
+input('change on a very small number at x in f(x)')
+
+input('next, number example')
+
+input('(2*4 - 2*4 + 2*h)/h in f(x)')
+
+input('(2*h)/h in f(x)')
+
+input('(2*(1/1) in f(x)')
+
+input('at 0, how much would an increase be scaled to')
+
+input('even though we were at x, forget x, go to 0, how much would an increase for a small change be scaled to')
