@@ -1,5 +1,9 @@
 import random
 import jsoneng
+from dotenv import load_dotenv
+import os
+
+load_dotenv()
 
 jdb = jsoneng.JsonDB()
 jdb.create({})

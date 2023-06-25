@@ -1,14 +1,11 @@
 import heapq
 import random
 import jsoneng
+from termcolor import *
 from dotenv import load_dotenv
 import os
 
 load_dotenv()
-
-# jdb = jsoneng.JsonDB('game')
-
-# jdb.create({'hello':'world'})
 
 def get_next_event(chillEvents, sweatyEvents, chillEventProbability):
     if random.randint(1, 100) < chillEventProbability:
@@ -20,7 +17,7 @@ def run_simulation(startSimTime, endSimTime):
     worldTension = 0
     futureEventList = []
 
-    print(f"{'sim time'}, {'world tension'}, {'sim event'}")
+    cprint(f"{'sim time'}, {'world tension'}, {'sim event'}",'yellow')
 
     while simTime < endSimTime:
         # create events
@@ -44,7 +41,7 @@ def run_simulation(startSimTime, endSimTime):
         currTime, currEvent = heapq.heappop(futureEventList)
 
         # handle events
-        print(f"{currTime} - {worldTension} - {currEvent}")
+        print(f"{colored(currTime,'red')} - {worldTension} - {currEvent}")
 
         if currEvent in chillEvents:
             worldTension += random.randint(-5,10)
@@ -52,10 +49,3 @@ def run_simulation(startSimTime, endSimTime):
             worldTension += random.randint(1,10)
 
         simTime = currTime
-
-
-if __name__ == "__main__":
-    startSimTime = int(os.environ.get("START_SIM_TIME"))
-    endSimTime = int(os.environ.get("END_SIM_TIME"))
-
-    run_simulation(startSimTime, endSimTime)
