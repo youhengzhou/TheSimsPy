@@ -1,6 +1,7 @@
 import math
 import numpy as np
 import matplotlib.pyplot as plt
+from termcolor import *
 
 def f(x):
   return 3*x**2 - 4*x + 5
@@ -12,5 +13,9 @@ ys = f(xs)
 print(xs)
 print(ys)
 
-plt.plot(xs, ys)
-plt.show()
+# plt.plot(xs, ys)
+# plt.show()
+
+h = 0.00001
+x = 3.0
+print((f(x+h) - f(x))/h)
