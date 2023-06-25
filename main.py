@@ -3,7 +3,7 @@ import random
 import jsoneng
 from dotenv import load_dotenv
 import os
-import FutureEventList
+from lib import FutureEventList
 
 if __name__ == "__main__":
     startSimTime = int(os.environ.get("START_SIM_TIME"))

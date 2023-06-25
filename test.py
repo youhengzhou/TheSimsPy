@@ -1,5 +1,11 @@
+import jsoneng
 from lib import ApartmentBuildingSim, CharacterGenerator, FutureEventList
 
-human = CharacterGenerator.Human()
+jdb = jsoneng.JsonDB()
+jdb.create({})
 
+human = CharacterGenerator.Human()
 human.buildChar()
+
+creator = CharacterGenerator.Create()
+jdb.update(creator.createRoles())
