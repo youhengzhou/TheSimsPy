@@ -4,15 +4,16 @@ import jsoneng
 
 from lib import ApartmentBuildingSim, CharacterGenerator, FutureEventList
 
-if __name__ == "__test__":
-    startSimTime = int(os.environ.get("START_SIM_TIME"))
-    endSimTime = int(os.environ.get("END_SIM_TIME"))
-                                   
-    jkdb = jsoneng.JsonDB()
-    jdb.create({})
+startSimTime = int(os.environ.get("START_SIM_TIME"))
+endSimTime = int(os.environ.get("END_SIM_TIME"))
 
-    human = CharacterGenerator.Human()
-    human.buildChar()
+FutureEventList.run_simulation(startSimTime, endSimTime)
 
-    creator = CharacterGenerator.Create()
-    jdb.update(creator.createRoles())
+jdb = jsoneng.JsonDB()
+jdb.create({})
+
+human = CharacterGenerator.Human()
+human.buildChar()
+
+creator = CharacterGenerator.Create()
+jdb.update(creator.createRoles())
