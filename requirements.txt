@@ -1,1 +1,5 @@
 jsoneng==1.0.5
+python-dotenv==1.0.0
+numpy==latest
+matplotlib==latest
+termcolor==latest
