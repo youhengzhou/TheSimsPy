@@ -1,12 +1,4 @@
 import random
-import jsoneng
-from dotenv import load_dotenv
-import os
-
-load_dotenv()
-
-jdb = jsoneng.JsonDB()
-jdb.create({})
 
 class Char:
     def buildChar(self):
@@ -271,9 +263,3 @@ class Create:
             # out[str(i)] = CivSmall().buildPlace()
             out[str(i)] = random.choice(self.places)().buildPlace()
         return out
-
-# out = {}
-# out['roles'] = Create().createRoles()
-# out['places'] = Create().createPlaces()
-
-# print(jdb.update(out))
