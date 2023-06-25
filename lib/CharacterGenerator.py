@@ -1,6 +1,12 @@
 import random
 
 class Char:
+    def __init__(self, charData):
+        self.charData = charData
+
+    def __repr__(self):
+        return f"Char(data={self.charData})"
+    
     def buildChar(self):
         out = {}
         out['type'] = f"{random.choice(self.charData['type'])} {random.choice(self.charData['gender'])} {random.choice(self.charData['name'])}"
@@ -51,6 +57,12 @@ class RoleTemplate(Role):
     }
 
 class Place:
+    def __init__(self, placeData):
+        self.placeData = placeData
+
+    def __repr__(self):
+        return f"Place(data={self.placeData})"
+
     def buildPlace(self):
         out = {}
         out['type'] = f"{random.choice(self.placeData['type'])} {random.choice(self.placeData['archetype'])}"
@@ -249,6 +261,11 @@ class EnchantedForest(Place):
 class Create:
     roles = [Soldier,Mercenary,Pilgrim,Monk,Priest,Citizen,Thug,Wizard,Assassin,Noble,Bard]
     places = [CivSmall,CivLarge,Geo,BuildingPoor,BuildingRich,AncientRuins,EnchantedForest]
+
+    def __init__(self, roles, places):
+        self.roles = roles
+        self.places = places
+
     def createRoles(self):
         out = {}
         for i in range(random.randint(4,4)):
@@ -257,6 +274,7 @@ class Create:
             # c['history'] = Soldier().buildRole()
             out[i] = c
         return out
+    
     def createPlaces(self):
         out = {}
         for i in range(random.randint(4,4)):

@@ -15,5 +15,7 @@ jdb.create({})
 human = CharacterGenerator.Human()
 human.buildChar()
 
+print(human)
+
 creator = CharacterGenerator.Create()
 jdb.update(creator.createRoles())
