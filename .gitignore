@@ -1,6 +1,6 @@
-
 # Python virtual environment
 .venv
+
 ~$lore.xlsx
 /__pycache__
 /jdb
