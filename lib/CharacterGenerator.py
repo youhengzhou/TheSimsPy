@@ -47,7 +47,7 @@ class Dragon(Char):
     }
 
 class Dwarf(Char):
-    dwarfData = {
+    charData = {
         'type': 
         ['mountain', 'hill', 'cave'],
         'gender': 
@@ -65,7 +65,7 @@ class Dwarf(Char):
     }
 
 class Elf(Char):
-    elfData = {
+    charData = {
         'type': 
         ['lyonian', 'frost', 'desert'],
         'gender': 
@@ -83,7 +83,7 @@ class Elf(Char):
     }
 
 class Orc(Char):
-    orcData = {
+    charData = {
         'type': 
         ['savage', 'warrior', 'shaman'],
         'gender': 
@@ -101,7 +101,7 @@ class Orc(Char):
     }
 
 class Vampire(Char):
-    vampireData = {
+    charData = {
         'type': 
         ['classic', 'seductive', 'feral'],
         'gender': 
@@ -346,15 +346,15 @@ class EnchantedForest(Place):
 class Create:
     def __init__(self, chars=[], roles=[], places=[]):
         if not chars:
-            chars = Char.__subclasses__()
+            self.chars = Char.__subclasses__()
         else:
             self.chars = chars
         if not roles:
-            roles = Role.__subclasses__()
+            self.roles = Role.__subclasses__()
         else:
             self.roles = roles
         if not places:
-            places = Place.__subclasses__()
+            self.places = Place.__subclasses__()
         else:
             self.places = places
 
