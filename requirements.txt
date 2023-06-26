@@ -1,4 +1,4 @@
-jsoneng==1.0.5
+jsoneng==1.0.7
 python-dotenv==1.0.0
 numpy
 matplotlib

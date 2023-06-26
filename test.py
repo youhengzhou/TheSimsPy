@@ -1,4 +1,3 @@
-import jsoneng
 import os
 import jsoneng
 
@@ -18,4 +17,6 @@ human.buildChar()
 print(human)
 
 creator = CharacterGenerator.Create()
-jdb.update(creator.createRoles())
+jdb.p('chars',creator.createChars())
+jdb.p('roles',creator.createRoles())
+jdb.p('places',creator.createPlaces())

@@ -1,11 +1,9 @@
 import random
+import json
 
 class Char:
-    def __init__(self, charData):
-        self.charData = charData
-
     def __repr__(self):
-        return f"Char(data={self.charData})"
+        return f"Char(data={json.dumps(self.charData, indent=2)})"
     
     def buildChar(self):
         out = {}
@@ -33,7 +31,27 @@ class Human(Char):
         ['diplomacy','martial','subterfuge','learning']
     }
 
+class Dragon(Char):
+    charData = {
+        'type':
+        ['frost','water','fire','desert'],
+        'gender': ['male','female'],
+        'name':
+        ['common','archaic','uncommon','noble'],
+        'look':
+        ['rough','smooth','horned','scaled'],
+        'build':
+        ['normal','light','giant','long'],
+        'style':
+        ['draconic'],
+        'skill':
+        ['fire breathing']
+    }
+
 class Role:
+    def __repr__(self):
+        return f"Role(data={json.dumps(self.roleData, indent=2)})"
+    
     def buildRole(self):
         out = {}
         out['type'] = self.roleData['type']
@@ -57,11 +75,8 @@ class RoleTemplate(Role):
     }
 
 class Place:
-    def __init__(self, placeData):
-        self.placeData = placeData
-
     def __repr__(self):
-        return f"Place(data={self.placeData})"
+        return f"Place(data={json.dumps(self.placeData, indent=2)})"
 
     def buildPlace(self):
         out = {}
@@ -259,12 +274,20 @@ class EnchantedForest(Place):
     }
 
 class Create:
+    chars = [Human,Dragon]
     roles = [Soldier,Mercenary,Pilgrim,Monk,Priest,Citizen,Thug,Wizard,Assassin,Noble,Bard]
     places = [CivSmall,CivLarge,Geo,BuildingPoor,BuildingRich,AncientRuins,EnchantedForest]
 
-    def __init__(self, roles, places):
-        self.roles = roles
-        self.places = places
+    # def __init__(self, chars=[], roles=[], places=[]):
+    #     self.chars = chars
+    #     self.roles = roles
+    #     self.places = places
+
+    def createChars(self):
+        out = {}
+        for i in range(random.randint(4,4)):
+            out[str(i)] = random.choice(self.chars)().buildChar()
+        return out
 
     def createRoles(self):
         out = {}
@@ -278,6 +301,5 @@ class Create:
     def createPlaces(self):
         out = {}
         for i in range(random.randint(4,4)):
-            # out[str(i)] = CivSmall().buildPlace()
             out[str(i)] = random.choice(self.places)().buildPlace()
         return out
