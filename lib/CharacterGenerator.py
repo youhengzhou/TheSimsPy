@@ -10,8 +10,6 @@ class Char:
         out['type'] = f"{random.choice(self.charData['type'])} {random.choice(self.charData['gender'])} {random.choice(self.charData['name'])}"
         out['look'] = f"{random.choice(self.charData['look'])} {random.choice(self.charData['build'])} {random.choice(self.charData['style'])}"
         out['skill'] = random.choice(self.charData['skill'])
-        # for key in self.charData:
-        #     out[key] = random.choice(self.charData[key])
         return out
     
 class Human(Char):
@@ -346,17 +344,19 @@ class EnchantedForest(Place):
     }
 
 class Create:
-    # chars = [Human,Dragon]
-    # roles = [Soldier,Mercenary,Pilgrim,Monk,Priest,Citizen,Thug,Wizard,Assassin,Noble,Bard]
-    # places = [CivSmall,CivLarge,Geo,BuildingPoor,BuildingRich,AncientRuins,EnchantedForest]
-    chars = Char.__subclasses__()
-    roles = Role.__subclasses__()
-    places = Place.__subclasses__()
-
-    # def __init__(self, chars=[], roles=[], places=[]):
-    #     self.chars = chars
-    #     self.roles = roles
-    #     self.places = places
+    def __init__(self, chars=[], roles=[], places=[]):
+        if not chars:
+            chars = Char.__subclasses__()
+        else:
+            self.chars = chars
+        if not roles:
+            roles = Role.__subclasses__()
+        else:
+            self.roles = roles
+        if not places:
+            places = Place.__subclasses__()
+        else:
+            self.places = places
 
     def createChars(self):
         out = {}
@@ -369,7 +369,6 @@ class Create:
         for i in range(random.randint(4,4)):
             c = Human().buildChar()
             c['history'] = random.choice(self.roles)().buildRole()
-            # c['history'] = Soldier().buildRole()
             out[i] = c
         return out
     
