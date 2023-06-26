@@ -47,7 +47,7 @@ class Dragon(Char):
     }
 
 class Dwarf(Char):
-    dwarfData = {
+    charData = {
         'type': 
         ['mountain', 'hill', 'cave'],
         'gender': 
@@ -65,7 +65,7 @@ class Dwarf(Char):
     }
 
 class Elf(Char):
-    elfData = {
+    charData = {
         'type': 
         ['lyonian', 'frost', 'desert'],
         'gender': 
@@ -83,7 +83,7 @@ class Elf(Char):
     }
 
 class Orc(Char):
-    orcData = {
+    charData = {
         'type': 
         ['savage', 'warrior', 'shaman'],
         'gender': 
@@ -101,7 +101,7 @@ class Orc(Char):
     }
 
 class Vampire(Char):
-    vampireData = {
+    charData = {
         'type': 
         ['classic', 'seductive', 'feral'],
         'gender': 
