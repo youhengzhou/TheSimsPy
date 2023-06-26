@@ -48,6 +48,78 @@ class Dragon(Char):
         ['fire breathing']
     }
 
+class Dwarf(Char):
+    dwarfData = {
+        'type': 
+        ['mountain', 'hill', 'cave'],
+        'gender': 
+        ['male', 'female'],
+        'name': 
+        ['common', 'archaic', 'uncommon', 'noble'],
+        'look': 
+        ['stout', 'strong', 'bearded'],
+        'build': 
+        ['stocky', 'muscular', 'athletic'],
+        'style': 
+        ['practical', 'rugged', 'traditional'],
+        'skill': 
+        ['mining', 'crafting', 'combat']
+    }
+
+class Elf(Char):
+    elfData = {
+        'type': 
+        ['lyonian', 'frost', 'desert'],
+        'gender': 
+        ['male', 'female'],
+        'name': 
+        ['common', 'archaic', 'uncommon', 'noble'],
+        'look': 
+        ['plain', 'soft', 'attractive', 'stern'],
+        'build': 
+        ['normal', 'small', 'muscular', 'lean'],
+        'style': 
+        ['incognito', 'simple', 'stylish', 'heavy'],
+        'skill': 
+        ['diplomacy', 'martial', 'subterfuge', 'learning', 'magic', 'arcane']
+    }
+
+class Orc(Char):
+    orcData = {
+        'type': 
+        ['savage', 'warrior', 'shaman'],
+        'gender': 
+        ['male', 'female'],
+        'name': 
+        ['common', 'archaic', 'uncommon', 'noble'],
+        'look': 
+        ['ferocious', 'intimidating', 'tattooed'],
+        'build': 
+        ['brawny', 'muscular', 'hulking'],
+        'style': 
+        ['barbaric', 'tribal', 'battle-hardened'],
+        'skill': 
+        ['combat', 'survival', 'brute strength']
+    }
+
+class Vampire(Char):
+    vampireData = {
+        'type': 
+        ['classic', 'seductive', 'feral'],
+        'gender': 
+        ['male', 'female'],
+        'name': 
+        ['common', 'archaic', 'elegant', 'noble'],
+        'look': 
+        ['pale', 'mesmerizing', 'mysterious'],
+        'build': 
+        ['slender', 'lithe', 'graceful'],
+        'style': 
+        ['elegant', 'gothic', 'modern'],
+        'skill': 
+        ['seduction', 'hypnosis', 'immortality'],
+    }
+
 class Role:
     def __repr__(self):
         return f"Role(data={json.dumps(self.roleData, indent=2)})"
@@ -274,9 +346,12 @@ class EnchantedForest(Place):
     }
 
 class Create:
-    chars = [Human,Dragon]
-    roles = [Soldier,Mercenary,Pilgrim,Monk,Priest,Citizen,Thug,Wizard,Assassin,Noble,Bard]
-    places = [CivSmall,CivLarge,Geo,BuildingPoor,BuildingRich,AncientRuins,EnchantedForest]
+    # chars = [Human,Dragon]
+    # roles = [Soldier,Mercenary,Pilgrim,Monk,Priest,Citizen,Thug,Wizard,Assassin,Noble,Bard]
+    # places = [CivSmall,CivLarge,Geo,BuildingPoor,BuildingRich,AncientRuins,EnchantedForest]
+    chars = Char.__subclasses__()
+    roles = Role.__subclasses__()
+    places = Place.__subclasses__()
 
     # def __init__(self, chars=[], roles=[], places=[]):
     #     self.chars = chars
