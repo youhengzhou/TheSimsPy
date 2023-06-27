@@ -53,7 +53,7 @@ class DrinkWater(Event):
 
     def handleEvent(self):
         for c in self.participants:
-            c.state = 'drinking'
+            c.state = 'drink water'
 
 class ResolveDrinkWater(Event):
     def __init__(self, time, participants):
@@ -97,6 +97,8 @@ harry.createEvents(fel)
 
 currEvent = heapq.heappop(fel)
 
+print(currEvent)
+
 currEvent.handleEvent()
 
 print(harry)
@@ -105,19 +107,21 @@ harry.createEvents(fel)
 
 currEvent = heapq.heappop(fel)
 
+print(currEvent)
+
 currEvent.handleEvent()
 
 print(harry)
 
-heapq.heappush(fel, d3)
-heapq.heappush(fel, d2)
-heapq.heappush(fel, d1)
+# heapq.heappush(fel, d3)
+# heapq.heappush(fel, d2)
+# heapq.heappush(fel, d1)
 
-print(f"fel {fel}")
+# print(f"fel {fel}")
 
-print(d)
+# print(d)
 
-print(harry)
-print(alice)
+# print(harry)
+# print(alice)
 
 
