@@ -4,10 +4,6 @@ import jsoneng
 from dotenv import load_dotenv
 import os
 
-import CharGen
-import PlaceGen
-import RoleGen
-
 jdb = jsoneng.JsonDB()
 jdb.create({})
 

@@ -60,16 +60,13 @@ class EnchantedForest(Place):
     }
 
 class PlaceCreator:
-    def __init__(self, places=[]):
-        if not places:
-            self.places = Place.__subclasses__()
-        else:
-            self.places = places
+    def __init__(self, places=None):
+        self.places = places if places is not None else Place.__subclasses__()
 
     def createPlaces(self, num=1):
-        out = {}
         if num == 1:
             return random.choice(self.places)().buildPlace()
+        out = {}
         for i in range(random.randint(1,num)):
             out[str(i)] = random.choice(self.places)().buildPlace()
         return out

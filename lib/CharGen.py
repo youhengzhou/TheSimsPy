@@ -138,16 +138,13 @@ class Vampire(Char):
     }
 
 class CharCreator:
-    def __init__(self, chars=[]):
-        if not chars:
-            self.chars = Char.__subclasses__()
-        else:
-            self.chars = chars
+    def __init__(self, chars=None):
+        self.chars = chars if chars is not None else Char.__subclasses__()
 
     def createChars(self, num=1):
-        out = {}
         if num == 1:
             return random.choice(self.chars)().buildChar()
+        out = {}
         for i in range(random.randint(1,num)):
             out[str(i)] = random.choice(self.chars)().buildChar()
         return out

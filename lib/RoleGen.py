@@ -169,16 +169,13 @@ class Bard(Role):
     }
 
 class RoleCreator:
-    def __init__(self, roles=[]):
-        if not roles:
-            self.roles = Role.__subclasses__()
-        else:
-            self.roles = roles
+    def __init__(self, roles=None):
+        self.roles = roles if roles is not None else Role.__subclasses__()
 
     def createRoles(self, num=1):
-        out = {}
         if num == 1:
             return random.choice(self.roles)().buildRole()
+        out = {}
         for i in range(random.randint(1,num)):
             out[str(i)] = random.choice(self.roles)().buildRole()
         return out
