@@ -33,7 +33,7 @@ class Event:
     
 class InitCharacters(Event):
     def __init__(self, time, participants):
-        super(InitCharacters, self).__init__(time, participants)
+        super().__init__(time, participants)
         self.name = 'init chars'
 
     def handleEvent(self):
@@ -42,7 +42,7 @@ class InitCharacters(Event):
     
 class DrinkWater(Event):
     def __init__(self, time, participants):
-        super(DrinkWater, self).__init__(time, participants)
+        super().__init__(time, participants)
         self.name = 'drink water'
 
     def handleEvent(self):
