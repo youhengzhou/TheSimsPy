@@ -21,9 +21,14 @@ class Character:
     
     def createEvents(self, futureEventList):
         if self.state == 'idle':
-            heapq.heappush(futureEventList, DrinkWater(1,[self]))
+            if random.random() < 0.5:
+                heapq.heappush(futureEventList, DrinkWater(1,[self]))
+            else:
+                heapq.heappush(futureEventList, Eating(1,[self]))
         if self.state == 'drink water':
             heapq.heappush(futureEventList, ResolveDrinkWater(1,[self]))
+        elif self.state == 'eating a meal':
+            heapq.heappush(futureEventList, ResolveEating(1,[self]))
 
 class Event:
     def __init__(self, time, participants=None):
@@ -72,7 +77,16 @@ class Eating(Event):
     def handleEvent(self):
         self.name = 'eating a meal'
         for c in self.participants:
-            c.state = 'eating'
+            c.state = 'eating a meal'
+
+class ResolveEating(Event):
+    def __init__(self, time, participants):
+        super().__init__(time, participants)
+        self.name = 'resolve eating a meal'
+
+    def handleEvent(self):
+        for c in self.participants:
+            c.state = 'idle'
 
 class SimState:
     def __init__(self):
@@ -105,25 +119,28 @@ e1 = Eating(4, [harry])
 fel = []
 
 harry.createEvents(fel)
-
 currEvent = heapq.heappop(fel)
-
 print(currEvent)
-
 currEvent.handleEvent()
-
 print(harry)
 
 harry.createEvents(fel)
-
 currEvent = heapq.heappop(fel)
-
 print(currEvent)
-
 currEvent.handleEvent()
-
 print(harry)
 
+harry.createEvents(fel)
+currEvent = heapq.heappop(fel)
+print(currEvent)
+currEvent.handleEvent()
+print(harry)
+
+harry.createEvents(fel)
+currEvent = heapq.heappop(fel)
+print(currEvent)
+currEvent.handleEvent()
+print(harry)
 # heapq.heappush(fel, d3)
 # heapq.heappush(fel, d2)
 # heapq.heappush(fel, d1)
