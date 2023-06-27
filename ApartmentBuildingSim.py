@@ -64,6 +64,16 @@ class ResolveDrinkWater(Event):
         for c in self.participants:
             c.state = 'idle'
 
+class Eating(Event):
+    def __init__(self, time, participants):
+        super().__init__(time, participants)
+        self.name = 'eating a meal'
+
+    def handleEvent(self):
+        self.name = 'eating a meal'
+        for c in self.participants:
+            c.state = 'eating'
+
 class SimState:
     def __init__(self):
         self.characters = []
@@ -90,6 +100,7 @@ d = InitCharacters(10,[harry,alice])
 d1 = DrinkWater(1,[harry,alice])
 d2 = DrinkWater(2,[harry,alice])
 d3 = DrinkWater(3,[harry,alice])
+e1 = Eating(4, [harry])
 
 fel = []
 
