@@ -18,6 +18,12 @@ class Character:
 
     def __repr__(self):
         return f"{self.name} is {self.state} at {self.location}"
+    
+    def createEvents(self, futureEventList):
+        if self.state == 'idle':
+            heapq.heappush(futureEventList, DrinkWater(1,[self]))
+        if self.state == 'drink water':
+            heapq.heappush(futureEventList, ResolveDrinkWater(1,[self]))
 
 class Event:
     def __init__(self, time, participants=None):
@@ -46,9 +52,17 @@ class DrinkWater(Event):
         self.name = 'drink water'
 
     def handleEvent(self):
-        self.name = 'drink water'
         for c in self.participants:
             c.state = 'drinking'
+
+class ResolveDrinkWater(Event):
+    def __init__(self, time, participants):
+        super().__init__(time, participants)
+        self.name = 'resolve drink water'
+
+    def handleEvent(self):
+        for c in self.participants:
+            c.state = 'idle'
 
 class SimState:
     def __init__(self):
@@ -70,7 +84,6 @@ class SimWorld:
             for c in self.simState.characters:
                 c.createEvents(self.futureEventList)
 
-
 harry = Character('harry')
 alice = Character('alice')
 d = InitCharacters(10,[harry,alice])
@@ -79,6 +92,22 @@ d2 = DrinkWater(2,[harry,alice])
 d3 = DrinkWater(3,[harry,alice])
 
 fel = []
+
+harry.createEvents(fel)
+
+currEvent = heapq.heappop(fel)
+
+currEvent.handleEvent()
+
+print(harry)
+
+harry.createEvents(fel)
+
+currEvent = heapq.heappop(fel)
+
+currEvent.handleEvent()
+
+print(harry)
 
 heapq.heappush(fel, d3)
 heapq.heappush(fel, d2)
