@@ -24,12 +24,16 @@ class Char:
         self.location = None
 
     def __repr__(self):
-        return f"{colored('CHAR:','red')} name:{self.name} state:{self.state} location:{self.location}"
+        return f"CHAR: name:{self.name} state:{self.state} location:{self.location}"
+        # return f"{colored('CHAR:','red')} name:{self.name} state:{self.state} location:{self.location}"
 
 class WaterDrinker(Char):
     def createEvents(self, simTime, futureEventList, chars):
         if self.state == 'idle':
-            heapq.heappush(futureEventList, DrinkWater0(simTime + random.randint(1,4), [self]))
+            heapq.heappush(futureEventList, DrinkWater0(simTime + random.randint(3,5), [self]))
+        
+        if self.state == 'need to piss':
+            heapq.heappush(futureEventList, PissWater0(simTime + random.randint(3,5), [self]))
 
 
 
@@ -47,7 +51,7 @@ class Event:
         self.chars = chars
 
     def __repr__(self):
-        return f"{colored('EVENT:','red')} time:{self.time} name:{self.name}"
+        return f"EVENT: time:{self.time} name:{self.name}"
 
     def __lt__(self, other):
         return self.time < other.time
@@ -68,7 +72,7 @@ class DrinkWater0(Event):
     def handleEvent(self, futureEventList):
         for c in self.chars:
             c.state = 'stage 0: drink water'
-        heapq.heappush(futureEventList, DrinkWater1(self.time, self.chars))
+        heapq.heappush(futureEventList, DrinkWater1(self.time + random.randint(4,8), self.chars))
 
 class DrinkWater1(Event):
     def __init__(self, time, chars):
@@ -76,8 +80,24 @@ class DrinkWater1(Event):
 
     def handleEvent(self, futureEventList):
         for c in self.chars:
-            c.state = 'idle'
+            c.state = 'need to piss'
 
+class PissWater0(Event):
+    def __init__(self, time, chars):
+        super().__init__(time, chars, 'stage 0: start pissing')
+
+    def handleEvent(self, futureEventList):
+        for c in self.chars:
+            c.state = 'stage 0: pissing'
+        heapq.heappush(futureEventList, PissWater1(self.time + random.randint(4,8), self.chars))
+
+class PissWater1(Event):
+    def __init__(self, time, chars):
+        super().__init__(time, chars, 'stage 1: finish pissing')
+
+    def handleEvent(self, futureEventList):
+        for c in self.chars:
+            c.state = 'pissing'
 
 
 
@@ -102,7 +122,7 @@ fel.append(initCharsEvent)
 simTime = 0
 while simTime < 10:
     currEvent = heapq.heappop(fel)
-    simTime += currEvent.time
+    simTime = currEvent.time
 
     currEvent.handleEvent(fel)
 
@@ -110,3 +130,11 @@ while simTime < 10:
         c.createEvents(simTime, fel, chars)
     
     print(f"time:{simTime} currEvent:{currEvent} chars:{chars}")
+
+    jdb.i({
+        'time': str(simTime),
+        'currEvent': str(currEvent),
+        'chars': str(chars),
+    })
+
+print(fel)
