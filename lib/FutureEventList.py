@@ -1,10 +1,27 @@
 import heapq
 import random
+import queue
 from termcolor import *
 from dotenv import load_dotenv
 
 load_dotenv()
 
+def organize_event_sequence(event, chillEventProbability):
+    """Bomi Log:
+    This is an entry point toll gate for the simulation so that we can have a way of keeping track of what has happened so that new
+    event have a chance to take place
+    """
+    event_queue = queue.Queue()
+    if event_queue.empty():
+        print(f"{event} has already happpend, lets try something else")
+    else:
+        while not event_queue.empty():
+            count = event_queue.get()
+            total = 0
+            print(f"{event} Just Occured")
+            for x in range(count):
+              total += 1
+            print(f" {name} has a probability of now occuring is {chillEventProbability}% of the simulation run time")
 def get_next_event(chillEvents, sweatyEvents, chillEventProbability):
     if random.randint(1, 100) < chillEventProbability:
         return random.choice(chillEvents)
