@@ -29,7 +29,7 @@ class Char:
 class WaterDrinker(Char):
     def createEvents(self, simTime, futureEventList, chars):
         if self.state == 'idle':
-            heapq.heappush(futureEventList, DrinkWater0(simTime + random.randint(1,4)))
+            heapq.heappush(futureEventList, DrinkWater0(simTime + random.randint(1,4), [self]))
 
 
 
@@ -41,10 +41,9 @@ class WaterDrinker(Char):
 
 
 class Event:
-    def __init__(self, time, chars, ):
+    def __init__(self, time, chars, name):
         self.time = time
         self.name = name
-        self.futureEventList = futureEventList
         self.chars = chars
 
     def __repr__(self):
@@ -69,7 +68,7 @@ class DrinkWater0(Event):
     def handleEvent(self, futureEventList):
         for c in self.chars:
             c.state = 'stage 0: drink water'
-        heapq.heappush(self.futureEventList, DrinkWater1(self.time, self.chars))
+        heapq.heappush(futureEventList, DrinkWater1(self.time, self.chars))
 
 class DrinkWater1(Event):
     def __init__(self, time, chars):
@@ -101,7 +100,7 @@ initCharsEvent = InitCharsEvent(0, chars)
 fel.append(initCharsEvent)
 
 simTime = 0
-while simTime < 100:
+while simTime < 10:
     currEvent = heapq.heappop(fel)
     simTime += currEvent.time
 
