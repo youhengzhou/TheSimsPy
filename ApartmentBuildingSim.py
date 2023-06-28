@@ -105,11 +105,6 @@ class PissWater1(Event):
 
 
 
-
-
-
-
-
 chars = []
 harry = WaterDrinker('Harry')
 alice = WaterDrinker('Alice')
