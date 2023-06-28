@@ -51,7 +51,7 @@ class Event:
         self.chars = chars
 
     def __repr__(self):
-        return f"EVENT: time:{self.time} name:{self.name}"
+        return f"EVENT: time:{self.time} chars:{self.chars[0].name} name:{self.name}"
 
     def __lt__(self, other):
         return self.time < other.time
@@ -97,7 +97,7 @@ class PissWater1(Event):
 
     def handleEvent(self, futureEventList):
         for c in self.chars:
-            c.state = 'pissing'
+            c.state = 'idle'
 
 
 
