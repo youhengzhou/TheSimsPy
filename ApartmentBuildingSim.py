@@ -1,155 +1,82 @@
 import heapq
 import random
+import os
 import jsoneng
 from dotenv import load_dotenv
-import os
+from termcolor import *
 
 jdb = jsoneng.JsonDB()
 jdb.create({})
 
-import random
-import heapq
-
-class Character:
+class Char:
     def __init__(self, name):
         self.name = name
-        self.state = "idle"
+        self.state = None
         self.location = None
 
     def __repr__(self):
-        return f"{self.name} is {self.state} at {self.location}"
-    
-    def createEvents(self, futureEventList):
+        return f"{colored('CHAR:','red')} name:{self.name} state:{self.state} location:{self.location}"
+
+class WaterDrinker(Char):
+    def createEvents(self, simTime, futureEventList, chars):
         if self.state == 'idle':
-            if random.random() < 0.5:
-                heapq.heappush(futureEventList, DrinkWater(1,[self]))
-            else:
-                heapq.heappush(futureEventList, Eating(1,[self]))
-        if self.state == 'drink water':
-            heapq.heappush(futureEventList, ResolveDrinkWater(1,[self]))
-        elif self.state == 'eating a meal':
-            heapq.heappush(futureEventList, ResolveEating(1,[self]))
+            heapq.heappush(futureEventList, DrinkWater0(simTime + random.randint(1,4)))
 
 class Event:
-    def __init__(self, time, participants=None):
+    def __init__(self, time, name):
         self.time = time
-        self.name = None
-        self.participants = participants if participants is not None else []
-    
+        self.name = name
+
     def __repr__(self):
-        return f"{self.time} {self.name}"
+        return f"{colored('EVENT:','red')} time:{self.time} name:{self.name}"
 
     def __lt__(self, other):
         return self.time < other.time
     
-class InitCharacters(Event):
-    def __init__(self, time, participants):
-        super().__init__(time, participants)
-        self.name = 'init chars'
+class InitCharsEvent(Event):
+    def __init__(self, time):
+        super().__init__(time, 'init chars')
 
-    def handleEvent(self):
-        for c in self.participants:
+    def handleEvent(self, futureEventList, chars):
+        for c in chars:
+            c.state = 'idle'
             c.location = 'lobby'
     
-class DrinkWater(Event):
-    def __init__(self, time, participants):
-        super().__init__(time, participants)
-        self.name = 'drink water'
+class DrinkWater0(Event):
+    def __init__(self, time):
+        super().__init__(time, 'stage 0: start drinking water')
 
-    def handleEvent(self):
-        for c in self.participants:
-            c.state = 'drink water'
+    def handleEvent(self, futureEventList, chars):
+        for c in chars:
+            c.state = 'stage 0: drink water'
+        heapq.heappush(futureEventList, DrinkWater1(self.time))
 
-class ResolveDrinkWater(Event):
-    def __init__(self, time, participants):
-        super().__init__(time, participants)
-        self.name = 'resolve drink water'
+class DrinkWater1(Event):
+    def __init__(self, time):
+        super().__init__(time, 'stage 1: finish drinking water')
 
-    def handleEvent(self):
-        for c in self.participants:
+    def handleEvent(self, futureEventList, chars):
+        for c in chars:
             c.state = 'idle'
 
-class Eating(Event):
-    def __init__(self, time, participants):
-        super().__init__(time, participants)
-        self.name = 'eating a meal'
-
-    def handleEvent(self):
-        self.name = 'eating a meal'
-        for c in self.participants:
-            c.state = 'eating a meal'
-
-class ResolveEating(Event):
-    def __init__(self, time, participants):
-        super().__init__(time, participants)
-        self.name = 'resolve eating a meal'
-
-    def handleEvent(self):
-        for c in self.participants:
-            c.state = 'idle'
-
-class SimState:
-    def __init__(self):
-        self.characters = []
-
-class SimWorld:
-    def __init__(self, endSimTime):
-        self.simTime = 0
-        self.endSimTime = endSimTime
-        self.futureEventList = []
-        self.simState = SimState()
-        
-    def run(self):
-        while self.simTime < self.endSimTime:
-            currEvent = heapq.heappop(self.futureEventList)
-
-            currEvent.handleEvent()
-
-            for c in self.simState.characters:
-                c.createEvents(self.futureEventList)
-
-harry = Character('harry')
-alice = Character('alice')
-d = InitCharacters(10,[harry,alice])
-d1 = DrinkWater(1,[harry,alice])
-d2 = DrinkWater(2,[harry,alice])
-d3 = DrinkWater(3,[harry,alice])
-e1 = Eating(4, [harry])
+chars = []
+harry = WaterDrinker('Harry')
+alice = WaterDrinker('Alice')
+chars.append(harry)
+chars.append(alice)
 
 fel = []
+initCharsEvent = InitCharsEvent(0)
+fel.append(initCharsEvent)
 
-harry.createEvents(fel)
-currEvent = heapq.heappop(fel)
-print(currEvent)
-currEvent.handleEvent()
-print(harry)
+simTime = 0
+while simTime < 10:
+    currEvent = heapq.heappop(fel)
+    simTime += currEvent.time
 
-harry.createEvents(fel)
-currEvent = heapq.heappop(fel)
-print(currEvent)
-currEvent.handleEvent()
-print(harry)
+    currEvent.handleEvent(fel, chars)
 
-harry.createEvents(fel)
-currEvent = heapq.heappop(fel)
-print(currEvent)
-currEvent.handleEvent()
-print(harry)
-
-harry.createEvents(fel)
-currEvent = heapq.heappop(fel)
-print(currEvent)
-currEvent.handleEvent()
-print(harry)
-# heapq.heappush(fel, d3)
-# heapq.heappush(fel, d2)
-# heapq.heappush(fel, d1)
-
-# print(f"fel {fel}")
-
-# print(d)
-
-# print(harry)
-# print(alice)
-
-
+    for c in chars:
+        c.createEvents(simTime, fel, chars)
+    
+    print(f"time:{simTime} currEvent:{currEvent} chars:{chars}")
