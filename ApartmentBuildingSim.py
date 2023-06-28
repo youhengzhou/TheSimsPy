@@ -22,6 +22,7 @@ class Char:
         self.name = name
         self.state = None
         self.location = None
+        self.pissCounter = 0
 
     def __repr__(self):
         return f"CHAR: name:{self.name} state:{self.state} location:{self.location}"
@@ -31,10 +32,12 @@ class WaterDrinker(Char):
     def createEvents(self, simTime, futureEventList, chars):
         if not any(self in evt.chars for evt in futureEventList):
             if self.state == 'idle':
-                heapq.heappush(futureEventList, DrinkWater0(simTime + random.randint(3,5), [self]))
+                heapq.heappush(futureEventList, DrinkWater0(simTime + random.randint(1,1), [self]))
             
             if self.state == 'need to piss':
-                heapq.heappush(futureEventList, PissWater0(simTime + random.randint(3,5), [self]))
+                heapq.heappush(futureEventList, PissWater0(simTime + random.randint(1,1), [self]))
+                self.pissCounter += 1
+
 
 
 
@@ -104,7 +107,6 @@ class PissWater1(Event):
 
 
 
-
 chars = []
 harry = WaterDrinker('Harry')
 alice = WaterDrinker('Alice')
@@ -116,7 +118,7 @@ initCharsEvent = InitCharsEvent(0, chars)
 fel.append(initCharsEvent)
 
 simTime = 0
-while simTime < 20:
+while simTime < 200:
     currEvent = heapq.heappop(fel)
     simTime = currEvent.time
 
@@ -130,7 +132,10 @@ while simTime < 20:
     jdb.i({
         'time': str(simTime),
         'currEvent': str(currEvent),
-        'chars': str(chars),
+        'chars': str(currEvent.chars[0].name),
     })
 
 print(fel)
+
+print(f"harry {harry.pissCounter}")
+print(f"alice {alice.pissCounter}")
