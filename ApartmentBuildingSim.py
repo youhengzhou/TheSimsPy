@@ -60,22 +60,32 @@ class Event:
     def __lt__(self, other):
         return self.time < other.time
     
+    def setCharacters(self, state=None, action=None):
+      for c in self.chars:
+         if state:
+            c.state = state
+         if action:
+            c.action = action
+    
+    def handleEvent(self, futureEventList):
+      raise NotImplementedError()
+    
 class InitCharsEvent(Event):
     def __init__(self, time, chars):
         super().__init__(time, chars, 'init chars')
 
     def handleEvent(self, futureEventList):
-        for c in self.chars:
-            c.state = 'idle'
-            c.location = 'lobby'
+        # for c in self.chars:
+        #     c.state = 'idle'
+        #     c.location = 'lobby'
+        self.setCharacters('idle', 'lobby')
     
 class DrinkWater0(Event):
     def __init__(self, time, chars):
         super().__init__(time, chars, 'stage 0: start drinking water')
 
     def handleEvent(self, futureEventList):
-        for c in self.chars:
-            c.state = 'stage 0: drink water'
+        self.setCharacters('stage 0: drink water')
         heapq.heappush(futureEventList, DrinkWater1(self.time + random.randint(4,8), self.chars))
 
 class DrinkWater1(Event):
@@ -83,16 +93,14 @@ class DrinkWater1(Event):
         super().__init__(time, chars, 'stage 1: finish drinking water')
 
     def handleEvent(self, futureEventList):
-        for c in self.chars:
-            c.state = 'need to piss'
+        self.setCharacters('need to piss')
 
 class PissWater0(Event):
     def __init__(self, time, chars):
         super().__init__(time, chars, 'stage 0: start pissing')
 
     def handleEvent(self, futureEventList):
-        for c in self.chars:
-            c.state = 'stage 0: pissing'
+        self.setCharacters('stage 0: pissing')
         heapq.heappush(futureEventList, PissWater1(self.time + random.randint(4,8), self.chars))
 
 class PissWater1(Event):
@@ -100,8 +108,7 @@ class PissWater1(Event):
         super().__init__(time, chars, 'stage 1: finish pissing')
 
     def handleEvent(self, futureEventList):
-        for c in self.chars:
-            c.state = 'idle'
+        self.setCharacters('idle')
 
 
 
