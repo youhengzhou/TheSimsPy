@@ -1,7 +1,7 @@
 import os
 import jsoneng
 
-from lib import ApartmentBuildingSim, CharGen, PlaceGen, RoleGen, FutureEventList
+from lib import CharGen, PlaceGen, RoleGen, FutureEventList
 
 startSimTime = int(os.environ.get("START_SIM_TIME"))
 endSimTime = int(os.environ.get("END_SIM_TIME"))
