@@ -8,15 +8,6 @@ from termcolor import *
 jdb = jsoneng.JsonDB()
 jdb.create({})
 
-
-
-
-
-
-
-
-
-
 class Char:
     def __init__(self, name):
         self.name = name
@@ -32,21 +23,11 @@ class WaterDrinker(Char):
     def createEvents(self, simTime, futureEventList, chars):
         if not any(self in evt.chars for evt in futureEventList):
             if self.state == 'idle':
-                heapq.heappush(futureEventList, DrinkWater0(simTime + random.randint(1,1), [self]))
+                heapq.heappush(futureEventList, DrinkWater0(simTime + random.randint(1,2), [self]))
             
             if self.state == 'need to piss':
-                heapq.heappush(futureEventList, PissWater0(simTime + random.randint(1,1), [self]))
+                heapq.heappush(futureEventList, PissWater0(simTime + random.randint(1,2), [self]))
                 self.pissCounter += 1
-
-
-
-
-
-
-
-
-
-
 
 class Event:
     def __init__(self, time, chars, name):
@@ -60,12 +41,12 @@ class Event:
     def __lt__(self, other):
         return self.time < other.time
     
-    def setCharacters(self, state=None, action=None):
+    def setCharacters(self, state=None, location=None):
       for c in self.chars:
          if state:
             c.state = state
-         if action:
-            c.action = action
+         if location:
+            c.location = location
     
     def handleEvent(self, futureEventList):
       raise NotImplementedError()
@@ -75,9 +56,6 @@ class InitCharsEvent(Event):
         super().__init__(time, chars, 'init chars')
 
     def handleEvent(self, futureEventList):
-        # for c in self.chars:
-        #     c.state = 'idle'
-        #     c.location = 'lobby'
         self.setCharacters('idle', 'lobby')
     
 class DrinkWater0(Event):
@@ -86,7 +64,7 @@ class DrinkWater0(Event):
 
     def handleEvent(self, futureEventList):
         self.setCharacters('stage 0: drink water')
-        heapq.heappush(futureEventList, DrinkWater1(self.time + random.randint(4,8), self.chars))
+        heapq.heappush(futureEventList, DrinkWater1(self.time + random.randint(1,50), self.chars))
 
 class DrinkWater1(Event):
     def __init__(self, time, chars):
@@ -101,7 +79,7 @@ class PissWater0(Event):
 
     def handleEvent(self, futureEventList):
         self.setCharacters('stage 0: pissing')
-        heapq.heappush(futureEventList, PissWater1(self.time + random.randint(4,8), self.chars))
+        heapq.heappush(futureEventList, PissWater1(self.time + random.randint(1,50), self.chars))
 
 class PissWater1(Event):
     def __init__(self, time, chars):
@@ -110,27 +88,28 @@ class PissWater1(Event):
     def handleEvent(self, futureEventList):
         self.setCharacters('idle')
 
-
-
-
-
 chars = []
 harry = WaterDrinker('Harry')
 alice = WaterDrinker('Alice')
+sally = WaterDrinker('Sally')
+david = WaterDrinker('David')
 chars.append(harry)
 chars.append(alice)
+chars.append(sally)
+chars.append(david)
 
 fel = []
 initCharsEvent = InitCharsEvent(0, chars)
 fel.append(initCharsEvent)
 
 simTime = 0
-while simTime < 200:
+while simTime < 1000:
     currEvent = heapq.heappop(fel)
     simTime = currEvent.time
 
     currEvent.handleEvent(fel)
 
+    random.shuffle(chars)
     for c in chars:
         c.createEvents(simTime, fel, chars)
     
@@ -138,7 +117,7 @@ while simTime < 200:
 
     jdb.i({
         'time': str(simTime),
-        'currEvent': str(currEvent),
+        'currEvent': str(currEvent.name),
         'chars': str(currEvent.chars[0].name),
     })
 
@@ -146,3 +125,5 @@ print(fel)
 
 print(f"harry {harry.pissCounter}")
 print(f"alice {alice.pissCounter}")
+print(f"sally {sally.pissCounter}")
+print(f"david {david.pissCounter}")
