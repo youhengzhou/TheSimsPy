@@ -74,17 +74,21 @@ class Role:
             out["year " + str(self.char.age + year + 1) + " desc"] = self.history[year]["desc"]
             if "stats" in self.history[year]:
                 for stat in self.history[year]["stats"]:
-                    setattr(
-                        self.char.skills,
-                        stat[0],
-                        getattr(self.char.skills, stat[0]) + stat[1],
-                    ) if stat[0] in [
-                        field.name for field in fields(Skills)
-                    ] else setattr(
-                        self.char.stats,
-                        stat[0],
-                        getattr(self.char.stats, stat[0]) + stat[1],
-                    )
+                    # setattr(
+                    #     self.char.skills,
+                    #     stat[0],
+                    #     getattr(self.char.skills, stat[0]) + stat[1],
+                    # ) if stat[0] in [
+                    #     field.name for field in fields(Skills)
+                    # ] else setattr(
+                    #     self.char.stats,
+                    #     stat[0],
+                    #     getattr(self.char.stats, stat[0]) + stat[1],
+                    # )
+                    if stat[0] in [field.name for field in fields(Skills)]:
+                        setattr(self.char.skills, stat[0], getattr(self.char.skills, stat[0]) + stat[1])
+                    else:
+                        setattr(self.char.stats, stat[0], getattr(self.char.stats, stat[0]) + stat[1])
             out["year " + str(self.char.age + year + 1) + " event"] = self.genEvent()
         self.char.age += years
         return out
