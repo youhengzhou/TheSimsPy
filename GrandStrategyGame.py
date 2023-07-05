@@ -49,6 +49,7 @@ def createChar(name, background):
     stats = Stats(0, 0, 0, 0, 0, 0, 0)
     return Char(name, background, skills, stats)
 
+
 @dataclass
 class Role:
     type: str
@@ -67,11 +68,21 @@ class Role:
         years = random.randint(1, 7)
         for year in range(years):
             print(year)
-            out["year " + str(year+1) + " desc"] = self.history[year]["desc"]
-            if 'stats' in self.history[year]:
-                for stat in self.history[year]['stats']:
-                    setattr(self.char.skills, stat[0], getattr(self.char.skills, stat[0]) + stat[1]) if stat[0] in [field.name for field in fields(Skills)] else setattr(self.char.stats, stat[0], getattr(self.char.stats, stat[0]) + stat[1])
-            out["year " + str(year+1) + " event"] = self.genEvent()
+            out["year " + str(year + 1) + " desc"] = self.history[year]["desc"]
+            if "stats" in self.history[year]:
+                for stat in self.history[year]["stats"]:
+                    setattr(
+                        self.char.skills,
+                        stat[0],
+                        getattr(self.char.skills, stat[0]) + stat[1],
+                    ) if stat[0] in [
+                        field.name for field in fields(Skills)
+                    ] else setattr(
+                        self.char.stats,
+                        stat[0],
+                        getattr(self.char.stats, stat[0]) + stat[1],
+                    )
+            out["year " + str(year + 1) + " event"] = self.genEvent()
         return out
 
     def genEvent(self):
@@ -164,6 +175,7 @@ class Soldier(Role):
         self.benefits = ["brothers-in-arms", "survival", "weapon proficiency"]
         self.quitting = ["promotion", "moving on", "infamy", "captured"]
         self.char = char
+
 
 tom = createChar("tom", "COMMON")
 s = Soldier(tom)
