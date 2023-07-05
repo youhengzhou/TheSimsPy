@@ -54,7 +54,6 @@ tom = createChar("tom", "COMMON")
 
 jdb.i(asdict(tom))
 
-
 @dataclass
 class Role:
     type: str
@@ -72,9 +71,11 @@ class Role:
         out = {}
         years = random.randint(1, 7)
         for year in range(years):
-            out["year " + str(year) + " desc"] = self.history[year - 1]["desc"]
-            if self.history[year - 1].keys():
-                print(self.history[year - 1].keys())
+            print(year)
+            out["year " + str(year+1) + " desc"] = self.history[year]["desc"]
+            if 'stats' in self.history[year]:
+                for stat in self.history[year]['stats']:
+                    setattr(self.char.skills, stat[0], getattr(self.char.skills, stat[0]) + stat[1]) if stat[0] in [field.name for field in fields(Skills)] else setattr(self.char.stats, stat[0], getattr(self.char.stats, stat[0]) + stat[1])
             out["year " + str(year+1) + " event"] = self.genEvent()
         return out
 
@@ -179,6 +180,8 @@ sampleOut = {
         "year1": "you are still learning the trade, martial + 1",
     }
 }
+
+jdb.i(asdict(tom))
 
 # class RoleTemplate(Role):
 #     roleData = {
