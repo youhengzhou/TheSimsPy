@@ -49,11 +49,6 @@ def createChar(name, background):
     stats = Stats(0, 0, 0, 0, 0, 0, 0)
     return Char(name, background, skills, stats)
 
-
-tom = createChar("tom", "COMMON")
-
-jdb.i(asdict(tom))
-
 @dataclass
 class Role:
     type: str
@@ -170,18 +165,18 @@ class Soldier(Role):
         self.quitting = ["promotion", "moving on", "infamy", "captured"]
         self.char = char
 
+tom = createChar("tom", "COMMON")
 s = Soldier(tom)
 jdb.i(s.genAll())
-
-sampleOut = {
-    0: {
-        "type": "soldier",
-        "archetype": "infantry",
-        "year1": "you are still learning the trade, martial + 1",
-    }
-}
-
 jdb.i(asdict(tom))
+
+# sampleOut = {
+#     0: {
+#         "type": "soldier",
+#         "archetype": "infantry",
+#         "year1": "you are still learning the trade, martial + 1",
+#     }
+# }
 
 # class RoleTemplate(Role):
 #     roleData = {
