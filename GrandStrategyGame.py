@@ -70,7 +70,6 @@ class Role:
         out = {}
         years = random.randint(1, 7)
         for year in range(years):
-            print(year)
             out["year " + str(year + 1) + " desc"] = self.history[year]["desc"]
             if "stats" in self.history[year]:
                 for stat in self.history[year]["stats"]:
