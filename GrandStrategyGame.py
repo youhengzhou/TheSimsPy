@@ -60,6 +60,9 @@ class Role:
     quitting: list
     char: Char
 
+    def __init__(self, char):
+        self.char = char
+
     def genArchetype(self):
         return random.choice(self.archetype)
 
@@ -102,6 +105,8 @@ class Role:
 
 class Soldier(Role):
     def __init__(self, char):
+        super().__init__(char)
+        
         self.type = "soldier"
         self.archetype = ["infantry", "skirmisher", "cavalry", "frontier guard"]
         self.history = [
@@ -174,7 +179,6 @@ class Soldier(Role):
         ]
         self.benefits = ["brothers-in-arms", "survival", "weapon proficiency"]
         self.quitting = ["promotion", "moving on", "infamy", "captured"]
-        self.char = char
 
 
 tom = createChar("tom", "COMMON")
