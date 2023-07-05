@@ -1,33 +1,42 @@
-type	soldier
-archetype	infantry
-	skirmisher
-	cavalry
-	royal fleet
-HISTORY	
-year 1 desc	you're still learning the trade
-year 1 stats	martial 1
-year 2 desc	you've seen a lot on the frontline
-year 2 stats	
-year 3 desc	you are a seasoned soldier who has fought on many battlefields across the country
-year 3 stats	
-year 4 desc	"by now, you're a jaded veteran"
-year 4 stats	"martial 1, body -1"
-year 5 desc	your name is quite known among soldiers
-year 5 stats	body -1
-year 6 desc	"sieges, sabotage, hopeless battles, desperate charges, you've done it all"
-year 6 stats	martial 1
-year 7 desc	war legend
-year 7 stats	"martial 1, body -1"
-EVENTS	
-title	sacking
-desc	"When the city fell, after a long siege, came the time of savagery. What did you do on this cruel night?"
-choice desc	you took part in the rapes and looting
-choice stats	"grit 1, reputation 1"
-choice desc	you refused to give in to your vile instincts
-choice stats	"reputation 1, mental -1"
-title	smuggling
-desc	"You discovered that some of your officers were engaged in illegal smuggling, so you…"
-choice desc	…denounced them to your superiors
-choice stats	"reputation 1, grit -1"
-choice desc	"…kept your tongue, on a condition"
-choice stats	wealth 1
+TYPE	soldier	mercenary	officer
+ARCHETYPE	infantry	the white company	careful
+	skirmisher	the desert hounds	hothead
+	cavalry	the blades of the weeping maiden	unorthodox
+	royal fleet	the black boars	traditional
+HISTORY			
+year 1 desc	you're still learning the trade		
+year 1 stats	martial 1		
+year 2 desc	you've seen a lot on the frontline		
+year 2 stats			
+year 3 desc	you are a seasoned soldier who has fought on many battlefields across the country		
+year 3 stats			
+year 4 desc	"by now, you're a jaded veteran"		
+year 4 stats	"martial 1, body -1"		
+year 5 desc	your name is quite known among soldiers		
+year 5 stats	body -1		
+year 6 desc	"sieges, sabotage, hopeless battles, desperate charges, you've done it all"		
+year 6 stats	martial 1		
+year 7 desc	war legend		
+year 7 stats	"martial 1, body -1"		
+EVENTS			
+title	sacking		
+desc	"When the city fell, after a long siege, came the time of savagery. What did you do on this cruel night?"		
+choice desc	you took part in the rapes and looting		
+choice stats	"grit 1, reputation 1"		
+choice desc	you refused to give in to your vile instincts		
+choice stats	"reputation 1, mental -1"		
+title	smuggling		
+desc	"You discovered that some of your officers were engaged in illegal smuggling, so you…"		
+choice desc	…denounced them to your superiors		
+choice stats	"reputation 1, grit -1"		
+choice desc	"…kept your tongue, on a condition"		
+choice stats	wealth 1		
+BENEFITS			
+	brother in arms		
+	nine lives		
+	proficiency		
+QUITTING			
+	promotion		
+	moving on		
+	infamy		
+	captured		
