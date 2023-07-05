@@ -40,14 +40,15 @@ class Stats:
 class Char:
     name: str
     background: str
+    age: int
     skills: Skills
     stats: Stats
 
 
-def createChar(name, background):
+def createChar(name, background, age=15):
     skills = Skills(0, 0, 0, 0, 0, 0, 0)
     stats = Stats(0, 0, 0, 0, 0, 0, 0)
-    return Char(name, background, skills, stats)
+    return Char(name, background, age, skills, stats)
 
 
 @dataclass
@@ -70,7 +71,7 @@ class Role:
         out = {}
         years = random.randint(1, 7)
         for year in range(years):
-            out["year " + str(year + 1) + " desc"] = self.history[year]["desc"]
+            out["year " + str(self.char.age + year + 1) + " desc"] = self.history[year]["desc"]
             if "stats" in self.history[year]:
                 for stat in self.history[year]["stats"]:
                     setattr(
@@ -84,7 +85,8 @@ class Role:
                         stat[0],
                         getattr(self.char.stats, stat[0]) + stat[1],
                     )
-            out["year " + str(year + 1) + " event"] = self.genEvent()
+            out["year " + str(self.char.age + year + 1) + " event"] = self.genEvent()
+        self.char.age += years
         return out
 
     def genEvent(self):
@@ -182,6 +184,8 @@ class Soldier(Role):
 
 tom = createChar("tom", "COMMON")
 s = Soldier(tom)
+jdb.i(s.genAll())
+jdb.i(s.genAll())
 jdb.i(s.genAll())
 jdb.i(asdict(tom))
 
