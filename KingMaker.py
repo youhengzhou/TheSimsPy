@@ -42,19 +42,19 @@ class Event:
         return self.time < other.time
 
 class EventCreator:
-    def __init__(self, fel: list, globalState: GlobalState, charState: CharState):
+    def __init__(self, fel: list, globalData: GlobalData, charData: CharsData):
         self.fel = []
-        self.globalState = globalState
-        self.charState = charState
+        self.globalData = globalData
+        self.charData = charData
 
     def create_event(self, time: int, eventName: str):
         event = Event(time, eventName)
         heapq.heappush(self.fel, (event.time, event))  # Add event to the FEL
 
 class EventResolver:
-    def __init__(self, globalState: GlobalState, charState: CharState):
-        self.globalState = globalState
-        self.charState = charState
+    def __init__(self, globalData: GlobalData, charData: CharsData):
+        self.globalData = globalData
+        self.charData = charData
 
     def handle_event(self, event: Event):
         # Handle the event by handling the respective state changes to the character and global states

@@ -74,8 +74,8 @@ class Role:
         for year in range(years):
             out["year " + str(year) + " desc"] = self.history[year - 1]["desc"]
             if self.history[year - 1].keys():
-                print("ok")
-            out["year " + str(year) + " event"] = self.genEvent()
+                print(self.history[year - 1].keys())
+            out["year " + str(year+1) + " event"] = self.genEvent()
         return out
 
     def genEvent(self):
@@ -94,7 +94,7 @@ class Role:
 
 
 class Soldier(Role):
-    def __init__(self):
+    def __init__(self, char):
         self.type = "soldier"
         self.archetype = ["infantry", "skirmisher", "cavalry", "frontier guard"]
         self.history = [
@@ -107,13 +107,6 @@ class Soldier(Role):
             {"desc": "you've seen a lot on the frontline"},
             {
                 "desc": "you are a seasoned soldier who has fought on many battlefields across the country",
-            },
-            {
-                "desc": "by now, you're a jaded veteran",
-                "stats": [
-                    ["martial", 1],
-                    ["body", -1],
-                ],
             },
             {
                 "desc": "by now, you're a jaded veteran",
@@ -174,9 +167,9 @@ class Soldier(Role):
         ]
         self.benefits = ["brothers-in-arms", "survival", "weapon proficiency"]
         self.quitting = ["promotion", "moving on", "infamy", "captured"]
+        self.char = char
 
-
-s = Soldier()
+s = Soldier(tom)
 jdb.i(s.genAll())
 
 sampleOut = {
