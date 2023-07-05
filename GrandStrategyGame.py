@@ -63,21 +63,33 @@ class Role:
     events: dict
     benefits: list
     quitting: list
+    char: Char
 
     def genArchetype(self):
         return random.choice(self.archetype)
 
+    def genHistory(self):
+        out = {}
+        years = random.randint(1, 7)
+        for year in range(years):
+            out["year " + str(year) + " desc"] = self.history[year - 1]["desc"]
+            if self.history[year - 1].keys():
+                print("ok")
+            out["year " + str(year) + " event"] = self.genEvent()
+        return out
+
     def genEvent(self):
-        ranEvent, ranEventValue = random.choice(list(self.events.items()))
-        return {ranEvent: ranEventValue}
+        out = {}
+        ranEvent = random.choice(self.events)
+        out["title"] = ranEvent["title"]
+        out["desc"] = ranEvent["desc"]
+        out["choice"] = random.choice(ranEvent["choices"])["desc"]
+        return out
 
     def genAll(self):
         out = {}
         out["archetype"] = self.genArchetype()
-        years = random.randint(1,7)
-        for year in range(years):
-            out['history'][year] = list(self.history.keys())[year-1]['desc']
-        out["event"] = self.genEvent()
+        out["history"] = self.genHistory()
         return out
 
 
@@ -137,11 +149,11 @@ class Soldier(Role):
                 "choices": [
                     {
                         "desc": "you took part in the rapes and looting",
-                        "stats": [["grit", 1],["reputation", 1]],
+                        "stats": [["grit", 1], ["reputation", 1]],
                     },
                     {
                         "desc": "you refused to give in to your vile instincts",
-                        "stats": [["reputation", 1],["mental", -1]],
+                        "stats": [["reputation", 1], ["mental", -1]],
                     },
                 ],
             },
@@ -151,7 +163,7 @@ class Soldier(Role):
                 "choices": [
                     {
                         "desc": "...denounced them to your superiors",
-                        "stats": [["reputation", 1],["grit", -1]],
+                        "stats": [["reputation", 1], ["grit", -1]],
                     },
                     {
                         "desc": "...kept your tongue, on a condition",
@@ -162,23 +174,6 @@ class Soldier(Role):
         ]
         self.benefits = ["brothers-in-arms", "survival", "weapon proficiency"]
         self.quitting = ["promotion", "moving on", "infamy", "captured"]
-
-    def genArchetype(self):
-        return random.choice(self.archetype)
-
-    def genHistory(self):
-        return random.choice(self.history)
-
-    def genEvent(self):
-        ranEvent = random.choice(self.events)
-        return ranEvent
-
-    def genAll(self):
-        out = {}
-        out["archetype"] = self.genArchetype()
-        out["history"] = self.genHistory()
-        out["event"] = self.genEvent()
-        return out
 
 
 s = Soldier()
