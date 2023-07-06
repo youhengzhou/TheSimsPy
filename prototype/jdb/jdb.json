@@ -1,0 +1,38 @@
+{
+    "0": {
+        "years": [
+            {
+                "year 1": {
+                    "important event": [
+                        "civil war",
+                        "drought"
+                    ],
+                    "important civ": [
+                        "the rhodsions",
+                        "the egyptians"
+                    ],
+                    "important people": [
+                        "john nolork",
+                        "casandra arnin"
+                    ]
+                }
+            },
+            {
+                "year 2": {
+                    "important event": [
+                        "civil war",
+                        "drought"
+                    ],
+                    "important civ": [
+                        "the rhodsions",
+                        "the egyptians"
+                    ],
+                    "important people": [
+                        "zego novo",
+                        "khan novo"
+                    ]
+                }
+            }
+        ]
+    }
+}

@@ -45,9 +45,16 @@ class Char:
     stats: Stats
 
 
+class Human(Char):
+    def __init__(self):
+        name = ["common", "archaic", "uncommon", "noble"]
+        self.name = random.choice(name)
+
+
 def createChar(name, background, age=15):
     skills = Skills(0, 0, 0, 0, 0, 0, 0)
     stats = Stats(0, 0, 0, 0, 0, 0, 0)
+
     return Char(name, background, age, skills, stats)
 
 

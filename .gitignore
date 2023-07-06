@@ -7,3 +7,5 @@
 /__pycache__
 /jdb
 /lib/__pycache__
+
+/frontend/rfront/node_modules
