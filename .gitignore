@@ -1,6 +1,7 @@
 # Python virtual environment
 .venv
 .vscode
+.pyc
 
 ~$lore.xlsx
 /__pycache__
