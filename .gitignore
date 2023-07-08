@@ -9,3 +9,4 @@
 /lib/__pycache__
 
 /frontend/rfront/node_modules
+/frontend/remotedb/node_modules
