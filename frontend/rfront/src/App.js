@@ -1,6 +1,47 @@
 import "./App.css";
 import React from "react";
+import useWebSocket, { ReadyState } from "react-use-websocket";
 import axios from "axios";
+
+const SendWebSocketComponent = () => {
+  const messageHistory = React.useRef([]);
+
+  // Connection URL - connect to the server on localhost at port 9000
+  const connectionUrl = "ws://localhost:9000";
+
+  const { sendMessage, lastMessage, readyState } = useWebSocket(connectionUrl);
+
+  // Handle messages, appending them to the message history
+  React.useEffect(() => {
+    if (lastMessage !== null) {
+      messageHistory.current = [...messageHistory.current, lastMessage];
+    }
+  }, [lastMessage]);
+
+  // Event handler for sending messages
+  const handleClickSendMessageButton = React.useCallback(
+    () => sendMessage(`Hello from WebSocket at port 9000`),
+    []
+  );
+
+  // Interface elements
+  return (
+    <div>
+      <button
+        onClick={handleClickSendMessageButton}
+        disabled={readyState !== ReadyState.OPEN}
+      >
+        Click me to send 'Hello from WebSocket at port 9000'
+      </button>
+
+      {lastMessage ? (
+        <p>Last received message: {lastMessage.data}</p>
+      ) : (
+        <p>No message received yet.</p>
+      )}
+    </div>
+  );
+};
 
 const WebSocketComponent = () => {
   const [data, setData] = React.useState(null);
@@ -9,16 +50,16 @@ const WebSocketComponent = () => {
   const waitData = async () => {
     try {
       const response = await axios.get(
-        "http://localhost:3000/wait?dirname=test0"
+        "http://localhost:9001/wait?dirname=test0"
       );
-      setData(response.data);
+      //   setData(response.data);
     } catch (error) {
       console.error("Error fetching data:", error);
     }
   };
 
   React.useEffect(() => {
-    const websocket = new WebSocket("ws://localhost:3002/websocket-endpoint");
+    const websocket = new WebSocket("ws://localhost:9000/websocket-endpoint");
     setWs(websocket);
     websocket.onopen = () => {
       console.log("connected");
@@ -31,7 +72,7 @@ const WebSocketComponent = () => {
     websocket.onclose = () => {
       console.log("disconnected");
       // automatically try to reconnect on connection loss
-      setWs(new WebSocket("ws://localhost:3002/websocket-endpoint"));
+      setWs(new WebSocket("ws://localhost:9000/websocket-endpoint"));
     };
 
     return () => {};
@@ -114,6 +155,7 @@ function Board() {
   return (
     <>
       {/* <MyComponent prop1="value1" prop2="value2" /> */}
+      <SendWebSocketComponent />
       <WebSocketComponent />
       <FetchButton />
       {/* <div className="board-row">
