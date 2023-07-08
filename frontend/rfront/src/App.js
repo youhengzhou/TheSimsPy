@@ -1,35 +1,46 @@
 import "./App.css";
 import React from "react";
-import WebSocket from "ws";
 import axios from "axios";
 
 const WebSocketComponent = () => {
   const [data, setData] = React.useState(null);
   const [ws, setWs] = React.useState(null);
 
+  const waitData = async () => {
+    try {
+      const response = await axios.get(
+        "http://localhost:3000/wait?dirname=test0"
+      );
+      setData(response.data);
+    } catch (error) {
+      console.error("Error fetching data:", error);
+    }
+  };
+
   React.useEffect(() => {
-    const websocket = new WebSocket("ws://localhost:30001websocket-endpoint");
+    const websocket = new WebSocket("ws://localhost:3002/websocket-endpoint");
     setWs(websocket);
     websocket.onopen = () => {
       console.log("connected");
     };
     websocket.onmessage = (event) => {
-      setData(event.data);
+      const data = JSON.parse(event.data);
+      console.log(data);
+      setData(JSON.stringify(data));
     };
     websocket.onclose = () => {
       console.log("disconnected");
       // automatically try to reconnect on connection loss
-      setWs(new WebSocket("ws://localhost:3001/websocket-endpoint"));
+      setWs(new WebSocket("ws://localhost:3002/websocket-endpoint"));
     };
 
-    return () => {
-      websocket.close();
-    };
+    return () => {};
   }, []);
 
   return (
     <div>
       <p>Data from WebSocket: {data}</p>
+      <button onClick={waitData}>Wait Data</button>
     </div>
   );
 };
@@ -61,6 +72,7 @@ function FetchButton() {
   return (
     <div>
       <button onClick={fetchData}>Fetch Data</button>
+
       {data && <pre>{JSON.stringify(data, null, 2)}</pre>}
     </div>
   );
