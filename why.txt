@@ -1,8 +1,0 @@
-/project
-    __init__.py
-    /lib
-        __init__.py
-        CharGen.py
-    /test
-        __init__.py
-        test.py
