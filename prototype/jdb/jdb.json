@@ -1,38 +1,5 @@
 {
-    "0": {
-        "years": [
-            {
-                "year 1": {
-                    "important event": [
-                        "civil war",
-                        "drought"
-                    ],
-                    "important civ": [
-                        "the rhodsions",
-                        "the egyptians"
-                    ],
-                    "important people": [
-                        "john nolork",
-                        "casandra arnin"
-                    ]
-                }
-            },
-            {
-                "year 2": {
-                    "important event": [
-                        "civil war",
-                        "drought"
-                    ],
-                    "important civ": [
-                        "the rhodsions",
-                        "the egyptians"
-                    ],
-                    "important people": [
-                        "zego novo",
-                        "khan novo"
-                    ]
-                }
-            }
-        ]
-    }
+    "0": "Floor(name='space elevator', inhabitants=[])",
+    "1": "Floor(name='penthouse', inhabitants=[])",
+    "2": "Floor(name='apartments', inhabitants=[])"
 }
