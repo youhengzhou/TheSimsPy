@@ -1,40 +1,13 @@
 {
-    "0": {},
-    "1": {
-        "payment": {
-            "description": "10 kg of rotten meat"
-        }
-    },
-    "2": {
-        "payment": {
-            "description": "10 kg of rotten meat"
+    "0": {
+        "the_lab": {
+            "description": "your memories of those long yeras are blurry.\n\nfull of pain, full of fear. but also of hatred, for the man in the white coat who rguarly bent over you, to inject all sorts of products into your veins, and to engrave with a scalpel burning glyphs on your skin.\n\nthe other scientists called him \"the professor\".\n\nthe hope of revenge is all that keeps you going today."
         },
-        "desc": {
-            "description": "also called the lord of vermin\n\n# ozelion the mask maker"
-        }
-    },
-    "3": {
-        "payment": {
-            "description": "an artistic craft that required"
+        "cartomancy": {
+            "description": "the old fortune teller remained for a long time contemplating her cards."
         },
-        "desc": {
-            "description": "also called the lord of vermin\n\n# ozelion the mask maker"
-        }
-    },
-    "4": {
-        "payment": {
-            "description": "an artistic craft that required"
-        },
-        "desc": {
-            "description": "a tall slender"
-        }
-    },
-    "5": {
-        "payment": {
-            "description": "an artistic craft that required"
-        },
-        "desc": {
-            "description": "a tall slender"
+        "journey": {
+            "description": "that journey you took in your youth brought you to distant lands, full of ancient and forgotten magic, rich in dark and dangerous forces."
         }
     }
 }

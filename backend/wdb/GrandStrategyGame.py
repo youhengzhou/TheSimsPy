@@ -1840,6 +1840,8 @@ def gen():
 
         jdb.patch(asdict(tom), folderName)
 
+gen()
+
 # sampleOut = {
 #     0: {
 #         "type": "soldier",

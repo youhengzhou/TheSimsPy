@@ -17,3 +17,20 @@ the old fortune teller remained for a long time contemplating her cards.
 ## journey
 
 that journey you took in your youth brought you to distant lands, full of ancient and forgotten magic, rich in dark and dangerous forces.
+
+When adrenaline rushes
+through you, a sudden joy,
+or a surprise, you feel a heat
+explode in your chest, your
+heart racing, and... a wave
+of flame rise from every
+pore of your skin and
+swallow everyone around
+you in a burning cloud. It
+doesn't hurt you, but it is
+blinding. The flash lasts only
+a handful of seconds. As the
+heat fades, you stare in
+horror at the black circle of
+ash around you.... and the
+bones in it.

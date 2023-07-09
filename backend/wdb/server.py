@@ -13,7 +13,7 @@ async def echo(websocket, path):
         if message:
             GrandStrategyGame.gen()
             out = jdb.retrieve("test0")
-        print(out)
+        # print(out)
         await websocket.send(str(out))
 
 
