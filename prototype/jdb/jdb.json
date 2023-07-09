@@ -1,5 +1,5 @@
 {
-    "0": "Floor(name='space elevator', inhabitants=[])",
+    "0": "Floor(name='space elevator', inhabitants=[Person(name='tom')])",
     "1": "Floor(name='penthouse', inhabitants=[])",
-    "2": "Floor(name='apartments', inhabitants=[])"
+    "2": "Floor(name='apartments', inhabitants=[Person(name='dan')])"
 }

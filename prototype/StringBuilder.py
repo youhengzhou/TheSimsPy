@@ -57,9 +57,6 @@ apartments = Floor("apartments")
 
 tower = [spaceElevator, pentHouse, apartments]
 
-for floor in tower:
-    jdb.i(str(floor))
-
 tom = Person("tom")
 dan = Person("dan")
 
@@ -72,12 +69,11 @@ for i in range(len(tower)):
     if tower[i].inhabitants:
         print(tower[i])
 
-        if tower[i] > 0 and tower[i] < len(tower) - 1:
-            for p in range(len(tower)):
-                print(tower[i])
-
+        if i > 0 and i < len(tower) - 1:
+            numHab = len(tower[i].inhabitants)
+            for p in range(numHab):
                 person = heapq.heappop(tower[i].inhabitants)
+                heapq.heappush(tower[random.randint(-1, 1) + i].inhabitants, person)
 
-                # heapq.heappush(tower[random.randint(-1, 1) + i], person)
-
-# print(tower)
+for floor in tower:
+    jdb.i(str(floor))
