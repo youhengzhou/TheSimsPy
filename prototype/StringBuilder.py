@@ -29,6 +29,3 @@ def clothing():
 
 
 print(clothing())
-
-
-
