@@ -15,10 +15,9 @@ class Monster:
 
     def take_damage(self, damage):
         self.health -= damage
-    
+
     def __lt__(self, other):
         return self.strength < other.strength
-
 
 
 @dataclass
@@ -78,7 +77,9 @@ class Dungeon:
         level = self.levels[self.current_level]
         if level:
             monster = random.choice(level)
-            print(f"You have encountered a {monster.name} (Strength: {monster.strength}).")
+            print(
+                f"You have encountered a {monster.name} (Strength: {monster.strength})."
+            )
             self.start_combat(monster)
         else:
             print("There are no monsters in the current level.")
@@ -117,7 +118,7 @@ player = Player("Player 1", 100, 10)
 monsters = [
     [Monster("Goblin", 50, 5)],
     [Monster("Skeleton", 60, 8), Monster("Zombie", 70, 7)],
-    [Monster("Orc", 80, 12), Monster("Troll", 100, 15), Monster("Dragon", 150, 20)]
+    [Monster("Orc", 80, 12), Monster("Troll", 100, 15), Monster("Dragon", 150, 20)],
 ]
 
 dungeon = Dungeon("My Dungeon")
@@ -125,5 +126,10 @@ dungeon.add_level(monsters[0])
 dungeon.add_level(monsters[1])
 dungeon.add_level(monsters[2])
 
+# print(dungeon.get_levels())
+
 dungeon.explore_current_level()
+dungeon.move_to_next_level()
+dungeon.explore_current_level()
+
 dungeon.encounter_monster()
