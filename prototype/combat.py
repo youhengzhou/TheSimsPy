@@ -126,10 +126,5 @@ dungeon.add_level(monsters[0])
 dungeon.add_level(monsters[1])
 dungeon.add_level(monsters[2])
 
-# print(dungeon.get_levels())
-
 dungeon.explore_current_level()
-dungeon.move_to_next_level()
-dungeon.explore_current_level()
-
 dungeon.encounter_monster()
