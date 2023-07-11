@@ -1,0 +1,671 @@
+{
+  "1a": [
+    "You find a mysterious object in your backyard. What is it and what do you do with it?",
+    ""
+  ],
+  "1b": [
+    "You and your friends start a neighborhood detective agency. What's your first case?",
+    ""
+  ],
+  "1c": ["You discover a hidden room in your house. What's inside?", ""],
+  "2a": [
+    "You start a lemonade stand. How do you make it the most popular one in the neighborhood?",
+    ""
+  ],
+  "2b": [
+    "You and your friends decide to build a treehouse. What challenges do you face?",
+    ""
+  ],
+  "2c": [
+    "You accidentally break a window while playing. How do you handle the situation?",
+    ""
+  ],
+  "3a": ["You find a lost pet. How do you find its owner?", ""],
+  "3b": ["You start a school newspaper. What's your first big story?", ""],
+  "3c": [
+    "You organize a neighborhood clean-up day. How do you get everyone involved?",
+    ""
+  ],
+  "4a": [
+    "You run for student council president. What's your campaign strategy?",
+    ""
+  ],
+  "4b": ["You join the school band. What instrument do you play and why?", ""],
+  "4c": ["You start a study group. How do you make it fun and effective?", ""],
+  "5a": [
+    "You organize a charity event at your school. What's the cause and how do you raise money?",
+    ""
+  ],
+  "5b": [
+    "You get a part-time job. What's your job and how do you balance it with school?",
+    ""
+  ],
+  "5c": [
+    "You plan a surprise party for your best friend. How do you keep it a secret?",
+    ""
+  ],
+  "6a": [
+    "You decide to study abroad for a semester. Where do you go and what do you study?",
+    ""
+  ],
+  "6b": [
+    "You join a club related to your major. What's the club and what role do you play?",
+    ""
+  ],
+  "6c": [
+    "You get an internship at a company you admire. What's your role and what do you learn?",
+    ""
+  ],
+  "7a": [
+    "You organize a campus-wide event. What's the event and how do you make it a success?",
+    ""
+  ],
+  "7b": [
+    "You start a business with your friends. What's your business and how do you make it grow?",
+    ""
+  ],
+  "7c": [
+    "You write a thesis on a topic you're passionate about. What's your topic and what's your argument?",
+    ""
+  ],
+  "8a": [
+    "You volunteer for a local charity. What's the cause and what role do you play?",
+    ""
+  ],
+  "8b": [
+    "You start a fitness challenge with your friends. What's the challenge and how do you motivate each other?",
+    ""
+  ],
+  "8c": [
+    "You organize a road trip with your friends. Where do you go and what adventures do you have?",
+    ""
+  ],
+  "9a": [
+    "You start a book club. What's the first book you read and how do you facilitate discussion?",
+    ""
+  ],
+  "9b": [
+    "You decide to learn a new language. Which language do you choose and how do you practice?",
+    ""
+  ],
+  "9c": [
+    "You start a community garden. How do you get the community involved and what do you grow?",
+    ""
+  ],
+  "10a": [
+    "You decide to run a marathon. How do you train and what challenges do you face?",
+    ""
+  ],
+  "10b": [
+    "You start a blog about a topic you're passionate about. What's the topic and how do you engage your readers?",
+    ""
+  ],
+  "10c": [
+    "You organize a neighborhood block party. How do you make it a success?",
+    ""
+  ],
+  "11a": [
+    "You decide to learn how to cook. What's the first dish you master?",
+    ""
+  ],
+  "11b": [
+    "You start a band with your friends. What kind of music do you play and how do you practice?",
+    ""
+  ],
+  "11c": [
+    "You decide to write a novel. What's it about and how do you stay motivated to finish?",
+    ""
+  ],
+  "12a": [
+    "You start a podcast. What's the theme and how do you engage your listeners?",
+    ""
+  ],
+  "12b": [
+    "You decide to learn how to code. What language do you choose and how do you practice?",
+    ""
+  ],
+  "12c": [
+    "You organize a charity run. How do you get people to participate and how do you raise funds?",
+    ""
+  ],
+  "13a": [
+    "You decide to learn how to paint. What style do you choose and how do you practice?",
+    ""
+  ],
+  "13b": [
+    "You start a film club. What's the first film you watch and how do you facilitate discussion?",
+    ""
+  ],
+  "13c": [
+    "You decide to write a play. What's it about and how do you stage it?",
+    ""
+  ],
+  "14a": [
+    "You join the high school debate team. What's your first debate topic and how do you prepare?",
+    ""
+  ],
+  "14b": [
+    "You audition for the high school play. What role do you get and how do you prepare for it?",
+    ""
+  ],
+  "14c": [
+    "You start a high school newspaper. What's your first big story and how do you get the scoop?",
+    ""
+  ],
+  "15a": [
+    "You run for high school student council. What's your campaign promise and how do you win votes?",
+    ""
+  ],
+  "15b": [
+    "You join the high school football team. How do you train and what position do you play?",
+    ""
+  ],
+  "15c": [
+    "You start a high school band. What instrument do you play and how do you practice?",
+    ""
+  ],
+  "16a": [
+    "You organize a high school prom. What's the theme and how do you make it a night to remember?",
+    ""
+  ],
+  "16b": [
+    "You start a high school chess club. How do you attract members and how do you practice?",
+    ""
+  ],
+  "16c": [
+    "You join the high school science club. What's your first project and how do you complete it?",
+    ""
+  ],
+  "17a": [
+    "You decide to study in a university abroad. Where do you go and what do you study?",
+    ""
+  ],
+  "17b": [
+    "You join a university fraternity/sorority. What's the initiation process and how do you fit in?",
+    ""
+  ],
+  "17c": [
+    "You start a university radio station. What's your first broadcast about and how do you engage listeners?",
+    ""
+  ],
+  "18a": [
+    "You organize a university-wide charity event. What's the cause and how do you raise funds?",
+    ""
+  ],
+  "18b": [
+    "You start a university study group. How do you make it effective and fun?",
+    ""
+  ],
+  "18c": [
+    "You join a university sports team. What sport do you play and how do you train?",
+    ""
+  ],
+  "19a": [
+    "You start a university club. What's the club about and how do you attract members?",
+    ""
+  ],
+  "19b": [
+    "You organize a university party. What's the theme and how do you make it a night to remember?",
+    ""
+  ],
+  "19c": [
+    "You start a university romance. Who's the lucky person and how do you win their heart?",
+    ""
+  ],
+  "20a": [
+    "You decide to study a unique major in university. What's the major and why do you choose it?",
+    ""
+  ],
+  "20b": [
+    "You join a university research project. What's the project about and what's your role?",
+    ""
+  ],
+  "20c": [
+    "You start a university business. What's the business about and how do you make it successful?",
+    ""
+  ],
+  "21a": [
+    "You organize a university music festival. Who are the performers and how do you make it a success?",
+    ""
+  ],
+  "21b": [
+    "You start a university newspaper. What's your first big story and how do you get the scoop?",
+    ""
+  ],
+  "21c": [
+    "You join a university exchange program. Where do you go and what do you learn?",
+    ""
+  ],
+  "22a": [
+    "You start a university art club. What's the first project and how do you inspire creativity?",
+    ""
+  ],
+  "22b": [
+    "You organize a university talent show. Who are the performers and how do you make it a success?",
+    ""
+  ],
+  "22c": [
+    "You start a university romance. Who's the lucky person and how do you win their heart?",
+    ""
+  ],
+  "23a": [
+    "You decide to run for university student council. What's your campaign promise and how do you win votes?",
+    ""
+  ],
+  "23b": [
+    "You join a university debate team. What's your first debate topic and how do you prepare?",
+    ""
+  ],
+  "23c": [
+    "You start a university book club. What's the first book you read and how do you facilitate discussion?",
+    ""
+  ],
+  "24a": [
+    "You organize a university hackathon. What's the theme and how do you make it a success?",
+    ""
+  ],
+  "24b": [
+    "You start a university podcast. What's the theme and how do you engage your listeners?",
+    ""
+  ],
+  "24c": [
+    "You join a university internship program. Where do you intern and what do you learn?",
+    ""
+  ],
+  "25a": [
+    "You start a university film club. What's the first film you watch and how do you facilitate discussion?",
+    ""
+  ],
+  "25b": [
+    "You organize a university charity run. How do you get people to participate and how do you raise funds?",
+    ""
+  ],
+  "25c": [
+    "You start a university romance. Who's the lucky person and how do you win their heart?",
+    ""
+  ],
+  "26a": [
+    "You decide to study a double major in university. What are the majors and why do you choose them?",
+    ""
+  ],
+  "26b": [
+    "You join a university volunteer program. What's the cause and what role do you play?",
+    ""
+  ],
+  "26c": [
+    "You start a university gaming club. What games do you play and how do you attract members?",
+    ""
+  ],
+  "27a": [
+    "You organize a university cultural festival. What cultures are represented and how do you make it a success?",
+    ""
+  ],
+  "27b": [
+    "You start a university photography club. What's the first project and how do you inspire creativity?",
+    ""
+  ],
+  "27c": [
+    "You join a university entrepreneurship program. What's your business idea and how do you develop it?",
+    ""
+  ],
+  "28a": [
+    "You start a university cooking club. What's the first dish you cook and how do you teach others?",
+    ""
+  ],
+  "28b": [
+    "You organize a university sports event. What sport is it and how do you make it a success?",
+    ""
+  ],
+  "28c": [
+    "You start a university romance. Who's the lucky person and how do you win their heart?",
+    ""
+  ],
+  "29a": [
+    "You decide to study a minor in university. What's the minor and why do you choose it?",
+    ""
+  ],
+  "29b": [
+    "You join a university theater group. What play do you perform and what role do you play?",
+    ""
+  ],
+  "29c": [
+    "You start a university science club. What's your first project and how do you complete it?",
+    ""
+  ],
+  "30a": [
+    "You organize a university graduation party. What's the theme and how do you make it a night to remember?",
+    ""
+  ],
+  "30b": [
+    "You start a university investment club. How do you teach others about investing and how do you practice?",
+    ""
+  ],
+  "30c": [
+    "You start a university romance. Who's the lucky person and how do you win their heart?",
+    ""
+  ],
+  "31a": [
+    "You start your first job after university. What's the job and how do you adapt to the working world?",
+    ""
+  ],
+  "31b": [
+    "You meet someone you think you want to marry. How do you propose?",
+    ""
+  ],
+  "31c": ["You decide to have kids. How do you prepare for parenthood?", ""],
+  "32a": ["You face challenges in your job. How do you overcome them?", ""],
+  "32b": [
+    "You plan your wedding. What's the theme and how do you make it a day to remember?",
+    ""
+  ],
+  "32c": [
+    "You become a parent. How do you adjust to the new responsibilities?",
+    ""
+  ],
+  "33a": [
+    "You consider changing careers. What's the new career and why do you choose it?",
+    ""
+  ],
+  "33b": [
+    "You celebrate your first wedding anniversary. How do you make it special?",
+    ""
+  ],
+  "33c": [
+    "You see your child take their first steps. How do you feel and what do you do?",
+    ""
+  ],
+  "34a": [
+    "You get promoted at work. What's the new role and how do you handle the increased responsibilities?",
+    ""
+  ],
+  "34b": [
+    "You plan a family vacation. Where do you go and what adventures do you have?",
+    ""
+  ],
+  "34c": [
+    "You see your child start school. How do you prepare them and how do you feel?",
+    ""
+  ],
+  "35a": [
+    "You get laid off from your job. How do you handle the situation and what's your next step?",
+    ""
+  ],
+  "35b": [
+    "You celebrate your child's birthday. How do you make it a day to remember?",
+    ""
+  ],
+  "35c": [
+    "You see your child make their first friend. How do you feel and what advice do you give them?",
+    ""
+  ],
+  "36a": [
+    "You start a new job. What's the job and how do you adapt to the new environment?",
+    ""
+  ],
+  "36b": [
+    "You plan a surprise party for your spouse. How do you keep it a secret and how do you make it special?",
+    ""
+  ],
+  "36c": [
+    "You see your child excel in a subject at school. How do you encourage them and how do you feel?",
+    ""
+  ],
+  "37a": [
+    "You decide to start your own business. What's the business and how do you make it successful?",
+    ""
+  ],
+  "37b": [
+    "You celebrate a milestone wedding anniversary. How do you make it special?",
+    ""
+  ],
+  "37c": [
+    "You see your child graduate from high school. How do you feel and what advice do you give them?",
+    ""
+  ],
+  "38a": [
+    "You retire from your job. How do you adjust to the new lifestyle?",
+    ""
+  ],
+  "38b": [
+    "You become a grandparent. How do you feel and what advice do you give to your child?",
+    ""
+  ],
+  "38c": [
+    "You see your child start their first job. How do you feel and what advice do you give them?",
+    ""
+  ],
+  "39a": [
+    "You decide to move to a new city after retirement. Where do you go and why do you choose it?",
+    ""
+  ],
+  "39b": ["You renew your wedding vows. How do you make it special?", ""],
+  "39c": [
+    "You see your child get married. How do you feel and what advice do you give them?",
+    ""
+  ],
+  "40a": [
+    "You decide to take up a new hobby in retirement. What's the hobby and why do you choose it?",
+    ""
+  ],
+  "40b": [
+    "You plan a trip around the world. Where do you go and what adventures do you have?",
+    ""
+  ],
+  "40c": [
+    "You see your grandchild take their first steps. How do you feel and what do you do?",
+    ""
+  ],
+  "41a": [
+    "You volunteer in your local community. What's the cause and what role do you play?",
+    ""
+  ],
+  "41b": [
+    "You celebrate your golden wedding anniversary. How do you make it special?",
+    ""
+  ],
+  "41c": [
+    "You see your grandchild start school. How do you prepare them and how do you feel?",
+    ""
+  ],
+  "42a": [
+    "You decide to write a book about your life. What's the theme and how do you stay motivated to finish?",
+    ""
+  ],
+  "42b": [
+    "You plan a family reunion. How do you make it a day to remember?",
+    ""
+  ],
+  "42c": [
+    "You see your grandchild graduate from high school. How do you feel and what advice do you give them?",
+    ""
+  ],
+  "43a": [
+    "You decide to learn a new language in retirement. Which language do you choose and how do you practice?",
+    ""
+  ],
+  "43b": [
+    "You celebrate your diamond wedding anniversary. How do you make it special?",
+    ""
+  ],
+  "43c": [
+    "You see your grandchild start their first job. How do you feel and what advice do you give them?",
+    ""
+  ],
+  "44a": [
+    "You decide to go back to university to study a subject you love. What's the subject and why do you choose it?",
+    ""
+  ],
+  "44b": [
+    "You plan a surprise party for your spouse. How do you keep it a secret and how do you make it special?",
+    ""
+  ],
+  "44c": [
+    "You see your grandchild get married. How do you feel and what advice do you give them?",
+    ""
+  ],
+  "45a": [
+    "You decide to move to a retirement community. How do you adjust to the new environment?",
+    ""
+  ],
+  "45b": [
+    "You celebrate your platinum wedding anniversary. How do you make it special?",
+    ""
+  ],
+  "45c": [
+    "You become a great-grandparent. How do you feel and what advice do you give to your grandchild?",
+    ""
+  ],
+  "46a": [
+    "You decide to take up painting in retirement. How do you practice and what do you paint?",
+    ""
+  ],
+  "46b": [
+    "You plan a trip to visit your childhood home. What memories does it bring back?",
+    ""
+  ],
+  "46c": [
+    "You see your great-grandchild take their first steps. How do you feel and what do you do?",
+    ""
+  ],
+  "47a": ["You decide to write a will. How do you decide who gets what?", ""],
+  "47b": [
+    "You plan a party to celebrate your 100th birthday. How do you make it a day to remember?",
+    ""
+  ],
+  "47c": [
+    "You see your great-grandchild start school. How do you prepare them and how do you feel?",
+    ""
+  ],
+  "48a": [
+    "You decide to donate to a charity. What's the cause and why do you choose it?",
+    ""
+  ],
+  "48b": [
+    "You plan a trip to visit your grandchildren. What adventures do you have?",
+    ""
+  ],
+  "48c": [
+    "You see your great-grandchild graduate from high school. How do you feel and what advice do you give them?",
+    ""
+  ],
+  "49a": [
+    "You decide to share your life story with your family. How do you tell it and what reactions do you get?",
+    ""
+  ],
+  "49b": [
+    "You plan a family gathering for the holidays. How do you make it special?",
+    ""
+  ],
+  "49c": [
+    "You see your great-grandchild start their first job. How do you feel and what advice do you give them?",
+    ""
+  ],
+  "50a": [
+    "You reflect on your life. What are you most proud of and what would you do differently?",
+    ""
+  ],
+  "50b": ["You plan your funeral. How do you want to be remembered?", ""],
+  "50c": [
+    "You pass away peacefully in your sleep. How do your family and friends remember you?",
+    ""
+  ],
+  "51a": [
+    "You reflect on your career. What were your biggest achievements and challenges?",
+    ""
+  ],
+  "51b": [
+    "You reflect on your marriage. What were the happiest moments and the toughest times?",
+    ""
+  ],
+  "51c": [
+    "You reflect on your parenthood. What were your proudest moments and the biggest lessons?",
+    ""
+  ],
+  "52a": [
+    "You reflect on your friendships. Who were the most influential people in your life and why?",
+    ""
+  ],
+  "52b": [
+    "You reflect on your hobbies. What brought you the most joy and why?",
+    ""
+  ],
+  "52c": [
+    "You reflect on your travels. What were your favorite places and why?",
+    ""
+  ],
+  "53a": [
+    "You reflect on your retirement. How did you make the most of this phase of life?",
+    ""
+  ],
+  "53b": [
+    "You reflect on your community involvement. How did you make a difference?",
+    ""
+  ],
+  "53c": [
+    "You reflect on your personal growth. How have you changed over the years?",
+    ""
+  ],
+  "54a": [
+    "You reflect on your health. How did you take care of yourself and what were the challenges?",
+    ""
+  ],
+  "54b": [
+    "You reflect on your spiritual journey. What were your beliefs and how did they guide you?",
+    ""
+  ],
+  "54c": [
+    "You reflect on your legacy. What do you hope to be remembered for?",
+    ""
+  ],
+  "55a": [
+    "You write a letter to your younger self. What advice do you give?",
+    ""
+  ],
+  "55b": [
+    "You write a letter to your future family members. What wisdom do you want to pass on?",
+    ""
+  ],
+  "55c": ["You write your memoir. What are the key themes and messages?", ""],
+  "56a": [
+    "You plan a celebration of life party. Who do you invite and what stories do you share?",
+    ""
+  ],
+  "56b": [
+    "You make a bucket list. What are the things you still want to do?",
+    ""
+  ],
+  "56c": ["You create a time capsule. What items do you include and why?", ""],
+  "57a": [
+    "You revisit your favorite places. What memories do they bring back?",
+    ""
+  ],
+  "57b": ["You reconnect with old friends. What do you talk about?", ""],
+  "57c": [
+    "You spend time with your family. What are your favorite moments?",
+    ""
+  ],
+  "58a": [
+    "You give away your most cherished possessions. Who do you give them to and why?",
+    ""
+  ],
+  "58b": ["You record a video message for your family. What do you say?", ""],
+  "58c": ["You spend your last day doing what you love. What do you do?", ""],
+  "59a": ["You say your goodbyes. Who do you talk to and what do you say?", ""],
+  "59b": [
+    "You reflect on your life one last time. What are your final thoughts?",
+    ""
+  ],
+  "59c": ["You pass away peacefully. How do your loved ones remember you?", ""],
+  "60a": [
+    "Your family holds a memorial service. What stories do they share about you?",
+    ""
+  ],
+  "60b": [
+    "Your legacy lives on. How do your family and friends honor your memory?",
+    ""
+  ],
+  "60c": [
+    "Your life story is told to future generations. How is it told and what lessons does it impart?",
+    ""
+  ]
+}
