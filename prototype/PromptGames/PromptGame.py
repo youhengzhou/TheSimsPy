@@ -52,7 +52,7 @@ def create(textFile, game):
 
 def play(game, output):
     import jsoneng
-    import termcolor
+    from termcolor import colored
 
     jdb = jsoneng.JsonDB()
     jdb.create({}, output)
@@ -60,11 +60,11 @@ def play(game, output):
     dictionary = randomRoll(jdb.retrieve(game))
 
     for i, (k, v) in enumerate(dictionary.items()):
-        print(f"prompt {k}")
-        print(termcolor.colored(v[0], "red"))
+        print(colored(f"prompt {k}", "light_blue"))
+        print(colored(v[0], "red"))
         text = input("> ")
         jdb.patch({k: {"prompt": v[0], "answer": text}}, output)
 
 
-create("ThousandYearOldVampire.txt", "TYOV")
+# create("ThousandYearOldVampire.txt", "TYOV")
 play("ALifeLived", "Play")
