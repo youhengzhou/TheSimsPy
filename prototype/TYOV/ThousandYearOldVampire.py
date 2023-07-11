@@ -50,11 +50,11 @@ def create(textFile, game):
     jdb.create(textToDict(textFile), game)
 
 
-def play(game):
+def play(game, output):
     import jsoneng
 
     jdb = jsoneng.JsonDB()
-    jdb.create({})
+    jdb.create({}, output)
 
     dictionary = randomRoll(jdb.retrieve(game))
 
@@ -62,8 +62,8 @@ def play(game):
         print(f"prompt {k}")
         print(v[0])
         text = input("> ")
-        jdb.p(k, {"prompt": v[0], "answer": text})
+        jdb.patch({k: {"prompt": v[0], "answer": text}}, output)
 
 
 create("ThousandYearOldVampire.txt", "TYOV")
-play("SchoolZone")
+play("SchoolZone", "Play")
