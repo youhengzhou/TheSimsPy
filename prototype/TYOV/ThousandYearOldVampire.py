@@ -1,10 +1,10 @@
-def textToDict():
+def textToDict(textFile):
     import re
 
     dictionary = {}
     key = ""
 
-    with open("ThousandYearOldVampire.txt", "r", encoding="utf-8") as file:
+    with open(textFile, "r", encoding="utf-8") as file:
         for line in file:
             line = line.rstrip()  # remove trailing newline character
 
@@ -43,13 +43,20 @@ def randomRoll(dictionary):
     return out
 
 
-def TYOV():
+def create(textFile, game):
+    import jsoneng
+
+    jdb = jsoneng.JsonDB()
+    jdb.create(textToDict(textFile), game)
+
+
+def play(game):
     import jsoneng
 
     jdb = jsoneng.JsonDB()
     jdb.create({})
 
-    dictionary = randomRoll(textToDict())
+    dictionary = randomRoll(jdb.retrieve(game))
 
     for i, (k, v) in enumerate(dictionary.items()):
         print(f"prompt {k}")
@@ -58,4 +65,5 @@ def TYOV():
         jdb.p(k, {"prompt": v[0], "answer": text})
 
 
-TYOV()
+create("ThousandYearOldVampire.txt", "TYOV")
+play("SchoolZone")
