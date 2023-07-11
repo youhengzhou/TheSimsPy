@@ -34,7 +34,7 @@ def randomRoll(dictionary):
     out = {}
     roll = 0
     while roll <= 80:
-        roll = roll_dice() + roll
+        roll = roll_dice() + roll + 10
         part = assign_part(counts, roll)
 
         if part in dictionary:
@@ -52,6 +52,7 @@ def create(textFile, game):
 
 def play(game, output):
     import jsoneng
+    import termcolor
 
     jdb = jsoneng.JsonDB()
     jdb.create({}, output)
@@ -60,7 +61,7 @@ def play(game, output):
 
     for i, (k, v) in enumerate(dictionary.items()):
         print(f"prompt {k}")
-        print(v[0])
+        print(termcolor.colored(v[0], "red"))
         text = input("> ")
         jdb.patch({k: {"prompt": v[0], "answer": text}}, output)
 
