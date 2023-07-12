@@ -1,0 +1,791 @@
+{
+  "1a": [
+    "You reflect on your childhood. How did you develop an interest in MMA?",
+    ""
+  ],
+  "1b": [
+    "You think about your early fandom. Which MMA fighters inspired you and why?",
+    ""
+  ],
+  "1c": [
+    "You remember the first MMA fight you watched. How did it make you feel?",
+    ""
+  ],
+  "2a": [
+    "You reflect on your decision to train as an MMA fighter. How did you make that decision?",
+    ""
+  ],
+  "2b": ["You remember your first MMA training experience. How did it go?", ""],
+  "2c": [
+    "Looking back, how did your family feel about your decision to start training in MMA?",
+    ""
+  ],
+  "3a": ["You step into your first amateur MMA fight. What was it like?", ""],
+  "3b": [
+    "You consider your mentors in the sport. How have they guided you?",
+    ""
+  ],
+  "3c": [
+    "Reflecting on your training, you think about the major challenges you've had to overcome. How did they impact you?",
+    ""
+  ],
+  "4a": [
+    "You balance your civilian life with your MMA life. How do you manage that?",
+    ""
+  ],
+  "4b": [
+    "Thinking about your day job, consider how it influences your MMA career. How does it help or hinder?",
+    ""
+  ],
+  "4c": [
+    "Reflect on the sacrifices you have made for your MMA career. What motivated you to make these sacrifices?",
+    ""
+  ],
+  "5a": [
+    "Remember your biggest amateur victory. What happened and how did it feel?",
+    ""
+  ],
+  "5b": [
+    "Reflect on a major loss in the amateur circuit. What lessons did you learn?",
+    ""
+  ],
+  "5c": [
+    "Consider your fans. How do they impact your career and personal life?",
+    ""
+  ],
+  "6a": [
+    "Looking at your mindset, how do you prepare yourself for an upcoming fight?",
+    ""
+  ],
+  "6b": [
+    "Consider your training schedule. How has it evolved and how does it shape your day-to-day life?",
+    ""
+  ],
+  "6c": [
+    "Reflect on the health challenges you've faced. How have they impacted your MMA career?",
+    ""
+  ],
+  "7a": [
+    "Think of the relationships you've formed through MMA. Who do you remember and why?",
+    ""
+  ],
+  "7b": [
+    "Remember the moment you realized you wanted to turn professional. What brought you to that decision?",
+    ""
+  ],
+  "7c": [
+    "Reflect on the people who doubted your decision to become an MMA fighter. Have you proved them wrong?",
+    ""
+  ],
+  "8a": [
+    "You think about the future of your MMA career. What are your hopes and plans?",
+    ""
+  ],
+  "8b": [
+    "You consider your impact on future MMA fighters. What example do you hope to set?",
+    ""
+  ],
+  "8c": [
+    "You reflect on your path so far. Are you proud of your MMA journey?",
+    ""
+  ],
+  "9a": [
+    "You visualize your first professional MMA fight. What does it look like?",
+    ""
+  ],
+  "9b": [
+    "You remember the first time you met your idol. How did that experience influence your career path?",
+    ""
+  ],
+  "9c": [
+    "You prepare for the next step in your career. How do you feel knowing you're moving towards becoming a professional fighter?",
+    ""
+  ],
+  "10a": [
+    "You start professional training. How did it differ from your previous experiences?",
+    ""
+  ],
+  "10b": ["Competing professionally for the first time, how did it feel?", ""],
+  "10c": ["You're starting to get noticed. What did you do to stand out?", ""],
+  "11a": [
+    "You win your first regional championship. Describe the feeling and experience.",
+    ""
+  ],
+  "11b": [
+    "Reflect on your first professional loss. What lessons did it impart?",
+    ""
+  ],
+  "11c": [
+    "Talk about the face-offs and weight cuts. How did you manage these aspects?",
+    ""
+  ],
+  "12a": [
+    "You win your first championship title. How did that moment feel?",
+    ""
+  ],
+  "12b": [
+    "Or, if you lost the championship, how did you handle the defeat?",
+    ""
+  ],
+  "12c": [
+    "How did experiencing success or failure at this level change you as a fighter?",
+    ""
+  ],
+  "13a": [
+    "Let's move on to your first significant win. Can you talk about your first regional championship win?",
+    ""
+  ],
+  "13b": [
+    "How did winning the regional championship validate your efforts and what was its impact on your confidence?",
+    ""
+  ],
+  "13c": [
+    "Post the regional win, how did you prepare for the new challenges ahead?",
+    ""
+  ],
+  "14a": [
+    "Describe your experience of the face-offs leading up to the fights. Were you nervous?",
+    ""
+  ],
+  "14b": [
+    "How did you gain mental toughness to handle the pressure during face-offs?",
+    ""
+  ],
+  "14c": [
+    "Were there any memorable experiences during these face-offs that you want to share?",
+    ""
+  ],
+  "15a": [
+    "Talk about the process of making weight for your fights. How tough were the weight cuts?",
+    ""
+  ],
+  "15b": [
+    "Can you share any specific methods or strategies you used for weight cuts?",
+    ""
+  ],
+  "15c": [
+    "Was there any impact of weight cuts on your performance during the fights?",
+    ""
+  ],
+  "16a": [
+    "Moving onto bigger fights, tell us about your first championship title win. How did you prepare for it?",
+    ""
+  ],
+  "16b": [
+    "Describe the feeling of winning the championship title for the first time.",
+    ""
+  ],
+  "16c": [
+    "How did your first championship win influence your career and personal life?",
+    ""
+  ],
+  "17a": [
+    "On the other side, let's talk about your first loss in a championship fight. Can you detail your feelings and the match?",
+    ""
+  ],
+  "17b": [
+    "How did you cope with that loss and what did you learn from it?",
+    ""
+  ],
+  "17c": [
+    "Can you share about any changes you made in your approach post the loss in the championship fight?",
+    ""
+  ],
+  "18a": [
+    "Looking back at your journey, how has the transition been from a rookie to a professional MMA fighter?",
+    ""
+  ],
+  "18b": [
+    "Talk about the support from your family and friends during your early professional days.",
+    ""
+  ],
+  "18c": [
+    "How has the experience of these early days helped shape your MMA career?",
+    ""
+  ],
+  "19a": [
+    "If you could go back, is there anything you would do differently in your early days?",
+    ""
+  ],
+  "19b": [
+    "Describe any significant milestone or moment from your early MMA journey that had a big impact on you.",
+    ""
+  ],
+  "19c": [
+    "Looking forward, how did you set your goals beyond these initial stages of professional MMA fighting?",
+    ""
+  ],
+  "20a": [
+    "Tell me about the first day of your professional training. What were the challenges you encountered?",
+    ""
+  ],
+  "20b": [
+    "How did your training schedule and intensity change when you started to train professionally?",
+    ""
+  ],
+  "20c": [
+    "Can you describe your dietary and workout regime during your initial days of professional training?",
+    ""
+  ],
+  "21a": [
+    "Let's talk about your first professional fight. Can you describe what it felt like stepping into the ring professionally for the first time?",
+    ""
+  ],
+  "21b": ["How did the fight go? What was the outcome?", ""],
+  "21c": [
+    "After your first professional fight, how did you analyze your performance and make improvements?",
+    ""
+  ],
+  "22a": [
+    "Describe the moment when you first caught attention from the UFC. What led to that moment?",
+    ""
+  ],
+  "22b": [
+    "What did you feel when you were being noticed by UFC? Was there any change in your training methods or intensity after that?",
+    ""
+  ],
+  "22c": [
+    "Getting noticed by UFC is a big deal. How did this achievement impact your motivation and mindset?",
+    ""
+  ],
+  "23a": [
+    "Describe your emotions when you entered UFC for the first time. What did this moment mean for your career?",
+    ""
+  ],
+  "23b": [
+    "In your early UFC days, how did you navigate the challenges and pressures?",
+    ""
+  ],
+  "23c": [
+    "What were some initial goals you set for yourself upon entering UFC?",
+    ""
+  ],
+  "24a": [
+    "Let's talk about your journey of climbing the UFC rankings. What was your strategy for it?",
+    ""
+  ],
+  "24b": [
+    "Were there any fights that were instrumental in your rise through the ranks? If so, can you share about them?",
+    ""
+  ],
+  "24c": [
+    "What were the challenges you faced while improving your rank in UFC?",
+    ""
+  ],
+  "25a": [
+    "Moving on to your first press conference tour, how did you prepare yourself for it? How was the experience?",
+    ""
+  ],
+  "25b": [
+    "How did you manage and respond to on-spot questioning from the media?",
+    ""
+  ],
+  "25c": [
+    "In retrospect, what strategy would you advise to handle the press effectively?",
+    ""
+  ],
+  "26a": [
+    "Tell us about the first time you had a face-off in UFC. What was that like?",
+    ""
+  ],
+  "26b": [
+    "Facing an opponent at a press conference can be intimidating. How did you manage your nerves during these face-offs?",
+    ""
+  ],
+  "26c": [
+    "Can you recall any memorable experiences or learnings from these early face-offs?",
+    ""
+  ],
+  "27a": [
+    "What was it like to meet a famous opponent for the first time in UFC?",
+    ""
+  ],
+  "27b": [
+    "How did you mentally prepare yourself to fight against well-known opponents?",
+    ""
+  ],
+  "27c": [
+    "Any memorable encounters or matches you'd like to share where you faced a renowned UFC fighter?",
+    ""
+  ],
+  "28a": [
+    "Let's talk about your first big brand deal. How did it come about and how did it impact your career?",
+    ""
+  ],
+  "28b": [
+    "How did you manage the new avenues and responsibilities that came with these brand deals?",
+    ""
+  ],
+  "28c": [
+    "Were there new lessons learned from your interactions with these brands?",
+    ""
+  ],
+  "29a": [
+    "Describe your experience in handling UFC interviews. What approach did you take?",
+    ""
+  ],
+  "29b": [
+    "Did you have any specific preparation for these interviews? If so, can you share about it?",
+    ""
+  ],
+  "29c": [
+    "How important has effective communication been in shaping your public image?",
+    ""
+  ],
+  "30a": [
+    "Discuss your first experience dealing with controversy. What was the situation and how did you navigate through it?",
+    ""
+  ],
+  "30b": [
+    "What was the impact of the controversy on your personal and professional life?",
+    ""
+  ],
+  "30c": [
+    "Reflecting on the experience, what advice would you give to new fighters about handling controversies?",
+    ""
+  ],
+  "31a": [
+    "After some years into UFC, how do you think you have evolved as a fighter?",
+    ""
+  ],
+  "31b": [
+    "Exploring the fighter's mindset, how did you deal with the pressure to continually perform and defend your ranking in UFC?",
+    ""
+  ],
+  "31c": [
+    "What kind of support network did you have during these demanding times?",
+    ""
+  ],
+  "32a": [
+    "Can you share about a particularly challenging fight that tested your limits?",
+    ""
+  ],
+  "32b": [
+    "Looking back at your journey, how did it feel ranking among the best in UFC?",
+    ""
+  ],
+  "32c": [
+    "Moving forward from this phase, what goals did you set for the next phase of your career?",
+    ""
+  ],
+  "33a": [
+    "Let's talk about the time when you sustained a significant injury. How did it affect your career and personal life?",
+    ""
+  ],
+  "33b": [
+    "Discuss your journey of recovery from that injury. How did you maintain your mental strength during this period?",
+    ""
+  ],
+  "33c": [
+    "Looking back, how has that experience changed you as a fighter and a person?",
+    ""
+  ],
+  "34a": [
+    "Discuss your thoughts and feelings about handling fame. How did you stay grounded?",
+    ""
+  ],
+  "34b": [
+    "How did you manage to keep your focus on fighting amid skyrocketing fame and pressure?",
+    ""
+  ],
+  "34c": [
+    "Were there new values or skillsets you learned about personally as you gained fame?",
+    ""
+  ],
+  "35a": [
+    "When you look back at the journey so far, what do you consider as your most significant accomplishments?",
+    ""
+  ],
+  "35b": [
+    "Discuss how your life changed as you established yourself in UFC.",
+    ""
+  ],
+  "35c": [
+    "Looking into the future, what plans or targets did you set for yourself at this stage of your career?",
+    ""
+  ],
+  "47a": [
+    "How did starting a family influence your life and career? What values from your MMA journey do you wish to pass onto your upcoming generation?",
+    ""
+  ],
+  "47b": [
+    "Discuss the role of your family in supporting and coping with your career's highs and lows.",
+    ""
+  ],
+  "47c": [
+    "How do you balance your time and responsibilities between your professional MMA career and your family life?",
+    ""
+  ],
+  "48a": [
+    "Elaborate on your relationships outside the ring. How did you handle these while maintaining a high-profile career?",
+    ""
+  ],
+  "48b": [
+    "If you had multiple relationships, how did you manage to keep them separate from your public professional persona?",
+    ""
+  ],
+  "48c": [
+    "Did your relationships impact your performance or mental state in the ring?",
+    ""
+  ],
+  "49a": [
+    "Tell us about your businesses. How did you venture into them? How much time do you divide between your MMA career and managing your businesses?",
+    ""
+  ],
+  "49b": [
+    "Have your MMA career and public image benefited your businesses in any way?",
+    ""
+  ],
+  "49c": [
+    "What challenges did you face while running these businesses, and how did you overcome them?",
+    ""
+  ],
+  "50a": [
+    "Share your thoughts about your favourite sponsorships. Why were they your favourite, and how did they benefit you?",
+    ""
+  ],
+  "50b": [
+    "How did these sponsorships contribute to your life outside the ring, and how did you balance them with your fighting career?",
+    ""
+  ],
+  "50c": [
+    "Share any memorable incidents or experiences related to your sponsorships.",
+    ""
+  ],
+  "51a": [
+    "Let's discuss your friendships with celebrities. How did these friendships come about, and how have they influenced your life and career?",
+    ""
+  ],
+  "51b": [
+    "Do you share any common interests or hobbies with your celebrity friends? Do they understand and support your MMA career path?",
+    ""
+  ],
+  "51c": [
+    "Did these high-profile friendships ever land you in controversies?",
+    ""
+  ],
+  "52a": [
+    "How have you dealt with controversies? Share the experiences of a particular controversy you'd like to discuss.",
+    ""
+  ],
+  "52b": [
+    "How did those controversies impact both your professional fighting career and your personal life?",
+    ""
+  ],
+  "52c": [
+    "In hindsight, what would you have done differently to manage these controversies, and what lessons did you learn from them?",
+    ""
+  ],
+  "53a": [
+    "Moving forward, how do you wish to grow outside the ring? Are there new ventures or projects you are interested in?",
+    ""
+  ],
+  "53b": [
+    "Discuss how you're planning to leverage the network and opportunities you've gained from your MMA career to support these ventures.",
+    ""
+  ],
+  "53c": [
+    "Talk about any new pursuits or interests that you've developed outside of fighting.",
+    ""
+  ],
+  "54a": [
+    "Have you thought about the end of your fighting career? How do you visualize it?",
+    ""
+  ],
+  "54b": [
+    "What are some goals you've set for yourself post-retirement from active MMA fighting?",
+    ""
+  ],
+  "54c": ["Share how you're preparing for this next phase in your life.", ""],
+  "55a": [
+    "Discuss the impact and influence of your MMA career on your life philosophy.",
+    ""
+  ],
+  "55b": [
+    "What qualities or disciplines from MMA do you find useful in your everyday life?",
+    ""
+  ],
+  "55c": [
+    "Reflecting on your journey, what advice would you give to those aspiring to make a career in MMA?",
+    ""
+  ],
+  "56a": [
+    "Share your thoughts about the role of a mentor. Do you have a mentor, and how have they guided your path?",
+    ""
+  ],
+  "56b": [
+    "Could you share a particular piece of advice or incident from your mentor that had a significant impact on your decisions or career?",
+    ""
+  ],
+  "56c": [
+    "As a successful MMA fighter, what are your views on mentoring the next generation of fighters?",
+    ""
+  ],
+  "57a": [
+    "Finally, how would you want to be remembered in the MMA world and by your fans?",
+    ""
+  ],
+  "57b": [
+    "Has there ever been a moment in your career that you believe defined you as a fighter?",
+    ""
+  ],
+  "57c": [
+    "Discuss any plans toward contributing to the MMA community beyond your career, like coaching, opening an MMA training center, etc.",
+    ""
+  ],
+  "58a": [
+    "How has your reign as champion changed your lifestyle and training routine?",
+    ""
+  ],
+  "58b": [
+    "Do you feel more pressure now as a champion? How do you handle it?",
+    ""
+  ],
+  "58c": [
+    "What are you doing to ensure that you uphold your position as a champion long term?",
+    ""
+  ],
+  "59a": [
+    "Discuss a tough, upcoming opponent you're scheduled to face. What expectations do you have?",
+    ""
+  ],
+  "59b": [
+    "How are you preparing specifically for this new opponent? In light of their strengths and weaknesses, what strategies have you formed?",
+    ""
+  ],
+  "59c": [
+    "Considering this opponent, do you anticipate this being one of your more challenging fights? Why?",
+    ""
+  ],
+  "60a": [
+    "Let's talk about brand deals. Which ones are you currently engaged with, and why did you choose them?",
+    ""
+  ],
+  "60b": [
+    "What, in your opinion, has been your best brand collaboration so far, and why?",
+    ""
+  ],
+  "60c": ["How do brand deals impact your professional and personal life?", ""],
+  "61a": [
+    "Club appearances and social life are a part of many famous athletes' lives. How do you handle this aspect of your new-found fame?",
+    ""
+  ],
+  "61b": [
+    "Discuss a memorable moment related to your social life in clubs or events. How do you balance such activities with your professional obligations?",
+    ""
+  ],
+  "61c": [
+    "How has fame from being a champion influenced your relationships and your time spent outside the gym?",
+    ""
+  ],
+  "62a": [
+    "Share your thoughts on the potential for becoming a 2 weight champion.  Is that a goal you're interested in pursuing?",
+    ""
+  ],
+  "62b": [
+    "What kind of changes, in terms of training and diet, would you have to make to compete in another weight class?",
+    ""
+  ],
+  "62c": [
+    "How would you manage the additional pressure and expectations of being a 2 weight champion?",
+    ""
+  ],
+  "63a": [
+    "How have your feelings evolved over time when you step into the ring for a fight?",
+    ""
+  ],
+  "63b": [
+    "What motivates you to keep returning to the high-stress environment of fighting, despite being a champion?",
+    ""
+  ],
+  "63c": [
+    "Do you still experience the same excitement in each fight, or is there a sense of tiredness? Elaborate.",
+    ""
+  ],
+  "64a": [
+    "Discuss your feelings towards interviews now. Are you more comfortable compared to when you started, or do you find them more draining?",
+    ""
+  ],
+  "64b": [
+    "Do you often have to put on a 'public persona' during these interactions, or would you say you remain true to your private self?",
+    ""
+  ],
+  "64c": [
+    "Has your relationship with the media changed after becoming a champion? Explain how.",
+    ""
+  ],
+  "65a": [
+    "Let us delve deeper into your private life. Can you share with us how you spend your time when you're not training?",
+    ""
+  ],
+  "65b": [
+    "Did you start a family, or do you have plans for the same? How would your approach to your career change as a family man?",
+    ""
+  ],
+  "65c": [
+    "How crucial is privacy to you? Have you had to take any measures to ensure your privacy due to the fame accompanied with being a champion?",
+    ""
+  ],
+  "66a": [
+    "Are there ever moments of self-doubt, or fear of falling off from your champion status? How do you overcome these feelings?",
+    ""
+  ],
+  "66b": ["How do you rejuvenate or reset after a tough fight or a loss?", ""],
+  "66c": [
+    "What part does mental health play in your training regime, and how do you ensure its upkeep?",
+    ""
+  ],
+  "67a": [
+    "What advice would you give to aspiring fighters who aim to achieve what you have in their careers?",
+    ""
+  ],
+  "67b": [
+    "Are there specific moments or memories in your journey that you believe can inspire or educate upcoming fighters?",
+    ""
+  ],
+  "67c": [
+    "Looking back, what was the one significant turning point in your journey to becoming a champion?",
+    ""
+  ],
+  "68a": [
+    "Outside of MMA and work commitments, what are your passions or hobbies?",
+    ""
+  ],
+  "68b": [
+    "As a successful and famous personality now, how do you give back to your community?",
+    ""
+  ],
+  "68c": [
+    "Looking at the future, where do you see yourself ten years down the line?",
+    ""
+  ],
+  "69a": [
+    "When and why did you decide to retire from MMA? Can you discuss the factors leading up to this decision?",
+    ""
+  ],
+  "69b": [
+    "Were there specific events or health considerations that influenced your decision to retire?",
+    ""
+  ],
+  "69c": [
+    "How did you announce your retirement, and what was the reaction from your friends, family, and the MMA community?",
+    ""
+  ],
+  "70a": [
+    "Now that you've retired, how have you adjusted your daily routine? What are your key activities and priorities?",
+    ""
+  ],
+  "70b": [
+    "Describe what your family life looks like now, after retirement.",
+    ""
+  ],
+  "70c": [
+    "What new roles have you taken on at home since your retirement?",
+    ""
+  ],
+  "71a": [
+    "Have you been using your MMA experiences in your life after retirement?",
+    ""
+  ],
+  "71b": ["Have you pursued any new interests or hobbies after retiring?", ""],
+  "71c": [
+    "Have you been involved in any business ventures since your retirement?",
+    ""
+  ],
+  "72a": [
+    "How have your relationships with friends, family, and the MMA community evolved post-retirement?",
+    ""
+  ],
+  "72b": [
+    "Are there specific lifestyle changes you've had to make since retiring from MMA?",
+    ""
+  ],
+  "72c": [
+    "Discuss the impact retirement has had on your physical and mental fitness.",
+    ""
+  ],
+  "73a": [
+    "Do you miss fighting? Have there been moments where you considered a comeback?",
+    ""
+  ],
+  "73b": ["What do you miss the least about being an active MMA fighter?", ""],
+  "73c": [
+    "Have you been able to maintain your diet and training routine post-retirement?",
+    ""
+  ],
+  "74a": [
+    "Have you considered taking on a coaching role, or are there any other roles within MMA you are interested in?",
+    ""
+  ],
+  "74b": [
+    "How do you plan to use your experience and knowledge of MMA post-retirement?",
+    ""
+  ],
+  "74c": [
+    "Discuss any involvement you have had in the MMA community since your retirement.",
+    ""
+  ],
+  "75a": [
+    "How has retirement impacted your identity and perception of self?",
+    ""
+  ],
+  "75b": [
+    "Did retiring affect your motivation or ambition in other areas of life?",
+    ""
+  ],
+  "75c": [
+    "What values or lessons from your MMA career do you hope to instill in your children or future generations?",
+    ""
+  ],
+  "76a": [
+    "What is one adversity you faced during retirement and how did you overcome it?",
+    ""
+  ],
+  "76b": [
+    "Share any unexpected joys or benefits you've experienced since retiring.",
+    ""
+  ],
+  "76c": [
+    "Discuss any goals or plans you have set for yourself for the next five years.",
+    ""
+  ],
+  "77a": [
+    "Looking back at your journey, what advice would you give to your younger self just starting out in MMA?",
+    ""
+  ],
+  "77b": [
+    "What advice would you give to new fighters who aspire to be in your shoes one day?",
+    ""
+  ],
+  "77c": [
+    "How important is it for retiring athletes to plan their post-fight career and life?",
+    ""
+  ],
+  "78a": [
+    "Looking into the future, where do you see MMA as a sport going in the next few years?",
+    ""
+  ],
+  "78b": [
+    "As someone who has been a part of MMA for years, what changes or improvements would you like to see in the sport?",
+    ""
+  ],
+  "78c": [
+    "Can you talk about any regrets you might have from your fighting career?",
+    ""
+  ],
+  "79a": [
+    "Discuss your most memorable fight and why it holds such significance for you.",
+    ""
+  ],
+  "79b": [
+    "Post-retirement, do you find more peace in solitude or in the company of others?",
+    ""
+  ],
+  "79c": [
+    "In terms of self-growth, what are some changes you've noticed in yourself since retirement?",
+    ""
+  ],
+  "80a": ["Besides MMA, what else are you passionate about now?", ""],
+  "80b": ["What keeps you content and fulfilled in life after MMA?", ""],
+  "80c": ["How would you like to be remembered in the world of MMA?", ""]
+}
