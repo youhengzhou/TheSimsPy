@@ -67,4 +67,4 @@ def play(game, output):
 
 
 # create("ThousandYearOldVampire.txt", "TYOV")
-play("MMA", "Play")
+play("ALifeLived", "Play")
