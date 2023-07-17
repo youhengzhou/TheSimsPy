@@ -1,4 +1,5 @@
 def textToDict(textFile):
+    # for parsing the original TYOV txt file only
     import re
 
     dictionary = {}
@@ -57,7 +58,7 @@ def play(game, output):
     jdb = jsoneng.JsonDB()
     jdb.create({}, output)
 
-    dictionary = randomRoll(jdb.retrieve(game))
+    curr = randomRoll(jdb.retrieve(game))
 
     q1 = "broad summary of your previous life"
     c1 = "a character you are familiar with"
@@ -75,11 +76,11 @@ def play(game, output):
         text = input("> ")
         jdb.patch({i: {"prompt": preGame[i], "answer": text}}, output)
 
-    for i, (k, v) in enumerate(dictionary.items()):
+    for i, (k, v) in enumerate(curr.items()):
         print(colored(f"prompt {k}", "light_blue"))
-        print(colored(v[0], "red"))
+        print(colored(v, "red"))
         text = input("> ")
-        jdb.patch({k: {"prompt": v[0], "answer": text}}, output)
+        jdb.patch({k: {"prompt": v, "answer": text}}, output)
 
 
 # create("ThousandYearOldVampire.txt", "TYOV")
