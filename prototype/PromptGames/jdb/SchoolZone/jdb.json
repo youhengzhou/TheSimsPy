@@ -1,546 +1,138 @@
 {
-  "1a": [
-    "You discover a hidden secret about a popular student. What is the secret and how do you use it to your advantage? Take a Skill based on manipulation.",
-    ""
-  ],
-  "1b": [
-    "You are caught cheating on a test. How do you try to cover it up and avoid getting caught? Take a Skill based on deception.",
-    ""
-  ],
-  "1c": [
-    "You find out that your best friend has been spreading rumors about you. How do you confront them and repair your friendship? Take a Skill based on conflict resolution.",
-    ""
-  ],
-  "2a": [
-    "You are chosen to be the lead in the school play. How do you handle the pressure and ensure a successful performance? Take a Skill based on performing arts.",
-    ""
-  ],
-  "2b": [
-    "You discover that a teacher is unfairly grading students based on personal biases. How do you expose the injustice and advocate for fair grading? Take a Skill based on activism.",
-    ""
-  ],
-  "2c": [
-    "You are assigned to work on a group project with classmates who don't contribute. How do you motivate them and ensure the project's success? Take a Skill based on leadership.",
-    ""
-  ],
-  "3a": [
-    "You witness bullying in the school hallway. How do you intervene and support the victim? Take a Skill based on empathy.",
-    ""
-  ],
-  "3b": [
-    "You are accused of a crime you didn't commit. How do you gather evidence to prove your innocence? Take a Skill based on investigation.",
-    ""
-  ],
-  "3c": [
-    "You are elected as the student council president. How do you prioritize and address the concerns of your fellow students? Take a Skill based on diplomacy.",
-    ""
-  ],
-  "4a": [
-    "You discover a hidden talent for a particular sport. How do you balance your newfound passion with your academic responsibilities? Take a Skill based on athletics.",
-    ""
-  ],
-  "4b": [
-    "You are invited to join a secret club at school. What initiation tasks do you have to complete to become a member? Take a Skill based on secrecy.",
-    ""
-  ],
-  "4c": [
-    "You are chosen to represent your school in a prestigious academic competition. How do you prepare and ensure a victory for your team? Take a Skill based on intellectual prowess.",
-    ""
-  ],
-  "5a": [
-    "You develop a crush on a popular student. How do you gather the courage to confess your feelings? Take a Skill based on romantic pursuits.",
-    ""
-  ],
-  "5b": [
-    "You are assigned to mentor a younger student who is struggling academically. How do you help them improve their grades and boost their confidence? Take a Skill based on mentorship.",
-    ""
-  ],
-  "5c": [
-    "You discover a hidden talent for art. How do you showcase your artwork and gain recognition in the school community? Take a Skill based on creativity.",
-    ""
-  ],
-  "6a": [
-    "You are caught in the middle of a rivalry between two sports teams. How do you mediate the conflict and promote sportsmanship? Take a Skill based on conflict resolution.",
-    ""
-  ],
-  "6b": [
-    "You are chosen to organize the school prom. How do you plan and execute a memorable event for your classmates? Take a Skill based on event planning.",
-    ""
-  ],
-  "6c": [
-    "You uncover a cheating scandal involving multiple students. How do you expose the cheaters and restore academic integrity? Take a Skill based on justice.",
-    ""
-  ],
-  "7a": [
-    "You are selected to give a speech at graduation. How do you craft a meaningful and inspiring message for the graduating class? Take a Skill based on public speaking.",
-    ""
-  ],
-  "7b": [
-    "You are assigned to write an article for the school newspaper. What controversial topic do you choose to write about and how do you handle the backlash? Take a Skill based on journalism.",
-    ""
-  ],
-  "7c": [
-    "You are elected as the captain of the debate team. How do you lead your team to victory in the upcoming tournament? Take a Skill based on persuasive argumentation.",
-    ""
-  ],
-  "8a": [
-    "You discover a hidden talent for music. How do you form a band and perform in the school talent show? Take a Skill based on musical abilities.",
-    ""
-  ],
-  "8b": [
-    "You are assigned to organize a charity event for the school. How do you rally your classmates and make a positive impact in the community? Take a Skill based on community service.",
-    ""
-  ],
-  "8c": [
-    "You are chosen to represent your school in a prestigious science fair. How do you conduct groundbreaking research and impress the judges? Take a Skill based on scientific inquiry.",
-    ""
-  ],
-  "9a": [
-    "You are caught in a love triangle between two close friends. How do you navigate the complicated emotions and maintain your friendships? Take a Skill based on emotional intelligence.",
-    ""
-  ],
-  "9b": [
-    "You are assigned to lead a group project with classmates who have conflicting ideas. How do you facilitate collaboration and ensure a successful outcome? Take a Skill based on teamwork.",
-    ""
-  ],
-  "9c": [
-    "You are elected as the editor-in-chief of the school yearbook. How do you capture the essence of the school year and create a memorable publication? Take a Skill based on visual storytelling.",
-    ""
-  ],
-  "10a": [
-    "You discover a hidden talent for dance. How do you audition for the school dance team and showcase your skills in the annual performance? Take a Skill based on dance.",
-    ""
-  ],
-  "10b": [
-    "You are assigned to organize a school-wide talent show. How do you scout talent and create a diverse and entertaining lineup? Take a Skill based on event coordination.",
-    ""
-  ],
-  "10c": [
-    "You uncover a cheating ring in the school exams. How do you gather evidence and expose the cheaters without compromising your own integrity? Take a Skill based on integrity.",
-    ""
-  ],
-  "11a": [
-    "You are chosen to lead a school club. How do you recruit new members and organize engaging activities? Take a Skill based on leadership.",
-    ""
-  ],
-  "11b": [
-    "You are assigned to mentor a new student who is struggling to adjust to the school. How do you help them navigate the challenges and feel welcome? Take a Skill based on empathy.",
-    ""
-  ],
-  "11c": [
-    "You discover a hidden talent for photography. How do you capture the essence of the school and showcase your work in an exhibition? Take a Skill based on photography.",
-    ""
-  ],
-  "12a": [
-    "You are caught in the middle of a conflict between two close friends. How do you mediate the situation and repair the damaged relationships? Take a Skill based on conflict resolution.",
-    ""
-  ],
-  "12b": [
-    "You are chosen to organize a fundraising event for a charitable cause. How do you rally your classmates and make a significant impact? Take a Skill based on event planning.",
-    ""
-  ],
-  "12c": [
-    "You are assigned to lead a group project with classmates who have different work styles. How do you ensure effective collaboration and achieve the desired outcome? Take a Skill based on teamwork.",
-    ""
-  ],
-  "13a": [
-    "You discover a hidden talent for writing. How do you start a school newspaper and publish impactful articles? Take a Skill based on journalism.",
-    ""
-  ],
-  "13b": [
-    "You are assigned to organize a school-wide sports tournament. How do you coordinate the event and ensure fair competition among the teams? Take a Skill based on event coordination.",
-    ""
-  ],
-  "13c": [
-    "You uncover a case of academic fraud involving a teacher. How do you gather evidence and expose the wrongdoing without jeopardizing your own academic standing? Take a Skill based on investigation.",
-    ""
-  ],
-  "14a": [
-    "You are chosen to represent your school in a regional art competition. How do you create a captivating artwork and make a name for yourself in the art community? Take a Skill based on artistic expression.",
-    ""
-  ],
-  "14b": [
-    "You are assigned to organize a school-wide environmental campaign. How do you raise awareness and encourage sustainable practices among your peers? Take a Skill based on environmental activism.",
-    ""
-  ],
-  "14c": [
-    "You are elected as the captain of the school basketball team. How do you motivate your teammates and lead them to victory in the championship? Take a Skill based on sportsmanship.",
-    ""
-  ],
-  "15a": [
-    "You develop a crush on a student from a rival school. How do you navigate the rivalry and pursue a relationship? Take a Skill based on romantic pursuits.",
-    ""
-  ],
-  "15b": [
-    "You are assigned to tutor a struggling student in a subject you excel in. How do you help them improve their grades and boost their confidence? Take a Skill based on teaching.",
-    ""
-  ],
-  "15c": [
-    "You discover a hidden talent for computer programming. How do you develop a groundbreaking software project and showcase it at a technology fair? Take a Skill based on coding.",
-    ""
-  ],
-  "16a": [
-    "You are caught in a conflict between two teachers with opposing teaching methods. How do you mediate the situation and promote collaboration among the faculty? Take a Skill based on diplomacy.",
-    ""
-  ],
-  "16b": [
-    "You are chosen to organize a school-wide charity drive. How do you inspire your classmates to donate and make a difference in the community? Take a Skill based on philanthropy.",
-    ""
-  ],
-  "16c": [
-    "You are assigned to lead a group of students on a field trip. How do you ensure their safety and create an educational and enjoyable experience? Take a Skill based on organization.",
-    ""
-  ],
-  "17a": [
-    "You discover a hidden talent for public speaking. How do you overcome stage fright and deliver a powerful speech at the school assembly? Take a Skill based on public speaking.",
-    ""
-  ],
-  "17b": [
-    "You are assigned to write a play for the drama club. How do you develop an engaging storyline and bring it to life on stage? Take a Skill based on playwriting.",
-    ""
-  ],
-  "17c": [
-    "You are elected as the president of the school's LGBTQ+ alliance. How do you advocate for inclusivity and support for LGBTQ+ students? Take a Skill based on activism.",
-    ""
-  ],
-  "18a": [
-    "You are chosen to lead a school-wide talent show. How do you audition performers and create a diverse and entertaining lineup? Take a Skill based on talent scouting.",
-    ""
-  ],
-  "18b": [
-    "You are assigned to organize a school trip to a foreign country. How do you plan the itinerary and ensure a smooth and educational experience for the students? Take a Skill based on travel planning.",
-    ""
-  ],
-  "18c": [
-    "You uncover a case of bullying in the school. How do you gather evidence and support the victims while promoting a safe and inclusive environment? Take a Skill based on advocacy.",
-    ""
-  ],
-  "19a": [
-    "You are caught in a love triangle between two classmates who are also close friends. How do you navigate the complex emotions and maintain your friendships? Take a Skill based on emotional intelligence.",
-    ""
-  ],
-  "19b": [
-    "You are assigned to lead a group project with classmates who have conflicting ideas. How do you facilitate collaboration and ensure a successful outcome? Take a Skill based on teamwork.",
-    ""
-  ],
-  "19c": [
-    "You are elected as the editor-in-chief of the school literary magazine. How do you curate and publish impactful works of literature from your fellow students? Take a Skill based on literary analysis.",
-    ""
-  ],
-  "20a": [
-    "You discover a hidden talent for gymnastics. How do you join the school gymnastics team and compete in a regional championship? Take a Skill based on gymnastics.",
-    ""
-  ],
-  "20b": [
-    "You are assigned to organize a school-wide science fair. How do you encourage students to participate and showcase their innovative projects? Take a Skill based on scientific inquiry.",
-    ""
-  ],
-  "20c": [
-    "You uncover a case of academic dishonesty involving a group of students. How do you confront them and ensure academic integrity in the school? Take a Skill based on integrity.",
-    ""
-  ],
-  "21a": [
-    "You are chosen to lead a school club. How do you organize engaging activities and foster a sense of community among club members? Take a Skill based on leadership.",
-    ""
-  ],
-  "21b": [
-    "You are assigned to mentor a struggling student in a subject you excel in. How do you help them improve their understanding and boost their confidence? Take a Skill based on tutoring.",
-    ""
-  ],
-  "21c": [
-    "You discover a hidden talent for fashion design. How do you create a fashion show and showcase your unique designs to the school community? Take a Skill based on fashion.",
-    ""
-  ],
-  "22a": [
-    "You are caught in a conflict between two close friends. How do you mediate the situation and help them reconcile their differences? Take a Skill based on conflict resolution.",
-    ""
-  ],
-  "22b": [
-    "You are chosen to organize a school-wide fundraising event. How do you come up with creative ideas to raise funds and support a worthy cause? Take a Skill based on event planning.",
-    ""
-  ],
-  "22c": [
-    "You discover a hidden talent for public speaking. How do you overcome stage fright and deliver a powerful speech at the school assembly? Take a Skill based on public speaking.",
-    ""
-  ],
-  "23a": [
-    "You are assigned to lead a group project with classmates from diverse backgrounds. How do you promote inclusivity and ensure effective collaboration? Take a Skill based on cultural competence.",
-    ""
-  ],
-  "23b": [
-    "You are chosen to organize a school-wide art exhibition. How do you curate a diverse range of artworks and create an immersive gallery experience? Take a Skill based on art curation.",
-    ""
-  ],
-  "23c": [
-    "You uncover a case of academic dishonesty involving a group of students. How do you address the situation and promote academic integrity in the school? Take a Skill based on integrity.",
-    ""
-  ],
-  "24a": [
-    "You develop a crush on a student from a rival school. How do you navigate the rivalry and pursue a relationship while maintaining school spirit? Take a Skill based on balancing priorities.",
-    ""
-  ],
-  "24b": [
-    "You are assigned to mentor a younger student who is struggling academically. How do you provide guidance and support to help them improve their grades? Take a Skill based on mentorship.",
-    ""
-  ],
-  "24c": [
-    "You discover a hidden talent for graphic design. How do you create visually stunning posters and digital artwork for school events? Take a Skill based on graphic design.",
-    ""
-  ],
-  "25a": [
-    "You are caught in a conflict between two teachers with different teaching styles. How do you mediate the situation and promote collaboration among the faculty? Take a Skill based on diplomacy.",
-    ""
-  ],
-  "25b": [
-    "You are chosen to organize a school-wide charity drive. How do you inspire your classmates to donate and make a positive impact in the community? Take a Skill based on philanthropy.",
-    ""
-  ],
-  "25c": [
-    "You are assigned to lead a group of students on a field trip. How do you ensure their safety and create an educational and enjoyable experience? Take a Skill based on organization.",
-    ""
-  ],
-  "26a": [
-    "You are chosen to represent your school in a regional debate competition. How do you prepare persuasive arguments and deliver compelling speeches to win the tournament? Take a Skill based on debate.",
-    ""
-  ],
-  "26b": [
-    "You are assigned to organize a school-wide talent show. How do you scout talent, coordinate auditions, and create an entertaining lineup for the event? Take a Skill based on event coordination.",
-    ""
-  ],
-  "27a": [
-    "You discover a hidden talent for creative writing. How do you start a school literary magazine and publish captivating stories and poems? Take a Skill based on writing.",
-    ""
-  ],
-  "27b": [
-    "You are assigned to organize a school-wide sports day. How do you plan and coordinate various athletic events to ensure a fun and competitive day for all students? Take a Skill based on event planning.",
-    ""
-  ],
-  "28a": [
-    "You are caught in a love triangle between two close friends. How do you navigate the complex emotions and make a decision that preserves your friendships? Take a Skill based on emotional intelligence.",
-    ""
-  ],
-  "28b": [
-    "You are assigned to lead a group project with classmates who have conflicting ideas. How do you facilitate collaboration and ensure a successful outcome? Take a Skill based on teamwork.",
-    ""
-  ],
-  "29a": [
-    "You are elected as the editor-in-chief of the school yearbook. How do you capture the essence of the school year and create a memorable publication? Take a Skill based on visual storytelling.",
-    ""
-  ],
-  "29b": [
-    "You are chosen to organize a school-wide art competition. How do you encourage students to showcase their artistic talents and create an engaging exhibition? Take a Skill based on art curation.",
-    ""
-  ],
-  "30a": [
-    "You discover a hidden talent for dance. How do you audition for the school dance team and showcase your skills in the annual performance? Take a Skill based on dance.",
-    ""
-  ],
-  "30b": [
-    "You are assigned to organize a school-wide talent show. How do you scout talent and create a diverse and entertaining lineup? Take a Skill based on event coordination.",
-    ""
-  ],
-  "31a": [
-    "You uncover a cheating ring in the school exams. How do you gather evidence and expose the cheaters without compromising your own integrity? Take a Skill based on integrity.",
-    ""
-  ],
-  "31b": [
-    "You are chosen to lead a school club. How do you recruit new members and organize engaging activities? Take a Skill based on leadership.",
-    ""
-  ],
-  "32a": [
-    "You are assigned to mentor a new student who is struggling to adjust to the school. How do you help them navigate the challenges and feel welcome? Take a Skill based on empathy.",
-    ""
-  ],
-  "32b": [
-    "You discover a hidden talent for photography. How do you capture the essence of the school and showcase your work in an exhibition? Take a Skill based on photography.",
-    ""
-  ],
-  "33a": [
-    "You are caught in the middle of a conflict between two close friends. How do you mediate the situation and repair the damaged relationships? Take a Skill based on conflict resolution.",
-    ""
-  ],
-  "33b": [
-    "You are chosen to organize a fundraising event for a charitable cause. How do you rally your classmates and make a significant impact in the community? Take a Skill based on event planning.",
-    ""
-  ],
-  "34a": [
-    "You are assigned to lead a group project with classmates who have different work styles. How do you manage the team dynamics and ensure a successful outcome? Take a Skill based on project management.",
-    ""
-  ],
-  "34b": [
-    "You are chosen to organize a school-wide science fair. How do you encourage students to participate and showcase their innovative projects? Take a Skill based on scientific inquiry.",
-    ""
-  ],
-  "35a": [
-    "You discover a hidden talent for singing. How do you audition for the school choir and perform in a prestigious music competition? Take a Skill based on vocal performance.",
-    ""
-  ],
-  "35b": [
-    "You are assigned to organize a school-wide environmental awareness campaign. How do you raise awareness about sustainability and inspire your peers to take action? Take a Skill based on environmental advocacy.",
-    ""
-  ],
-  "36a": [
-    "You are caught in a conflict between two teachers with different teaching styles. How do you mediate the situation and promote collaboration among the faculty? Take a Skill based on diplomacy.",
-    ""
-  ],
-  "36b": [
-    "You are chosen to organize a school-wide charity drive. How do you inspire your classmates to donate and make a positive impact in the community? Take a Skill based on philanthropy.",
-    ""
-  ],
-  "37a": [
-    "You are assigned to lead a group of students on a field trip. How do you ensure their safety and create an educational and enjoyable experience? Take a Skill based on organization.",
-    ""
-  ],
-  "37b": [
-    "You discover a hidden talent for painting. How do you create a mural that represents the diversity and unity of your school community? Take a Skill based on mural art.",
-    ""
-  ],
-  "38a": [
-    "You are chosen to represent your school in a regional sports competition. How do you train, compete, and strive for victory while maintaining good sportsmanship? Take a Skill based on sportsmanship.",
-    ""
-  ],
-  "38b": [
-    "You are assigned to organize a school-wide coding competition. How do you create coding challenges and engage students in the world of programming? Take a Skill based on coding.",
-    ""
-  ],
-  "39a": [
-    "You discover a hidden talent for acting. How do you audition for the school play and bring your character to life on stage? Take a Skill based on acting.",
-    ""
-  ],
-  "39b": [
-    "You are chosen to organize a school-wide leadership conference. How do you invite inspiring speakers and plan engaging workshops for student leaders? Take a Skill based on event management.",
-    ""
-  ],
-  "40a": [
-    "You are caught in a conflict between two student clubs with opposing viewpoints. How do you facilitate dialogue and promote understanding between the groups? Take a Skill based on conflict resolution.",
-    ""
-  ],
-  "40b": [
-    "You are assigned to mentor a younger student who is struggling academically. How do you provide guidance and support to help them improve their grades? Take a Skill based on mentorship.",
-    ""
-  ],
-  "40c": [
-    "You discover a hidden talent for event photography. How do you capture memorable moments at school events and showcase your work to the school community? Take a Skill based on event photography.",
-    ""
-  ],
-  "41a": [
-    "You are chosen to organize a school-wide talent competition. How do you create a fair judging process and provide a platform for students to showcase their talents? Take a Skill based on event coordination.",
-    ""
-  ],
-  "41b": [
-    "You discover a hidden talent for computer programming. How do you develop a mobile app that addresses a specific need within your school community? Take a Skill based on app development.",
-    ""
-  ],
-  "41c": [
-    "You are assigned to lead a group project with classmates who have different communication styles. How do you ensure effective communication and collaboration within the team? Take a Skill based on communication.",
-    ""
-  ],
-  "42a": [
-    "You are caught in a conflict between two student organizations competing for limited resources. How do you mediate the situation and find a fair solution that benefits both groups? Take a Skill based on negotiation.",
-    ""
-  ],
-  "42b": [
-    "You are chosen to organize a school-wide cultural festival. How do you celebrate the diversity of your school community and create an inclusive and engaging event? Take a Skill based on cultural awareness.",
-    ""
-  ],
-  "42c": [
-    "You uncover a case of bullying in your school. How do you address the issue and create a safe and supportive environment for all students? Take a Skill based on conflict resolution.",
-    ""
-  ],
-  "43a": [
-    "You are assigned to mentor a group of younger students in a subject you excel in. How do you create engaging lesson plans and help them develop a strong foundation in the subject? Take a Skill based on teaching.",
-    ""
-  ],
-  "43b": [
-    "You discover a hidden talent for entrepreneurship. How do you start a small business within your school and manage its operations? Take a Skill based on entrepreneurship.",
-    ""
-  ],
-  "43c": [
-    "You are chosen to organize a school-wide career fair. How do you invite professionals from various industries and provide valuable insights to your fellow students? Take a Skill based on event planning.",
-    ""
-  ],
-  "44a": [
-    "You are caught in a conflict between two classmates who are running for student council president. How do you mediate the situation and ensure a fair and democratic election process? Take a Skill based on leadership.",
-    ""
-  ],
-  "44b": [
-    "You are assigned to organize a school-wide book drive. How do you collect and distribute books to promote literacy and a love for reading among your peers? Take a Skill based on community service.",
-    ""
-  ],
-  "44c": [
-    "You uncover a case of academic pressure and stress among your classmates. How do you raise awareness about mental health and implement strategies to support your peers? Take a Skill based on mental health advocacy.",
-    ""
-  ],
-  "45a": [
-    "You are chosen to lead a school club focused on environmental sustainability. How do you organize initiatives and educate your peers about the importance of protecting the environment? Take a Skill based on environmental activism.",
-    ""
-  ],
-  "45b": [
-    "You discover a hidden talent for public speaking. How do you organize a school-wide speech competition and inspire your fellow students to improve their communication skills? Take a Skill based on public speaking.",
-    ""
-  ],
-  "45c": [
-    "You are assigned to mentor a student with learning difficulties. How do you provide personalized support and help them overcome challenges in their academic journey? Take a Skill based on special education.",
-    ""
-  ],
-  "46a": [
-    "You are caught in a conflict between two sports teams with a history of rivalry. How do you promote sportsmanship and foster a sense of unity and fair play among the athletes? Take a Skill based on sportsmanship.",
-    ""
-  ],
-  "46b": [
-    "You are chosen to organize a school-wide music concert. How do you coordinate performances, manage logistics, and create an unforgettable musical experience for the audience? Take a Skill based on event management.",
-    ""
-  ],
-  "46c": [
-    "You uncover a case of cyberbullying within your school community. How do you raise awareness about online safety and promote a positive digital environment? Take a Skill based on digital citizenship.",
-    ""
-  ],
-  "47a": [
-    "You are assigned to lead a group project with classmates who have different work styles. How do you manage the team dynamics and ensure a successful outcome? Take a Skill based on project management.",
-    ""
-  ],
-  "47b": [
-    "You are chosen to organize a school-wide science fair. How do you encourage students to participate and showcase their innovative projects? Take a Skill based on scientific inquiry.",
-    ""
-  ],
-  "47c": [
-    "You discover a hidden talent for singing. How do you audition for the school choir and perform in a prestigious music competition? Take a Skill based on vocal performance.",
-    ""
-  ],
-  "48a": [
-    "You are caught in a conflict between two student clubs with opposing viewpoints. How do you facilitate dialogue and promote understanding between the groups? Take a Skill based on conflict resolution.",
-    ""
-  ],
-  "48b": [
-    "You are assigned to mentor a younger student who is struggling academically. How do you provide guidance and support to help them improve their grades? Take a Skill based on mentorship.",
-    ""
-  ],
-  "48c": [
-    "You discover a hidden talent for event photography. How do you capture memorable moments at school events and showcase your work to the school community? Take a Skill based on event photography.",
-    ""
-  ],
-  "49a": [
-    "You are chosen to organize a school-wide talent competition. How do you create a fair judging process and provide a platform for students to showcase their talents? Take a Skill based on event coordination.",
-    ""
-  ],
-  "49b": [
-    "You discover a hidden talent for computer programming. How do you develop a mobile app that addresses a specific need within your school community? Take a Skill based on app development.",
-    ""
-  ],
-  "49c": [
-    "You are assigned to lead a group project with classmates who have different communication styles. How do you ensure effective communication and collaboration within the team? Take a Skill based on communication.",
-    ""
-  ],
-  "50a": [
-    "You are caught in a conflict between two student organizations competing for limited resources. How do you mediate the situation and find a fair solution that benefits both groups? Take a Skill based on negotiation.",
-    ""
-  ],
-  "50b": [
-    "You are chosen to organize a school-wide cultural festival. How do you celebrate the diversity of your school community and create an inclusive and engaging event? Take a Skill based on cultural awareness.",
-    ""
-  ],
-  "50c": [
-    "You uncover a case of bullying in your school. How do you address the issue and create a safe and supportive environment for all students? Take a Skill based on conflict resolution.",
-    ""
-  ]
+  "1a": "You discover a hidden secret about a popular student. What is the secret and how do you use it to your advantage? Take a Skill based on manipulation.",
+  "1b": "You are caught cheating on a test. How do you try to cover it up and avoid getting caught? Take a Skill based on deception.",
+  "1c": "You find out that your best friend has been spreading rumors about you. How do you confront them and repair your friendship? Take a Skill based on conflict resolution.",
+  "2a": "You are chosen to be the lead in the school play. How do you handle the pressure and ensure a successful performance? Take a Skill based on performing arts.",
+  "2b": "You discover that a teacher is unfairly grading students based on personal biases. How do you expose the injustice and advocate for fair grading? Take a Skill based on activism.",
+  "2c": "You are assigned to work on a group project with classmates who don't contribute. How do you motivate them and ensure the project's success? Take a Skill based on leadership.",
+  "3a": "You witness bullying in the school hallway. How do you intervene and support the victim? Take a Skill based on empathy.",
+  "3b": "You are accused of a crime you didn't commit. How do you gather evidence to prove your innocence? Take a Skill based on investigation.",
+  "3c": "You are elected as the student council president. How do you prioritize and address the concerns of your fellow students? Take a Skill based on diplomacy.",
+  "4a": "You discover a hidden talent for a particular sport. How do you balance your newfound passion with your academic responsibilities? Take a Skill based on athletics.",
+  "4b": "You are invited to join a secret club at school. What initiation tasks do you have to complete to become a member? Take a Skill based on secrecy.",
+  "4c": "You are chosen to represent your school in a prestigious academic competition. How do you prepare and ensure a victory for your team? Take a Skill based on intellectual prowess.",
+  "5a": "You develop a crush on a popular student. How do you gather the courage to confess your feelings? Take a Skill based on romantic pursuits.",
+  "5b": "You are assigned to mentor a younger student who is struggling academically. How do you help them improve their grades and boost their confidence? Take a Skill based on mentorship.",
+  "5c": "You discover a hidden talent for art. How do you showcase your artwork and gain recognition in the school community? Take a Skill based on creativity.",
+  "6a": "You are caught in the middle of a rivalry between two sports teams. How do you mediate the conflict and promote sportsmanship? Take a Skill based on conflict resolution.",
+  "6b": "You are chosen to organize the school prom. How do you plan and execute a memorable event for your classmates? Take a Skill based on event planning.",
+  "6c": "You uncover a cheating scandal involving multiple students. How do you expose the cheaters and restore academic integrity? Take a Skill based on justice.",
+  "7a": "You are selected to give a speech at graduation. How do you craft a meaningful and inspiring message for the graduating class? Take a Skill based on public speaking.",
+  "7b": "You are assigned to write an article for the school newspaper. What controversial topic do you choose to write about and how do you handle the backlash? Take a Skill based on journalism.",
+  "7c": "You are elected as the captain of the debate team. How do you lead your team to victory in the upcoming tournament? Take a Skill based on persuasive argumentation.",
+  "8a": "You discover a hidden talent for music. How do you form a band and perform in the school talent show? Take a Skill based on musical abilities.",
+  "8b": "You are assigned to organize a charity event for the school. How do you rally your classmates and make a positive impact in the community? Take a Skill based on community service.",
+  "8c": "You are chosen to represent your school in a prestigious science fair. How do you conduct groundbreaking research and impress the judges? Take a Skill based on scientific inquiry.",
+  "9a": "You are caught in a love triangle between two close friends. How do you navigate the complicated emotions and maintain your friendships? Take a Skill based on emotional intelligence.",
+  "9b": "You are assigned to lead a group project with classmates who have conflicting ideas. How do you facilitate collaboration and ensure a successful outcome? Take a Skill based on teamwork.",
+  "9c": "You are elected as the editor-in-chief of the school yearbook. How do you capture the essence of the school year and create a memorable publication? Take a Skill based on visual storytelling.",
+  "10a": "You discover a hidden talent for dance. How do you audition for the school dance team and showcase your skills in the annual performance? Take a Skill based on dance.",
+  "10b": "You are assigned to organize a school-wide talent show. How do you scout talent and create a diverse and entertaining lineup? Take a Skill based on event coordination.",
+  "10c": "You uncover a cheating ring in the school exams. How do you gather evidence and expose the cheaters without compromising your own integrity? Take a Skill based on integrity.",
+  "11a": "You are chosen to lead a school club. How do you recruit new members and organize engaging activities? Take a Skill based on leadership.",
+  "11b": "You are assigned to mentor a new student who is struggling to adjust to the school. How do you help them navigate the challenges and feel welcome? Take a Skill based on empathy.",
+  "11c": "You discover a hidden talent for photography. How do you capture the essence of the school and showcase your work in an exhibition? Take a Skill based on photography.",
+  "12a": "You are caught in the middle of a conflict between two close friends. How do you mediate the situation and repair the damaged relationships? Take a Skill based on conflict resolution.",
+  "12b": "You are chosen to organize a fundraising event for a charitable cause. How do you rally your classmates and make a significant impact? Take a Skill based on event planning.",
+  "12c": "You are assigned to lead a group project with classmates who have different work styles. How do you ensure effective collaboration and achieve the desired outcome? Take a Skill based on teamwork.",
+  "13a": "You discover a hidden talent for writing. How do you start a school newspaper and publish impactful articles? Take a Skill based on journalism.",
+  "13b": "You are assigned to organize a school-wide sports tournament. How do you coordinate the event and ensure fair competition among the teams? Take a Skill based on event coordination.",
+  "13c": "You uncover a case of academic fraud involving a teacher. How do you gather evidence and expose the wrongdoing without jeopardizing your own academic standing? Take a Skill based on investigation.",
+  "14a": "You are chosen to represent your school in a regional art competition. How do you create a captivating artwork and make a name for yourself in the art community? Take a Skill based on artistic expression.",
+  "14b": "You are assigned to organize a school-wide environmental campaign. How do you raise awareness and encourage sustainable practices among your peers? Take a Skill based on environmental activism.",
+  "14c": "You are elected as the captain of the school basketball team. How do you motivate your teammates and lead them to victory in the championship? Take a Skill based on sportsmanship.",
+  "15a": "You develop a crush on a student from a rival school. How do you navigate the rivalry and pursue a relationship? Take a Skill based on romantic pursuits.",
+  "15b": "You are assigned to tutor a struggling student in a subject you excel in. How do you help them improve their grades and boost their confidence? Take a Skill based on teaching.",
+  "15c": "You discover a hidden talent for computer programming. How do you develop a groundbreaking software project and showcase it at a technology fair? Take a Skill based on coding.",
+  "16a": "You are caught in a conflict between two teachers with opposing teaching methods. How do you mediate the situation and promote collaboration among the faculty? Take a Skill based on diplomacy.",
+  "16b": "You are chosen to organize a school-wide charity drive. How do you inspire your classmates to donate and make a difference in the community? Take a Skill based on philanthropy.",
+  "16c": "You are assigned to lead a group of students on a field trip. How do you ensure their safety and create an educational and enjoyable experience? Take a Skill based on organization.",
+  "17a": "You discover a hidden talent for public speaking. How do you overcome stage fright and deliver a powerful speech at the school assembly? Take a Skill based on public speaking.",
+  "17b": "You are assigned to write a play for the drama club. How do you develop an engaging storyline and bring it to life on stage? Take a Skill based on playwriting.",
+  "17c": "You are elected as the president of the school's LGBTQ+ alliance. How do you advocate for inclusivity and support for LGBTQ+ students? Take a Skill based on activism.",
+  "18a": "You are chosen to lead a school-wide talent show. How do you audition performers and create a diverse and entertaining lineup? Take a Skill based on talent scouting.",
+  "18b": "You are assigned to organize a school trip to a foreign country. How do you plan the itinerary and ensure a smooth and educational experience for the students? Take a Skill based on travel planning.",
+  "18c": "You uncover a case of bullying in the school. How do you gather evidence and support the victims while promoting a safe and inclusive environment? Take a Skill based on advocacy.",
+  "19a": "You are caught in a love triangle between two classmates who are also close friends. How do you navigate the complex emotions and maintain your friendships? Take a Skill based on emotional intelligence.",
+  "19b": "You are assigned to lead a group project with classmates who have conflicting ideas. How do you facilitate collaboration and ensure a successful outcome? Take a Skill based on teamwork.",
+  "19c": "You are elected as the editor-in-chief of the school literary magazine. How do you curate and publish impactful works of literature from your fellow students? Take a Skill based on literary analysis.",
+  "20a": "You discover a hidden talent for gymnastics. How do you join the school gymnastics team and compete in a regional championship? Take a Skill based on gymnastics.",
+  "20b": "You are assigned to organize a school-wide science fair. How do you encourage students to participate and showcase their innovative projects? Take a Skill based on scientific inquiry.",
+  "20c": "You uncover a case of academic dishonesty involving a group of students. How do you confront them and ensure academic integrity in the school? Take a Skill based on integrity.",
+  "21a": "You are chosen to lead a school club. How do you organize engaging activities and foster a sense of community among club members? Take a Skill based on leadership.",
+  "21b": "You are assigned to mentor a struggling student in a subject you excel in. How do you help them improve their understanding and boost their confidence? Take a Skill based on tutoring.",
+  "21c": "You discover a hidden talent for fashion design. How do you create a fashion show and showcase your unique designs to the school community? Take a Skill based on fashion.",
+  "22a": "You are caught in a conflict between two close friends. How do you mediate the situation and help them reconcile their differences? Take a Skill based on conflict resolution.",
+  "22b": "You are chosen to organize a school-wide fundraising event. How do you come up with creative ideas to raise funds and support a worthy cause? Take a Skill based on event planning.",
+  "22c": "You discover a hidden talent for public speaking. How do you overcome stage fright and deliver a powerful speech at the school assembly? Take a Skill based on public speaking.",
+  "23a": "You are assigned to lead a group project with classmates from diverse backgrounds. How do you promote inclusivity and ensure effective collaboration? Take a Skill based on cultural competence.",
+  "23b": "You are chosen to organize a school-wide art exhibition. How do you curate a diverse range of artworks and create an immersive gallery experience? Take a Skill based on art curation.",
+  "23c": "You uncover a case of academic dishonesty involving a group of students. How do you address the situation and promote academic integrity in the school? Take a Skill based on integrity.",
+  "24a": "You develop a crush on a student from a rival school. How do you navigate the rivalry and pursue a relationship while maintaining school spirit? Take a Skill based on balancing priorities.",
+  "24b": "You are assigned to mentor a younger student who is struggling academically. How do you provide guidance and support to help them improve their grades? Take a Skill based on mentorship.",
+  "24c": "You discover a hidden talent for graphic design. How do you create visually stunning posters and digital artwork for school events? Take a Skill based on graphic design.",
+  "25a": "You are caught in a conflict between two teachers with different teaching styles. How do you mediate the situation and promote collaboration among the faculty? Take a Skill based on diplomacy.",
+  "25b": "You are chosen to organize a school-wide charity drive. How do you inspire your classmates to donate and make a positive impact in the community? Take a Skill based on philanthropy.",
+  "25c": "You are assigned to lead a group of students on a field trip. How do you ensure their safety and create an educational and enjoyable experience? Take a Skill based on organization.",
+  "26a": "You are chosen to represent your school in a regional debate competition. How do you prepare persuasive arguments and deliver compelling speeches to win the tournament? Take a Skill based on debate.",
+  "26b": "You are assigned to organize a school-wide talent show. How do you scout talent, coordinate auditions, and create an entertaining lineup for the event? Take a Skill based on event coordination.",
+  "27a": "You discover a hidden talent for creative writing. How do you start a school literary magazine and publish captivating stories and poems? Take a Skill based on writing.",
+  "27b": "You are assigned to organize a school-wide sports day. How do you plan and coordinate various athletic events to ensure a fun and competitive day for all students? Take a Skill based on event planning.",
+  "28a": "You are caught in a love triangle between two close friends. How do you navigate the complex emotions and make a decision that preserves your friendships? Take a Skill based on emotional intelligence.",
+  "28b": "You are assigned to lead a group project with classmates who have conflicting ideas. How do you facilitate collaboration and ensure a successful outcome? Take a Skill based on teamwork.",
+  "29a": "You are elected as the editor-in-chief of the school yearbook. How do you capture the essence of the school year and create a memorable publication? Take a Skill based on visual storytelling.",
+  "29b": "You are chosen to organize a school-wide art competition. How do you encourage students to showcase their artistic talents and create an engaging exhibition? Take a Skill based on art curation.",
+  "30a": "You discover a hidden talent for dance. How do you audition for the school dance team and showcase your skills in the annual performance? Take a Skill based on dance.",
+  "30b": "You are assigned to organize a school-wide talent show. How do you scout talent and create a diverse and entertaining lineup? Take a Skill based on event coordination.",
+  "31a": "You uncover a cheating ring in the school exams. How do you gather evidence and expose the cheaters without compromising your own integrity? Take a Skill based on integrity.",
+  "31b": "You are chosen to lead a school club. How do you recruit new members and organize engaging activities? Take a Skill based on leadership.",
+  "32a": "You are assigned to mentor a new student who is struggling to adjust to the school. How do you help them navigate the challenges and feel welcome? Take a Skill based on empathy.",
+  "32b": "You discover a hidden talent for photography. How do you capture the essence of the school and showcase your work in an exhibition? Take a Skill based on photography.",
+  "33a": "You are caught in the middle of a conflict between two close friends. How do you mediate the situation and repair the damaged relationships? Take a Skill based on conflict resolution.",
+  "33b": "You are chosen to organize a fundraising event for a charitable cause. How do you rally your classmates and make a significant impact in the community? Take a Skill based on event planning.",
+  "34a": "You are assigned to lead a group project with classmates who have different work styles. How do you manage the team dynamics and ensure a successful outcome? Take a Skill based on project management.",
+  "34b": "You are chosen to organize a school-wide science fair. How do you encourage students to participate and showcase their innovative projects? Take a Skill based on scientific inquiry.",
+  "35a": "You discover a hidden talent for singing. How do you audition for the school choir and perform in a prestigious music competition? Take a Skill based on vocal performance.",
+  "35b": "You are assigned to organize a school-wide environmental awareness campaign. How do you raise awareness about sustainability and inspire your peers to take action? Take a Skill based on environmental advocacy.",
+  "36a": "You are caught in a conflict between two teachers with different teaching styles. How do you mediate the situation and promote collaboration among the faculty? Take a Skill based on diplomacy.",
+  "36b": "You are chosen to organize a school-wide charity drive. How do you inspire your classmates to donate and make a positive impact in the community? Take a Skill based on philanthropy.",
+  "37a": "You are assigned to lead a group of students on a field trip. How do you ensure their safety and create an educational and enjoyable experience? Take a Skill based on organization.",
+  "37b": "You discover a hidden talent for painting. How do you create a mural that represents the diversity and unity of your school community? Take a Skill based on mural art.",
+  "38a": "You are chosen to represent your school in a regional sports competition. How do you train, compete, and strive for victory while maintaining good sportsmanship? Take a Skill based on sportsmanship.",
+  "38b": "You are assigned to organize a school-wide coding competition. How do you create coding challenges and engage students in the world of programming? Take a Skill based on coding.",
+  "39a": "You discover a hidden talent for acting. How do you audition for the school play and bring your character to life on stage? Take a Skill based on acting.",
+  "39b": "You are chosen to organize a school-wide leadership conference. How do you invite inspiring speakers and plan engaging workshops for student leaders? Take a Skill based on event management.",
+  "40a": "You are caught in a conflict between two student clubs with opposing viewpoints. How do you facilitate dialogue and promote understanding between the groups? Take a Skill based on conflict resolution.",
+  "40b": "You are assigned to mentor a younger student who is struggling academically. How do you provide guidance and support to help them improve their grades? Take a Skill based on mentorship.",
+  "40c": "You discover a hidden talent for event photography. How do you capture memorable moments at school events and showcase your work to the school community? Take a Skill based on event photography.",
+  "41a": "You are chosen to organize a school-wide talent competition. How do you create a fair judging process and provide a platform for students to showcase their talents? Take a Skill based on event coordination.",
+  "41b": "You discover a hidden talent for computer programming. How do you develop a mobile app that addresses a specific need within your school community? Take a Skill based on app development.",
+  "41c": "You are assigned to lead a group project with classmates who have different communication styles. How do you ensure effective communication and collaboration within the team? Take a Skill based on communication.",
+  "42a": "You are caught in a conflict between two student organizations competing for limited resources. How do you mediate the situation and find a fair solution that benefits both groups? Take a Skill based on negotiation.",
+  "42b": "You are chosen to organize a school-wide cultural festival. How do you celebrate the diversity of your school community and create an inclusive and engaging event? Take a Skill based on cultural awareness.",
+  "42c": "You uncover a case of bullying in your school. How do you address the issue and create a safe and supportive environment for all students? Take a Skill based on conflict resolution.",
+  "43a": "You are assigned to mentor a group of younger students in a subject you excel in. How do you create engaging lesson plans and help them develop a strong foundation in the subject? Take a Skill based on teaching.",
+  "43b": "You discover a hidden talent for entrepreneurship. How do you start a small business within your school and manage its operations? Take a Skill based on entrepreneurship.",
+  "43c": "You are chosen to organize a school-wide career fair. How do you invite professionals from various industries and provide valuable insights to your fellow students? Take a Skill based on event planning.",
+  "44a": "You are caught in a conflict between two classmates who are running for student council president. How do you mediate the situation and ensure a fair and democratic election process? Take a Skill based on leadership.",
+  "44b": "You are assigned to organize a school-wide book drive. How do you collect and distribute books to promote literacy and a love for reading among your peers? Take a Skill based on community service.",
+  "44c": "You uncover a case of academic pressure and stress among your classmates. How do you raise awareness about mental health and implement strategies to support your peers? Take a Skill based on mental health advocacy.",
+  "45a": "You are chosen to lead a school club focused on environmental sustainability. How do you organize initiatives and educate your peers about the importance of protecting the environment? Take a Skill based on environmental activism.",
+  "45b": "You discover a hidden talent for public speaking. How do you organize a school-wide speech competition and inspire your fellow students to improve their communication skills? Take a Skill based on public speaking.",
+  "45c": "You are assigned to mentor a student with learning difficulties. How do you provide personalized support and help them overcome challenges in their academic journey? Take a Skill based on special education.",
+  "46a": "You are caught in a conflict between two sports teams with a history of rivalry. How do you promote sportsmanship and foster a sense of unity and fair play among the athletes? Take a Skill based on sportsmanship.",
+  "46b": "You are chosen to organize a school-wide music concert. How do you coordinate performances, manage logistics, and create an unforgettable musical experience for the audience? Take a Skill based on event management.",
+  "46c": "You uncover a case of cyberbullying within your school community. How do you raise awareness about online safety and promote a positive digital environment? Take a Skill based on digital citizenship.",
+  "47a": "You are assigned to lead a group project with classmates who have different work styles. How do you manage the team dynamics and ensure a successful outcome? Take a Skill based on project management.",
+  "47b": "You are chosen to organize a school-wide science fair. How do you encourage students to participate and showcase their innovative projects? Take a Skill based on scientific inquiry.",
+  "47c": "You discover a hidden talent for singing. How do you audition for the school choir and perform in a prestigious music competition? Take a Skill based on vocal performance.",
+  "48a": "You are caught in a conflict between two student clubs with opposing viewpoints. How do you facilitate dialogue and promote understanding between the groups? Take a Skill based on conflict resolution.",
+  "48b": "You are assigned to mentor a younger student who is struggling academically. How do you provide guidance and support to help them improve their grades? Take a Skill based on mentorship.",
+  "48c": "You discover a hidden talent for event photography. How do you capture memorable moments at school events and showcase your work to the school community? Take a Skill based on event photography.",
+  "49a": "You are chosen to organize a school-wide talent competition. How do you create a fair judging process and provide a platform for students to showcase their talents? Take a Skill based on event coordination.",
+  "49b": "You discover a hidden talent for computer programming. How do you develop a mobile app that addresses a specific need within your school community? Take a Skill based on app development.",
+  "49c": "You are assigned to lead a group project with classmates who have different communication styles. How do you ensure effective communication and collaboration within the team? Take a Skill based on communication.",
+  "50a": "You are caught in a conflict between two student organizations competing for limited resources. How do you mediate the situation and find a fair solution that benefits both groups? Take a Skill based on negotiation.",
+  "50b": "You are chosen to organize a school-wide cultural festival. How do you celebrate the diversity of your school community and create an inclusive and engaging event? Take a Skill based on cultural awareness.",
+  "50c": "You uncover a case of bullying in your school. How do you address the issue and create a safe and supportive environment for all students? Take a Skill based on conflict resolution."
 }
