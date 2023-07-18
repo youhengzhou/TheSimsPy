@@ -52,25 +52,42 @@ clothingPostCommon = {
     ]
 }
 
-clothingPostRich = ["top", "tuxedo", "dress shirt", "long shirt", "vest", "jacket"]
+clothingPostRich = {"top": ["tuxedo", "dress shirt", "long shirt", "vest", "jacket"]}
 
-
-def getString(dictionary):
-    return random.choice(dictionary[random.choice(list(dictionary.keys()))])
+roomsGala = {
+    "upper floor": ["study", "vault", "hallway", "master bedroom", "guest room"],
+    "ground floor": [
+        "reception hall",
+        "hallway",
+        "dining room",
+        "dance hall",
+        "kitchen",
+        "staff bedroom",
+        "guest room",
+        "art room",
+        "lounge",
+        "gaming lounge",
+        "smoke room",
+    ],
+    "basement": [
+        "firepit",
+        "kitchen",
+        "celler",
+        "winery",
+        "butcher table",
+        "staff bedroom",
+        "prison",
+    ],
+}
 
 
 def comb(one, two):
+    def getString(dictionary):
+        return random.choice(dictionary[random.choice(list(dictionary.keys()))])
+
     if type(one) != dict:
         return f"{one} {getString(two)}"
     elif type(two) != dict:
         return f"{getString(one)} {two}"
     else:
         return f"{getString(one)} {getString(two)}"
-
-
-print(comb(clothingPreCommon, clothingPostCommon))
-
-for i in range(100):
-    outfit = comb(clothingPreCommon, clothingPostCommon)
-    role = comb(humanPre, random.choice(humanPost["civilian"]))
-    print(f"{role}      -wearing-    {outfit}")

@@ -1,0 +1,46 @@
+{
+    "0": {
+        "gender": "Miss",
+        "name": "Edith King",
+        "home": "Louth",
+        "role": "soft banker",
+        "clothing": "old coat and vest",
+        "grit": 2,
+        "speed": 2,
+        "knowledge": 2,
+        "sanity": 5
+    },
+    "1": {
+        "gender": "Miss",
+        "name": "Elizabeth Wright",
+        "home": "Queenborough",
+        "role": "simple journalist",
+        "clothing": "urban vest and shirt",
+        "grit": 2,
+        "speed": 2,
+        "knowledge": 2,
+        "sanity": 9
+    },
+    "2": {
+        "gender": "Mr",
+        "name": "Arthur Jones",
+        "home": "Newark",
+        "role": "stern gang member",
+        "clothing": "urban coat and vest",
+        "grit": 5,
+        "speed": 4,
+        "knowledge": 3,
+        "sanity": 2
+    },
+    "3": {
+        "gender": "Miss",
+        "name": "Agnes Lee",
+        "home": "Tewkesbury",
+        "role": "simple hobbyist",
+        "clothing": "huntsman tuxedo",
+        "grit": 2,
+        "speed": 2,
+        "knowledge": 2,
+        "sanity": 9
+    }
+}
