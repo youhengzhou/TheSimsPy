@@ -1,58 +1,58 @@
 {
     "0": {
         "gender": "Mr",
-        "name": "George Smith",
+        "name": "Benjamin Baker",
         "home": "Farnham",
-        "role": "incognito student",
-        "clothing": "expensive dress shirt",
+        "role": "extravagant wildmen",
+        "clothing": "fine jacket and shirt",
         "grit": 4,
-        "speed": 2,
-        "knowledge": 7,
+        "speed": 1,
+        "knowledge": 1,
         "sanity": 2,
         "items": [
-            "\na fine silver sword\n\nincrease grit by 2\n"
+            "n"
         ]
     },
     "1": {
-        "gender": "Miss",
-        "name": "Eleanor Johnson",
+        "gender": "Mr",
+        "name": "Lionel Smith",
         "home": "Dorking",
-        "role": "incognito lieutenant",
-        "clothing": "urban shirt and sweater",
-        "grit": 2,
-        "speed": 7,
+        "role": "fit investigator",
+        "clothing": "sport coat and vest",
+        "grit": 4,
+        "speed": 1,
         "knowledge": 2,
-        "sanity": 3,
+        "sanity": 5,
         "items": [
-            "\nthis military patterend revolver\nis made from the best weapon smith in englandia\n\nincrease grit by 2\nallows you to use speed to attack\nfor that attack only, increase speed by 2\n"
+            "y"
         ]
     },
     "2": {
         "gender": "Mr",
         "name": "Alfred Young",
-        "home": "Ilfracombe",
-        "role": "stylish wildmen",
-        "clothing": "urban shirt and sweater",
-        "grit": 5,
-        "speed": 1,
-        "knowledge": 2,
+        "home": "Queenborough",
+        "role": "plain faced assassin",
+        "clothing": "sport dress shirt",
+        "grit": 3,
+        "speed": 5,
+        "knowledge": 1,
         "sanity": 2,
         "items": [
-            "\na fine silver sword\n\nincrease grit by 2\n"
+            "e"
         ]
     },
     "3": {
-        "gender": "Miss",
-        "name": "Amelia Davis",
-        "home": "Louth",
-        "role": "fit wildmen",
-        "clothing": "sport short jacket",
-        "grit": 2,
-        "speed": 4,
-        "knowledge": 2,
+        "gender": "Mr",
+        "name": "Harold Morris",
+        "home": "Ilfracombe",
+        "role": "stern occult member",
+        "clothing": "urban short jacket",
+        "grit": 4,
+        "speed": 2,
+        "knowledge": 3,
         "sanity": 4,
         "items": [
-            "\nalternative medicine created by the great\nnatural philosopher anton sokolov\ncan heal mental damage\n\nheals 2 mental damage\n"
+            "m"
         ]
     }
 }

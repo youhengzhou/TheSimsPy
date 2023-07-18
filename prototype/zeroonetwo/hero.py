@@ -230,9 +230,9 @@ class Hero:
         self.knowledge += random.randint(1, 2)
         self.sanity += random.randint(1, 2)
 
-        import entity
+        from lib import items
 
-        self.items.append(random.choice(random.choice(entity.allItems)))
+        self.items.append(random.choice(random.choice(items.items)))
 
 
 def getString(dictionary):
