@@ -171,12 +171,14 @@ class Hero:
     speed: int
     knowledge: int
     sanity: int
+    items: list
 
     def __init__(self):
         self.grit = 0
         self.speed = 0
         self.knowledge = 0
         self.sanity = 0
+        self.items = []
 
         if random.randint(0, 1) == 0:
             self.gender = "Mr"
@@ -227,6 +229,10 @@ class Hero:
         self.speed += random.randint(1, 2)
         self.knowledge += random.randint(1, 2)
         self.sanity += random.randint(1, 2)
+
+        import entity
+
+        self.items.append(random.choice(random.choice(entity.allItems)))
 
 
 def getString(dictionary):

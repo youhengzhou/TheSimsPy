@@ -19,7 +19,6 @@ check speed >4 to escape
 create 1 to 4 guards as enemy
 """
 
-
 events = [guardEncounter]
 
 wraithInTheMirror = """
@@ -54,7 +53,7 @@ increase grit by 2
 weapons = [revolver, silverSword, bloodySpear]
 
 firstAidKit = """
-a set of military mandages
+a set of military bandages
 
 heals 2 physical damage
 """
@@ -107,11 +106,15 @@ sanity = 6
 
 humans = [serf, commoner, gangster, inquisitor]
 
-allEntities = [events, omens, weapons, items, humans]
+allEvents = [events, omens]
+
+allItems = [weapons, items]
+
+allEntities = [humans]
 
 
-def entity(arrList):
-    print(random.choice(arrList))
+# def entity(arrList):
+#     print(random.choice(arrList))
 
 
-entity(random.choice(allEntities))
+# entity(random.choice(allEntities))

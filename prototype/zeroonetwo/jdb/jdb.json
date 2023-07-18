@@ -1,46 +1,58 @@
 {
     "0": {
-        "gender": "Miss",
-        "name": "Edith King",
-        "home": "Louth",
-        "role": "soft banker",
-        "clothing": "old coat and vest",
-        "grit": 2,
+        "gender": "Mr",
+        "name": "George Smith",
+        "home": "Farnham",
+        "role": "incognito student",
+        "clothing": "expensive dress shirt",
+        "grit": 4,
         "speed": 2,
-        "knowledge": 2,
-        "sanity": 5
+        "knowledge": 7,
+        "sanity": 2,
+        "items": [
+            "\na fine silver sword\n\nincrease grit by 2\n"
+        ]
     },
     "1": {
         "gender": "Miss",
-        "name": "Elizabeth Wright",
-        "home": "Queenborough",
-        "role": "simple journalist",
-        "clothing": "urban vest and shirt",
+        "name": "Eleanor Johnson",
+        "home": "Dorking",
+        "role": "incognito lieutenant",
+        "clothing": "urban shirt and sweater",
         "grit": 2,
-        "speed": 2,
+        "speed": 7,
         "knowledge": 2,
-        "sanity": 9
+        "sanity": 3,
+        "items": [
+            "\nthis military patterend revolver\nis made from the best weapon smith in englandia\n\nincrease grit by 2\nallows you to use speed to attack\nfor that attack only, increase speed by 2\n"
+        ]
     },
     "2": {
         "gender": "Mr",
-        "name": "Arthur Jones",
-        "home": "Newark",
-        "role": "stern gang member",
-        "clothing": "urban coat and vest",
+        "name": "Alfred Young",
+        "home": "Ilfracombe",
+        "role": "stylish wildmen",
+        "clothing": "urban shirt and sweater",
         "grit": 5,
-        "speed": 4,
-        "knowledge": 3,
-        "sanity": 2
+        "speed": 1,
+        "knowledge": 2,
+        "sanity": 2,
+        "items": [
+            "\na fine silver sword\n\nincrease grit by 2\n"
+        ]
     },
     "3": {
         "gender": "Miss",
-        "name": "Agnes Lee",
-        "home": "Tewkesbury",
-        "role": "simple hobbyist",
-        "clothing": "huntsman tuxedo",
+        "name": "Amelia Davis",
+        "home": "Louth",
+        "role": "fit wildmen",
+        "clothing": "sport short jacket",
         "grit": 2,
-        "speed": 2,
+        "speed": 4,
         "knowledge": 2,
-        "sanity": 9
+        "sanity": 4,
+        "items": [
+            "\nalternative medicine created by the great\nnatural philosopher anton sokolov\ncan heal mental damage\n\nheals 2 mental damage\n"
+        ]
     }
 }
