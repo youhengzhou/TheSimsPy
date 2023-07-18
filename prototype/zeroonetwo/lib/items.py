@@ -1,4 +1,4 @@
-revolver = """
+nrevolver = """
 this military patterend revolver
 is made from the best weapon smith in englandia
 

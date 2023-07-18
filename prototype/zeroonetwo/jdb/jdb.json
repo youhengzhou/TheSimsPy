@@ -1,58 +1,58 @@
 {
     "0": {
-        "gender": "Mr",
-        "name": "Benjamin Baker",
-        "home": "Farnham",
-        "role": "extravagant wildmen",
-        "clothing": "fine jacket and shirt",
-        "grit": 4,
+        "gender": "Miss",
+        "name": "Louisa Morris",
+        "home": "Newark",
+        "role": "small city guard",
+        "clothing": "old fashioned long jacket",
+        "grit": 5,
         "speed": 1,
-        "knowledge": 1,
-        "sanity": 2,
+        "knowledge": 2,
+        "sanity": 4,
         "items": [
-            "n"
+            " "
         ]
     },
     "1": {
         "gender": "Mr",
-        "name": "Lionel Smith",
-        "home": "Dorking",
-        "role": "fit investigator",
-        "clothing": "sport coat and vest",
+        "name": "Charles Young",
+        "home": "Kendal",
+        "role": "soft wildmen",
+        "clothing": "fine tuxedo",
         "grit": 4,
-        "speed": 1,
-        "knowledge": 2,
-        "sanity": 5,
+        "speed": 2,
+        "knowledge": 4,
+        "sanity": 2,
         "items": [
-            "y"
+            "l"
         ]
     },
     "2": {
         "gender": "Mr",
-        "name": "Alfred Young",
-        "home": "Queenborough",
-        "role": "plain faced assassin",
-        "clothing": "sport dress shirt",
-        "grit": 3,
-        "speed": 5,
-        "knowledge": 1,
+        "name": "Stanley Morris",
+        "home": "Tewkesbury",
+        "role": "fit soldier",
+        "clothing": "huntsman short jacket",
+        "grit": 9,
+        "speed": 2,
+        "knowledge": 3,
         "sanity": 2,
         "items": [
-            "e"
+            "m"
         ]
     },
     "3": {
         "gender": "Mr",
-        "name": "Harold Morris",
-        "home": "Ilfracombe",
-        "role": "stern occult member",
-        "clothing": "urban short jacket",
+        "name": "Arthur Wilson",
+        "home": "Penzance",
+        "role": "normal build servant",
+        "clothing": "fine shirt and sweater",
         "grit": 4,
-        "speed": 2,
-        "knowledge": 3,
-        "sanity": 4,
+        "speed": 1,
+        "knowledge": 1,
+        "sanity": 1,
         "items": [
-            "m"
+            "s"
         ]
     }
 }

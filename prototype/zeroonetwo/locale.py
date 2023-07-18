@@ -4,6 +4,18 @@ import sys
 from dataclasses import *
 import jsoneng
 
+biomes = {
+    "overworld": [
+        "coast",
+        "plains",
+        "forest",
+        "mountains",
+        "desert",
+        "town",
+        "city",
+    ],
+}
+
 overworld = {
     "coast": [
         "beach",
@@ -32,9 +44,6 @@ overworld = {
         "dense woods",
         "clearing",
         "hills",
-        "mountain",
-        "mountain village",
-        "cliffs",
         "caves",
         "campground",
         "river",
@@ -45,6 +54,36 @@ overworld = {
         "road",
         "highway",
     ],
+    "mountains": [
+        "hills",
+        "waterfall",
+        "cliffs",
+        "caves",
+        "mountain",
+        "mountain top",
+        "mountain village",
+        "snowy alpine",
+        "alpine village",
+        "mountain path",
+        "mountain road",
+    ],
+    "desert": [
+        "desert",
+        "mesa",
+        "dune hills",
+        "sand dune",
+        "desert mountain",
+        "desert town",
+        "desert train station",
+        "desert city",
+        "oasis",
+        "oasis town",
+        "desert path",
+        "desert road",
+    ],
+}
+
+urban = {
     "entrance": [
         "gates",
         "tavern",
@@ -130,7 +169,7 @@ roomsGala = {
     ],
     "ground": [
         "hallway",
-        "staff dining room",
+        "staff dining kroom",
         "kitchen",
         "staff bedroom",
         "guest room",
@@ -161,6 +200,13 @@ roomsGala = {
     ],
 }
 
+localeInfo = {
+    "name": "",
+    "population": 0,
+    "security": 0,
+    "supernatural": 0,
+}
+
 
 def getString(dictionary):
     return random.choice(dictionary[random.choice(list(dictionary.keys()))])
@@ -185,4 +231,25 @@ def locale(dictionary, size):
         print(f"{locale}")
 
 
-locale(overworld, 4)
+def street(dictionary, size):
+    while True:
+        roomType = input(f"create next street... street type: ")
+
+        if roomType == "":
+            print(dictionary.keys())
+            continue
+
+        locale = []
+        for i in range(4):
+            locale.append(random.choice(dictionary[roomType]))
+
+        import hero
+
+        localeInfo["name"] = random.choice(hero.names["place"])
+        localeInfo["population"] = random.randint(0, 2)
+        print(f"{locale}")
+
+
+# locale(overworld, 4)
+
+street(urban, 4)
