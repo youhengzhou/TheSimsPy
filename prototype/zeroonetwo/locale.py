@@ -4,6 +4,20 @@ import sys
 from dataclasses import *
 import jsoneng
 
+overworld = {
+    "coast": ["beach", "forest", "seaside town", "seaside city", "port", "road"],
+    "forest": ["woods", "forest village", "road"],
+    "plain": ["grassy field", "village", "town", "city", "road", "highway"],
+    "urban": [
+        "gala",
+        "castle",
+        "shopping district",
+        "inn",
+        "prison",
+        "bank",
+        "gambling den",
+    ],
+}
 
 roomsGala = {
     "up": [
@@ -69,17 +83,17 @@ def getString(dictionary):
     return random.choice(dictionary[random.choice(list(dictionary.keys()))])
 
 
-def rooms():
-    rooms = []
+def locale(dictionary, size):
+    locale = []
     while True:
-        roomType = input(f"create next room... room type:")
+        roomType = input(f"create next locale... locale type: ")
         if roomType == "":
-            print(roomsGala.keys())
+            print(dictionary.keys())
             continue
-        rooms.append(random.choice(roomsGala[roomType]))
-        if len(rooms) > 6:
-            rooms.pop(0)
-        print(rooms)
+        locale.append(random.choice(dictionary[roomType]))
+        if len(locale) > size:
+            locale.pop(0)
+        print(locale)
 
 
-rooms()
+locale(overworld, 4)
