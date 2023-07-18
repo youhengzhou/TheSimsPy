@@ -84,16 +84,22 @@ def getString(dictionary):
 
 
 def locale(dictionary, size):
+    steps = 0
     locale = []
     while True:
         roomType = input(f"create next locale... locale type: ")
+
         if roomType == "":
             print(dictionary.keys())
             continue
+
+        steps += 1
         locale.append(random.choice(dictionary[roomType]))
         if len(locale) > size:
             locale.pop(0)
-        print(locale)
+
+        print(f"steps:{steps}")
+        print(f"locale:{locale}")
 
 
 locale(overworld, 4)
