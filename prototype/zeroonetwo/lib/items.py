@@ -75,3 +75,18 @@ for next d5 turns, grit and speed +2
 """
 
 items = [firstAidKit, sokolovPhysicRemedy, stimulant]
+
+horse = """
+fine englandia horse
+
+for overworld only, speed +2
+"""
+
+drake = """
+winged drake, belonging to the supernatural world
+
+grit +6
+for overworld only, speed +6
+"""
+
+mount = [horse, drake]
