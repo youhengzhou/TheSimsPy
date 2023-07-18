@@ -5,17 +5,100 @@ from dataclasses import *
 import jsoneng
 
 overworld = {
-    "coast": ["beach", "forest", "seaside town", "seaside city", "port", "road"],
-    "forest": ["woods", "forest village", "road"],
-    "plain": ["grassy field", "village", "town", "city", "road", "highway"],
-    "urban": [
-        "gala",
-        "castle",
-        "shopping district",
-        "inn",
-        "prison",
-        "bank",
+    "coast": [
+        "beach",
+        "marsh",
+        "woods",
+        "seaside fair",
+        "seaside town",
+        "seaside city",
+        "port",
+        "seaside road",
+    ],
+    "plains": [
+        "grassy field",
+        "flower field",
+        "crops farm",
+        "animal farm",
+        "village",
+        "village fair",
+        "town",
+        "city",
+        "road",
+        "highway",
+    ],
+    "forest": [
+        "woods",
+        "dense woods",
+        "clearing",
+        "hills",
+        "mountain",
+        "mountain village",
+        "cliffs",
+        "caves",
+        "campground",
+        "river",
+        "riverside village",
+        "waterfall",
+        "forest village",
+        "path",
+        "road",
+        "highway",
+    ],
+    "entrance": [
+        "gates",
+        "tavern",
+        "stable",
+        "metalsmith",
+        "road",
+    ],
+    "res": [
+        "slums",
+        "apartments",
+        "houses",
+        "convenience store",
+        "fruit stalls",
+        "barber shop",
+        "tavern",
+        "alleyway",
+        "road",
+    ],
+    "slums": [
+        "slums",
         "gambling den",
+        "drug den",
+        "whore house",
+        "fence",
+        "alleyway",
+    ],
+    "shops": [
+        "grocers",
+        "fishmongers",
+        "butchers",
+        "tavern",
+        "textile shoppes",
+        "clothing shoppes",
+        "metalsmith",
+        "alleyway",
+        "road",
+    ],
+    "rich": [
+        "police station",
+        "apartment",
+        "apartment house party",
+        "mansion",
+        "mansion gala party",
+        "castle",
+        "castle gala party",
+        "restaurants",
+        "tavern",
+        "hotel",
+        "fine grocers",
+        "fine clothing shoppes",
+        "bank",
+        "casino",
+        "gunstore",
+        "road",
     ],
 }
 
@@ -98,8 +181,8 @@ def locale(dictionary, size):
         if len(locale) > size:
             locale.pop(0)
 
-        print(f"steps:{steps}")
-        print(f"locale:{locale}")
+        print(f"steps: {steps}")
+        print(f"{locale}")
 
 
 locale(overworld, 4)
