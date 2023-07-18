@@ -14,4 +14,12 @@ you can choose to roll knowledge instead of sanity for
 sanity checks
 """
 
+backup = """
+can call for backup in dangerous situations
+roll d4 once per encounter
+
+>4: more people and equipments
+<3: only equipments
+"""
+
 traits = [ageless, scientificMind]

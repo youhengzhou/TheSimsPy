@@ -34,5 +34,4 @@ knowledge = 6
 sanity = 6
 """
 
-
 humans = [serf, commoner, gangster, inquisitor]

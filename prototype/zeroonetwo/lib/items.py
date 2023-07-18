@@ -7,10 +7,19 @@ allows you to use speed to attack
 for that attack only, speed +2
 """
 
+rifle = """
+a worn military standard rifle
+
+grit +4
+allows you to use speed to attack
+for that attack only, speed +4
+"""
+
 silverSword = """
-a fine silver sword
+a fine silver dueling sword
 
 grit +2
+grit +4 against supernatural, can kill supernaturals
 """
 
 bloodySpear = """
@@ -19,7 +28,7 @@ a bloody spear, embued with power
 grit +2
 """
 
-weapons = [revolver, silverSword, bloodySpear]
+weapons = [revolver, rifle, silverSword, bloodySpear]
 
 imperialFootUniform = """
 heavy duty imperial soldier uniform
