@@ -89,4 +89,4 @@ grit +6
 for overworld only, speed +6
 """
 
-mount = [horse, drake]
+mounts = [horse, drake]
