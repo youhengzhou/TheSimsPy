@@ -22,52 +22,7 @@ class Jailor(Char):
 # NAMED CHARACTERS
 
 
-# LOCALES
-
-prison = {
-    "armory": [
-        "weapon cache",
-        "armory entrance",
-    ],
-    "yard": [
-        "main yard",
-        "yard gates",
-    ],
-}
-
-
-@dataclass
-class Locale:
-    name: str
-    listOfItems: list
-    listOfGoodEvents: list
-    listOfBadEvents: list
-
-
-class WeaponCache(Locale):
-    def __init__(self):
-        self.name = "Weapon Cache"
-        self.listOfItems = []
-        self.listOfGoodEvents = []
-        self.listOfBadEvents = []
-
-
-class WeaponCache(Locale):
-    def __init__(self):
-        self.name = "Weapon Cache"
-        self.listOfItems = []
-        self.listOfGoodEvents = []
-        self.listOfBadEvents = []
-
-
 # ITEMS
-
-
-@dataclass
-class Item:
-    name: str
-    desc: str
-    actions: list
 
 
 @dataclass
@@ -75,6 +30,13 @@ class Action:
     name: str
     desc: str
     actionRollTable: dict
+
+
+@dataclass
+class Item:
+    name: str
+    desc: str
+    actions: list[Action]
 
 
 class Gun(Item):
@@ -151,3 +113,78 @@ class GoodEvent:
 @dataclass
 class BadEvent:
     name: str
+
+
+# LOCALES
+
+prison = {
+    "armory": [
+        "weapon cache",
+        "armory entrance",
+    ],
+    "yard": [
+        "main yard",
+        "yard gates",
+    ],
+}
+
+
+@dataclass
+class Locale:
+    localeName: str
+    desc: str
+    listOfItems: list
+    listOfGoodEvents: list
+    listOfBadEvents: list
+
+
+@dataclass
+class Biome:
+    biomeName: str
+    desc: str
+    locales: list[Locale]
+
+
+@dataclass
+class Overworld:
+    overworldName: str
+    desc: str
+    biomes: list[Biome]
+
+
+class Prison(Overworld):
+    def __init__(self):
+        self.overworldName = "Imperial Irelandia Prison"
+        self.desc = "none shall leave here without penance"
+
+        class Armories(Biome):
+            def __init__(self):
+                self.biomeName = "Armory Section"
+                self.desc = "the armory section, guns and lots of guards patrolling"
+
+                class WeaponCache(Locale):
+                    def __init__(self):
+                        self.localeName = "Weapon Cache"
+                        self.desc = "lots of weapons here"
+
+                        self.listOfItems = [Gun()]
+                        self.listOfGoodEvents = []
+                        self.listOfBadEvents = []
+
+                class ArmoryEntrance(Locale):
+                    def __init__(self):
+                        self.localeName = "Armory Entrance"
+                        self.desc = "lots of guards patrolling the entrance"
+
+                        self.listOfItems = []
+                        self.listOfGoodEvents = []
+                        self.listOfBadEvents = []
+
+                self.locales = [WeaponCache(), ArmoryEntrance()]
+
+        self.biomes = [Armories()]
+
+
+p = Prison()
+
+jdb.patch(asdict(p))
