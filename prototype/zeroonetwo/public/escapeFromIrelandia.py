@@ -646,6 +646,8 @@ def locale(overworld, size):
 
 
 def setup():
+    from termcolor import colored
+
     def prisonHeat():
         import random
 
@@ -669,7 +671,10 @@ def setup():
         locale(p, 4)
 
     print(
-        "you escaped the prison! at this point, we can add another overworld for you to go to"
+        colored(
+            "you escaped the prison! at this point, we can add another overworld for you to go to",
+            "red",
+        )
     )
 
     overworld = {
