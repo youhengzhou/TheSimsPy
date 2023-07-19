@@ -230,6 +230,13 @@ class Prison(Overworld):
                         self.listOfGoodEvents = []
                         self.listOfBadEvents = [Patrol()]
 
+                    def localeAffect(self):
+                        import random
+
+                        lowerBound = jdb.r("heat lower bound")
+                        lowerBound -= random.randint(1, 2)
+                        jdb.p("heat lower bound", lowerBound)
+
                 class ArmoryEntrance(Locale):
                     def __init__(self):
                         self.localeName = "Armory Entrance"
@@ -240,11 +247,67 @@ class Prison(Overworld):
                         self.listOfGoodEvents = []
                         self.listOfBadEvents = [Patrol()]
 
+                    def localeAffect(self):
+                        import random
+
+                        lowerBound = jdb.r("heat lower bound")
+                        lowerBound += random.randint(1, 2)
+                        jdb.p("heat lower bound", lowerBound)
+
                 self.locales = [WeaponCache(), ArmoryEntrance()]
 
         self.biomes = [Armories()]
 
 
-p = Prison()
+def locale(overworld, size):
+    import random
+    from termcolor import colored
 
-jdb.patch(asdict(p))
+    steps = 0
+    locale = []
+    while True:
+        biomeType = input(f"create next locale... locale type: ")
+
+        if biomeType == "":
+            print(f"{[biome.biomeName for biome in overworld.biomes]}")
+            continue
+
+        steps += 1
+
+        for biome in overworld.biomes:
+            if biomeType == biome.biomeName:
+                selectedLocale = random.choice(biome.locales)
+                locale.append(selectedLocale.localeName)
+                selectedLocale.status()
+
+        if len(locale) > size:
+            locale.pop(0)
+
+        print(f"steps: {colored(steps, 'red')}")
+        print(f"heat lower bound: {colored(jdb.r('heat lower bound'), 'red')}")
+        print(f"heat upper bound: {colored(jdb.r('heat upper bound'), 'red')}")
+        print(f"{locale}")
+
+
+def setup():
+    def prisonHeat():
+        import random
+
+        heatLowerBound = random.randint(100, 120)
+        heatUpperBound = random.randint(200, 300)
+
+        jdb.p("heat lower bound", heatLowerBound)
+        jdb.p("heat upper bound", heatUpperBound)
+
+        return random.randint(heatLowerBound, heatUpperBound)
+
+    prisonHeat()
+
+    p = Prison()
+
+    jdb.patch(asdict(p))
+
+    locale(p, 4)
+
+
+setup()

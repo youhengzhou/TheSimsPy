@@ -1,4 +1,6 @@
 {
+    "heat lower bound": 126,
+    "heat upper bound": 218,
     "overworldName": "Imperial Irelandia Prison",
     "desc": "none shall leave here without penance",
     "biomes": [

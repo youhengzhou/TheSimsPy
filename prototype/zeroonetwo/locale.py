@@ -244,6 +244,7 @@ def locale(dictionary, size):
 
         steps += 1
         locale.append(random.choice(dictionary[roomType]))
+
         if len(locale) > size:
             locale.pop(0)
 
