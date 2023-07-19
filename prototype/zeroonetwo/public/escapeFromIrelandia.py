@@ -649,9 +649,9 @@ def setup():
     def prisonHeat():
         import random
 
-        heatLowerBound = random.randint(10, 10)
-        heatUpperBound = random.randint(10, 10)
-        escapeChance = random.randint(10, 10)
+        heatLowerBound = random.randint(100, 120)
+        heatUpperBound = random.randint(200, 300)
+        escapeChance = random.randint(0, 10)
 
         jdb.p("heat lower bound", heatLowerBound)
         jdb.p("heat upper bound", heatUpperBound)
