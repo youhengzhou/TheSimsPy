@@ -1,58 +1,58 @@
 {
     "0": {
-        "gender": "Miss",
-        "name": "Louisa Morris",
-        "home": "Newark",
-        "role": "small city guard",
-        "clothing": "old fashioned long jacket",
-        "grit": 5,
-        "speed": 1,
-        "knowledge": 2,
-        "sanity": 4,
+        "gender": "Mr",
+        "name": "Benjamin Young",
+        "home": "Tewkesbury",
+        "role": "stern assassin",
+        "clothing": "fine tuxedo",
+        "grit": 6,
+        "speed": 3,
+        "knowledge": 3,
+        "sanity": 1,
         "items": [
             " "
         ]
     },
     "1": {
-        "gender": "Mr",
-        "name": "Charles Young",
-        "home": "Kendal",
-        "role": "soft wildmen",
-        "clothing": "fine tuxedo",
-        "grit": 4,
+        "gender": "Miss",
+        "name": "Louisa Miller",
+        "home": "Gillingham",
+        "role": "fit towne militia",
+        "clothing": "urban long shirt",
+        "grit": 6,
         "speed": 2,
-        "knowledge": 4,
-        "sanity": 2,
+        "knowledge": 2,
+        "sanity": 6,
         "items": [
-            "l"
+            "\n"
         ]
     },
     "2": {
-        "gender": "Mr",
-        "name": "Stanley Morris",
-        "home": "Tewkesbury",
-        "role": "fit soldier",
-        "clothing": "huntsman short jacket",
-        "grit": 9,
-        "speed": 2,
+        "gender": "Miss",
+        "name": "Louisa Baker",
+        "home": "Louth",
+        "role": "plain faced researcher",
+        "clothing": "old fashioned long shirt",
+        "grit": 2,
+        "speed": 1,
         "knowledge": 3,
-        "sanity": 2,
+        "sanity": 4,
         "items": [
-            "m"
+            "a"
         ]
     },
     "3": {
         "gender": "Mr",
-        "name": "Arthur Wilson",
-        "home": "Penzance",
-        "role": "normal build servant",
-        "clothing": "fine shirt and sweater",
+        "name": "Ernest Carter",
+        "home": "Cheltenham",
+        "role": "incognito assassin",
+        "clothing": "sport dress shirt",
         "grit": 4,
-        "speed": 1,
-        "knowledge": 1,
-        "sanity": 1,
+        "speed": 3,
+        "knowledge": 3,
+        "sanity": 2,
         "items": [
-            "s"
+            "i"
         ]
     }
 }

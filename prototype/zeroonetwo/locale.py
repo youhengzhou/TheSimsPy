@@ -200,6 +200,26 @@ roomsGala = {
     ],
 }
 
+gardens = {
+    "gate": [
+        "ornate door",
+        "guard post",
+    ],
+    "entrance": [
+        "labyrinth entrance",
+        "labyrinth trap",
+        "labyrinth passage way",
+    ],
+    "garden": [
+        "garden entrance",
+        "central garden",
+    ],
+    "vault": [
+        "guard post",
+        "treasure room",
+    ],
+}
+
 localeInfo = {
     "name": "",
     "population": 0,
@@ -231,7 +251,7 @@ def locale(dictionary, size):
         print(f"{locale}")
 
 
-def street(dictionary, size):
+def series(dictionary, size):
     while True:
         roomType = input(f"create next street... street type: ")
 
@@ -240,16 +260,21 @@ def street(dictionary, size):
             continue
 
         locale = []
-        for i in range(4):
+        for i in range(size):
             locale.append(random.choice(dictionary[roomType]))
 
         import hero
+        import json
 
         localeInfo["name"] = random.choice(hero.names["place"])
         localeInfo["population"] = random.randint(0, 2)
+        localeInfo["security"] = random.randint(0, 2)
+        localeInfo["supernatural"] = random.randint(0, 2)
+
+        print(json.dumps(localeInfo, indent=4))
         print(f"{locale}")
 
 
 # locale(overworld, 4)
 
-street(urban, 4)
+series(overworld, 4)

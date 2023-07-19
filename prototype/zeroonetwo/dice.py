@@ -3,6 +3,10 @@ import sys
 
 
 def dice(num):
+    if num == 0:
+        print(
+            "0: dead, 1: wounded, 2: injured, 3: fatigued, 4: layman, 5: trained, 6: veteran, 7: master"
+        )
     curr = 0
     total = 0
     for i in range(num):
