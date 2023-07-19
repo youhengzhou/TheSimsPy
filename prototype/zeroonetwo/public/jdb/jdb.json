@@ -1,6 +1,9 @@
 {
-    "heat lower bound": 126,
-    "heat upper bound": 218,
+    "heat lower bound": 3,
+    "heat upper bound": 1,
+    "escape chance": 10,
+    "current events": "a physical altercation between inmates",
+    "victory": "yes",
     "overworldName": "Imperial Irelandia Prison",
     "desc": "none shall leave here without penance",
     "biomes": [
@@ -621,6 +624,419 @@
                                                     [
                                                         "3",
                                                         "nobody comes to help"
+                                                    ]
+                                                ]
+                                            }
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "biomeName": "Cell Block",
+            "desc": "the cell block area, where inmates are housed",
+            "locales": [
+                {
+                    "localeName": "Cell",
+                    "desc": "a prison cell where an inmate resides",
+                    "listOfItems": [
+                        {
+                            "name": "Bed",
+                            "desc": "A comfortable bed for resting.",
+                            "actions": [
+                                {
+                                    "name": "Rest",
+                                    "desc": "You can rest on the bed to regain energy.",
+                                    "actionRollTable": {
+                                        "rollType": "endurance",
+                                        "roll": [
+                                            [
+                                                "8",
+                                                "Fully rested and rejuvenated"
+                                            ],
+                                            [
+                                                "5",
+                                                "Partially rested, still feeling tired"
+                                            ]
+                                        ]
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Toilet",
+                            "desc": "A sanitary toilet for personal needs.",
+                            "actions": [
+                                {
+                                    "name": "Use Toilet",
+                                    "desc": "You can use the toilet for your personal needs.",
+                                    "actionRollTable": {
+                                        "rollType": "endurance",
+                                        "roll": [
+                                            [
+                                                "8",
+                                                "Successfully use the toilet without any issues"
+                                            ],
+                                            [
+                                                "5",
+                                                "Encounter some difficulties while using the toilet"
+                                            ]
+                                        ]
+                                    }
+                                }
+                            ]
+                        }
+                    ],
+                    "listOfChars": [
+                        {
+                            "name": "Inmate",
+                            "desc": "an inmate residing in the prison",
+                            "listOfItems": [],
+                            "actions": [
+                                {
+                                    "name": "Plot Escape",
+                                    "desc": "conspire with other inmates to escape",
+                                    "actionRollTable": {
+                                        "rollType": "intelligence",
+                                        "roll": [
+                                            [
+                                                "6",
+                                                "escape plan is foolproof"
+                                            ],
+                                            [
+                                                "4",
+                                                "escape plan has some risks"
+                                            ],
+                                            [
+                                                "2",
+                                                "escape plan is unlikely to work"
+                                            ]
+                                        ]
+                                    }
+                                },
+                                {
+                                    "name": "Start a Fight",
+                                    "desc": "instigate a fight with another inmate",
+                                    "actionRollTable": {
+                                        "rollType": "strength",
+                                        "roll": [
+                                            [
+                                                "6",
+                                                "overwhelming victory"
+                                            ],
+                                            [
+                                                "3",
+                                                "partial success"
+                                            ],
+                                            [
+                                                "1",
+                                                "defeat"
+                                            ]
+                                        ]
+                                    }
+                                }
+                            ]
+                        }
+                    ],
+                    "listOfGoodEvents": [],
+                    "listOfBadEvents": [
+                        {
+                            "name": "Fight",
+                            "desc": "a physical altercation between inmates",
+                            "eventRollTable": {
+                                "rollType": "combat",
+                                "roll": [
+                                    [
+                                        "6",
+                                        "inmates peacefully resolve the conflict"
+                                    ],
+                                    [
+                                        "4",
+                                        "minor injuries sustained by both parties"
+                                    ],
+                                    [
+                                        "2",
+                                        "serious injuries and intervention by guards"
+                                    ]
+                                ]
+                            },
+                            "listOfItems": [],
+                            "listOfChars": [
+                                {
+                                    "name": "Inmate",
+                                    "desc": "an inmate residing in the prison",
+                                    "listOfItems": [],
+                                    "actions": [
+                                        {
+                                            "name": "Plot Escape",
+                                            "desc": "conspire with other inmates to escape",
+                                            "actionRollTable": {
+                                                "rollType": "intelligence",
+                                                "roll": [
+                                                    [
+                                                        "6",
+                                                        "escape plan is foolproof"
+                                                    ],
+                                                    [
+                                                        "4",
+                                                        "escape plan has some risks"
+                                                    ],
+                                                    [
+                                                        "2",
+                                                        "escape plan is unlikely to work"
+                                                    ]
+                                                ]
+                                            }
+                                        },
+                                        {
+                                            "name": "Start a Fight",
+                                            "desc": "instigate a fight with another inmate",
+                                            "actionRollTable": {
+                                                "rollType": "strength",
+                                                "roll": [
+                                                    [
+                                                        "6",
+                                                        "overwhelming victory"
+                                                    ],
+                                                    [
+                                                        "3",
+                                                        "partial success"
+                                                    ],
+                                                    [
+                                                        "1",
+                                                        "defeat"
+                                                    ]
+                                                ]
+                                            }
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "localeName": "Cafeteria",
+                    "desc": "the cafeteria where inmates have their meals",
+                    "listOfItems": [
+                        {
+                            "name": "Table",
+                            "desc": "A sturdy table for various purposes.",
+                            "actions": [
+                                {
+                                    "name": "Use Table",
+                                    "desc": "You can use the table for various activities.",
+                                    "actionRollTable": {
+                                        "rollType": "skill",
+                                        "roll": [
+                                            [
+                                                "6",
+                                                "Successfully use the table"
+                                            ],
+                                            [
+                                                "3",
+                                                "Encounter some difficulties while using the table"
+                                            ]
+                                        ]
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Food",
+                            "desc": "Delicious food for nourishment.",
+                            "actions": [
+                                {
+                                    "name": "Eat",
+                                    "desc": "You can eat the food to satisfy your hunger.",
+                                    "actionRollTable": {
+                                        "rollType": "skill",
+                                        "roll": [
+                                            [
+                                                "6",
+                                                "Enjoy a delicious meal"
+                                            ],
+                                            [
+                                                "3",
+                                                "The food is average in taste"
+                                            ]
+                                        ]
+                                    }
+                                }
+                            ]
+                        }
+                    ],
+                    "listOfChars": [
+                        {
+                            "name": "Inmate",
+                            "desc": "an inmate residing in the prison",
+                            "listOfItems": [],
+                            "actions": [
+                                {
+                                    "name": "Plot Escape",
+                                    "desc": "conspire with other inmates to escape",
+                                    "actionRollTable": {
+                                        "rollType": "intelligence",
+                                        "roll": [
+                                            [
+                                                "6",
+                                                "escape plan is foolproof"
+                                            ],
+                                            [
+                                                "4",
+                                                "escape plan has some risks"
+                                            ],
+                                            [
+                                                "2",
+                                                "escape plan is unlikely to work"
+                                            ]
+                                        ]
+                                    }
+                                },
+                                {
+                                    "name": "Start a Fight",
+                                    "desc": "instigate a fight with another inmate",
+                                    "actionRollTable": {
+                                        "rollType": "strength",
+                                        "roll": [
+                                            [
+                                                "6",
+                                                "overwhelming victory"
+                                            ],
+                                            [
+                                                "3",
+                                                "partial success"
+                                            ],
+                                            [
+                                                "1",
+                                                "defeat"
+                                            ]
+                                        ]
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "name": "KitchenStaff",
+                            "desc": "a member of the kitchen staff",
+                            "listOfItems": [],
+                            "actions": [
+                                {
+                                    "name": "Prepare Meal",
+                                    "desc": "prepare a meal for the inmates",
+                                    "actionRollTable": {
+                                        "rollType": "skill",
+                                        "roll": [
+                                            [
+                                                "6",
+                                                "the meal turns out delicious"
+                                            ],
+                                            [
+                                                "4",
+                                                "the meal is average"
+                                            ],
+                                            [
+                                                "2",
+                                                "the meal is poorly prepared"
+                                            ]
+                                        ]
+                                    }
+                                },
+                                {
+                                    "name": "Steal Supplies",
+                                    "desc": "sneakily take some supplies from the kitchen",
+                                    "actionRollTable": {
+                                        "rollType": "stealth",
+                                        "roll": [
+                                            [
+                                                "6",
+                                                "successfully steal the supplies without being noticed"
+                                            ],
+                                            [
+                                                "3",
+                                                "get caught but manage to take some supplies"
+                                            ],
+                                            [
+                                                "1",
+                                                "get caught and fail to take any supplies"
+                                            ]
+                                        ]
+                                    }
+                                }
+                            ]
+                        }
+                    ],
+                    "listOfGoodEvents": [],
+                    "listOfBadEvents": [
+                        {
+                            "name": "Food Fight",
+                            "desc": "an altercation between inmates involving throwing food",
+                            "eventRollTable": {
+                                "rollType": "chaos",
+                                "roll": [
+                                    [
+                                        "6",
+                                        "inmates quickly stop the food fight"
+                                    ],
+                                    [
+                                        "4",
+                                        "food fight escalates, causing a mess"
+                                    ],
+                                    [
+                                        "2",
+                                        "chaotic food fight with widespread food throwing"
+                                    ]
+                                ]
+                            },
+                            "listOfItems": [],
+                            "listOfChars": [
+                                {
+                                    "name": "Inmate",
+                                    "desc": "an inmate residing in the prison",
+                                    "listOfItems": [],
+                                    "actions": [
+                                        {
+                                            "name": "Plot Escape",
+                                            "desc": "conspire with other inmates to escape",
+                                            "actionRollTable": {
+                                                "rollType": "intelligence",
+                                                "roll": [
+                                                    [
+                                                        "6",
+                                                        "escape plan is foolproof"
+                                                    ],
+                                                    [
+                                                        "4",
+                                                        "escape plan has some risks"
+                                                    ],
+                                                    [
+                                                        "2",
+                                                        "escape plan is unlikely to work"
+                                                    ]
+                                                ]
+                                            }
+                                        },
+                                        {
+                                            "name": "Start a Fight",
+                                            "desc": "instigate a fight with another inmate",
+                                            "actionRollTable": {
+                                                "rollType": "strength",
+                                                "roll": [
+                                                    [
+                                                        "6",
+                                                        "overwhelming victory"
+                                                    ],
+                                                    [
+                                                        "3",
+                                                        "partial success"
+                                                    ],
+                                                    [
+                                                        "1",
+                                                        "defeat"
                                                     ]
                                                 ]
                                             }

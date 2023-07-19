@@ -82,6 +82,7 @@ class Gun(Item):
 
 gun = Gun()
 
+
 # choice = input(f"> {[a.name for a in gun.actions]} ")
 class GuardsKey(Item):
     def __init__(self):
@@ -91,7 +92,9 @@ class GuardsKey(Item):
         class Unlock(Action):
             def __init__(self):
                 self.name = "Unlock"
-                self.desc = "You use the key to unlock doors and access restricted areas."
+                self.desc = (
+                    "You use the key to unlock doors and access restricted areas."
+                )
                 self.actionRollTable = {
                     "rollType": "knowledge",
                     "roll": [
@@ -103,7 +106,9 @@ class GuardsKey(Item):
         class SilentUnlock(Action):
             def __init__(self):
                 self.name = "Silent Unlock"
-                self.desc = "You use the key to unlock doors silently, avoiding detection."
+                self.desc = (
+                    "You use the key to unlock doors silently, avoiding detection."
+                )
                 self.actionRollTable = {
                     "rollType": "stealth",
                     "roll": [
@@ -120,7 +125,10 @@ class GuardsKey(Item):
                     "rollType": "speed",
                     "roll": [
                         ["7", "Successfully unlock the door in record time"],
-                        ["5", "Unlock the door, but it takes a bit longer than expected"],
+                        [
+                            "5",
+                            "Unlock the door, but it takes a bit longer than expected",
+                        ],
                     ],
                 }
 
@@ -158,6 +166,7 @@ class Shovel(Item):
 
         self.actions = [Dig(), ClearPath()]
 
+
 class Bed(Item):
     def __init__(self):
         self.name = "Bed"
@@ -176,6 +185,7 @@ class Bed(Item):
                 }
 
         self.actions = [Rest()]
+
 
 class Food(Item):
     def __init__(self):
@@ -196,6 +206,7 @@ class Food(Item):
 
         self.actions = [Eat()]
 
+
 class Toilet(Item):
     def __init__(self):
         self.name = "Toilet"
@@ -215,6 +226,7 @@ class Toilet(Item):
 
         self.actions = [UseToilet()]
 
+
 class Table(Item):
     def __init__(self):
         self.name = "Table"
@@ -233,6 +245,7 @@ class Table(Item):
                 }
 
         self.actions = [UseTable()]
+
 
 # CHARACTERS
 
@@ -278,6 +291,7 @@ class Jailor(Char):
 
         self.actions = [Patrol(), CallBackup()]
 
+
 class KitchenStaff(Char):
     def __init__(self):
         self.name = "KitchenStaff"
@@ -313,6 +327,7 @@ class KitchenStaff(Char):
 
         self.actions = [PrepareMeal(), StealSupplies()]
 
+
 class Inmate(Char):
     def __init__(self):
         self.name = "Inmate"
@@ -347,6 +362,7 @@ class Inmate(Char):
                 }
 
         self.actions = [PlotEscape(), StartFight()]
+
 
 # GOOD EVENTS
 
@@ -389,6 +405,7 @@ class Patrol(BadEvent):
         self.listOfItems = []
         self.listOfChars = [Jailor()]
 
+
 class Fight(BadEvent):
     def __init__(self):
         self.name = "Fight"
@@ -406,6 +423,7 @@ class Fight(BadEvent):
         self.listOfItems = []
         self.listOfChars = [Inmate()]
 
+
 class FoodFight(BadEvent):
     def __init__(self):
         self.name = "Food Fight"
@@ -422,6 +440,7 @@ class FoodFight(BadEvent):
 
         self.listOfItems = []
         self.listOfChars = [Inmate()]
+
 
 # LOCALES
 
@@ -488,6 +507,13 @@ class Prison(Overworld):
                         lowerBound -= random.randint(1, 2)
                         jdb.p("heat lower bound", lowerBound)
 
+                        escapeChance = jdb.r("escape chance")
+                        escapeChance += random.randint(1, 2)
+                        jdb.p("escape chance", escapeChance)
+
+                        currEvent = random.choice(self.listOfBadEvents)
+                        jdb.p("current events", currEvent.desc)
+
                 class ArmoryEntrance(Locale):
                     def __init__(self):
                         self.localeName = "Armory Entrance"
@@ -505,8 +531,15 @@ class Prison(Overworld):
                         lowerBound += random.randint(1, 2)
                         jdb.p("heat lower bound", lowerBound)
 
+                        upperBound = jdb.r("heat upper bound")
+                        upperBound += random.randint(1, 2)
+                        jdb.p("heat upper bound", upperBound)
+
+                        currEvent = random.choice(self.listOfBadEvents)
+                        jdb.p("current events", currEvent.desc)
+
                 self.locales = [WeaponCache(), ArmoryEntrance()]
-        
+
         class CellBlock(Biome):
             def __init__(self):
                 self.biomeName = "Cell Block"
@@ -522,6 +555,20 @@ class Prison(Overworld):
                         self.listOfGoodEvents = []
                         self.listOfBadEvents = [Fight()]
 
+                    def localeAffect(self):
+                        import random
+
+                        lowerBound = jdb.r("heat lower bound")
+                        lowerBound -= random.randint(2, 4)
+                        jdb.p("heat lower bound", lowerBound)
+
+                        upperBound = jdb.r("heat upper bound")
+                        upperBound -= random.randint(2, 4)
+                        jdb.p("heat upper bound", upperBound)
+
+                        currEvent = random.choice(self.listOfBadEvents)
+                        jdb.p("current events", currEvent.desc)
+
                 class Cafeteria(Locale):
                     def __init__(self):
                         self.localeName = "Cafeteria"
@@ -532,6 +579,20 @@ class Prison(Overworld):
                         self.listOfGoodEvents = []
                         self.listOfBadEvents = [FoodFight()]
 
+                    def localeAffect(self):
+                        import random
+
+                        lowerBound = jdb.r("heat lower bound")
+                        lowerBound -= random.randint(0, 1)
+                        jdb.p("heat lower bound", lowerBound)
+
+                        upperBound = jdb.r("heat upper bound")
+                        upperBound -= random.randint(0, 1)
+                        jdb.p("heat upper bound", upperBound)
+
+                        currEvent = random.choice(self.listOfBadEvents)
+                        jdb.p("current events", currEvent.desc)
+
                 self.locales = [Cell(), Cafeteria()]
 
         self.biomes = [Armories(), CellBlock()]
@@ -541,29 +602,46 @@ def locale(overworld, size):
     import random
     from termcolor import colored
 
-    steps = 0
+    day = 0
     locale = []
-    while True:
+    stay = True
+    while stay:
         biomeType = input(f"create next locale... locale type: ")
 
         if biomeType == "":
             print(f"{[biome.biomeName for biome in overworld.biomes]}")
             continue
 
-        steps += 1
+        if biomeType == "escape":
+            lowerBound = jdb.r("heat lower bound")
+            upperBound = jdb.r("heat upper bound")
+
+            if random.randint(
+                min(int(lowerBound), int(upperBound)), int(upperBound)
+            ) < int(jdb.r("escape chance")):
+                jdb.p("victory", "yes")
+                stay = False
+            else:
+                print(colored("nice try, you didn't quite escape", "red"))
+
+            continue
+
+        day += 1
 
         for biome in overworld.biomes:
             if biomeType == biome.biomeName:
                 selectedLocale = random.choice(biome.locales)
                 locale.append(selectedLocale.localeName)
-                selectedLocale.status()
+                selectedLocale.localeAffect()
 
         if len(locale) > size:
             locale.pop(0)
 
-        print(f"steps: {colored(steps, 'red')}")
+        print(f"day: {colored(day, 'red')}")
         print(f"heat lower bound: {colored(jdb.r('heat lower bound'), 'red')}")
         print(f"heat upper bound: {colored(jdb.r('heat upper bound'), 'red')}")
+        print(f"escape chance: {colored(jdb.r('escape chance'), 'red')}")
+        print(f"current events: {colored(jdb.r('current events'), 'red')}")
         print(f"{locale}")
 
 
@@ -571,13 +649,15 @@ def setup():
     def prisonHeat():
         import random
 
-        heatLowerBound = random.randint(100, 120)
-        heatUpperBound = random.randint(200, 300)
+        heatLowerBound = random.randint(10, 10)
+        heatUpperBound = random.randint(10, 10)
+        escapeChance = random.randint(10, 10)
 
         jdb.p("heat lower bound", heatLowerBound)
         jdb.p("heat upper bound", heatUpperBound)
-
-        return random.randint(heatLowerBound, heatUpperBound)
+        jdb.p("escape chance", escapeChance)
+        jdb.p("current events", [])
+        jdb.p("victory", "no")
 
     prisonHeat()
 
@@ -585,7 +665,102 @@ def setup():
 
     jdb.patch(asdict(p))
 
-    locale(p, 4)
+    while jdb.r("victory") == "no":
+        locale(p, 4)
+
+    print(
+        "you escaped the prison! at this point, we can add another overworld for you to go to"
+    )
+
+    overworld = {
+        "coast": [
+            "beach",
+            "marsh",
+            "woods",
+            "seaside fair",
+            "seaside town",
+            "seaside city",
+            "port",
+            "seaside road",
+        ],
+        "plains": [
+            "grassy field",
+            "flower field",
+            "crops farm",
+            "animal farm",
+            "village",
+            "village fair",
+            "town",
+            "city",
+            "road",
+            "highway",
+        ],
+        "forest": [
+            "woods",
+            "dense woods",
+            "clearing",
+            "hills",
+            "caves",
+            "campground",
+            "river",
+            "riverside village",
+            "waterfall",
+            "forest village",
+            "path",
+            "road",
+            "highway",
+        ],
+        "mountains": [
+            "hills",
+            "waterfall",
+            "cliffs",
+            "caves",
+            "mountain",
+            "mountain top",
+            "mountain village",
+            "snowy alpine",
+            "alpine village",
+            "mountain path",
+            "mountain road",
+        ],
+        "desert": [
+            "desert",
+            "mesa",
+            "dune hills",
+            "sand dune",
+            "desert mountain",
+            "desert town",
+            "desert train station",
+            "desert city",
+            "oasis",
+            "oasis town",
+            "desert path",
+            "desert road",
+        ],
+    }
+
+    def journey(dictionary, size):
+        import random
+
+        steps = 0
+        locale = []
+        while True:
+            roomType = input(f"create next locale... locale type: ")
+
+            if roomType == "":
+                print(dictionary.keys())
+                continue
+
+            steps += 1
+            locale.append(random.choice(dictionary[roomType]))
+
+            if len(locale) > size:
+                locale.pop(0)
+
+            print(f"steps: {steps}")
+            print(f"{locale}")
+
+    journey(overworld, 4)
 
 
 setup()
