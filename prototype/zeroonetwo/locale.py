@@ -275,6 +275,6 @@ def series(dictionary, size):
         print(f"{locale}")
 
 
-# locale(overworld, 4)
+locale(overworld, 6)
 
-series(overworld, 4)
+# series(overworld, 4)
