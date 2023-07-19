@@ -6,21 +6,6 @@ jdb.create({})
 
 # ESCAPE FROM IRELANDIA
 
-# CHARACTERS
-
-
-@dataclass
-class Char:
-    name: str
-
-
-class Jailor(Char):
-    def __init__(self):
-        self.name = "jailor"
-
-
-# NAMED CHARACTERS
-
 
 # ITEMS
 
@@ -99,6 +84,52 @@ gun = Gun()
 
 # choice = input(f"> {[a.name for a in gun.actions]} ")
 
+
+# CHARACTERS
+
+
+@dataclass
+class Char:
+    name: str
+    desc: str
+    listOfItems: list[Item]
+    actions: list[Action]
+
+
+class Jailor(Char):
+    def __init__(self):
+        self.name = "Jailor"
+        self.desc = "a typical jailor, they might not want to be there, just there for a paycheck, but they still do their jobs"
+        self.listOfItems = [Gun()]
+
+        class Patrol(Action):
+            def __init__(self):
+                self.name = "Patrol"
+                self.desc = "the jailor patrols the area, they check for you"
+                self.actionRollTable = {
+                    "rollType": "speed",
+                    "roll": [
+                        ["4", "found you"],
+                        ["3", "miss you"],
+                    ],
+                }
+
+        class CallBackup(Action):
+            def __init__(self):
+                self.name = "Call Backup"
+                self.desc = "calls for backup, get some extra weapons or help"
+                self.actionRollTable = {
+                    "rollType": "sanity",
+                    "roll": [
+                        ["6", "they receive extra weapons and help"],
+                        ["4", "they only receive extra weapons"],
+                        ["3", "nobody comes to help"],
+                    ],
+                }
+
+        self.actions = [Patrol(), CallBackup()]
+
+
 # GOOD EVENTS
 
 
@@ -133,9 +164,10 @@ prison = {
 class Locale:
     localeName: str
     desc: str
-    listOfItems: list
-    listOfGoodEvents: list
-    listOfBadEvents: list
+    listOfItems: list[Item]
+    listOfChars: list[Char]
+    listOfGoodEvents: list[GoodEvent]
+    listOfBadEvents: list[BadEvent]
 
 
 @dataclass
@@ -168,6 +200,7 @@ class Prison(Overworld):
                         self.desc = "lots of weapons here"
 
                         self.listOfItems = [Gun()]
+                        self.listOfChars = [Jailor()]
                         self.listOfGoodEvents = []
                         self.listOfBadEvents = []
 
@@ -177,6 +210,7 @@ class Prison(Overworld):
                         self.desc = "lots of guards patrolling the entrance"
 
                         self.listOfItems = []
+                        self.listOfChars = [Jailor()]
                         self.listOfGoodEvents = []
                         self.listOfBadEvents = []
 
