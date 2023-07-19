@@ -83,7 +83,156 @@ class Gun(Item):
 gun = Gun()
 
 # choice = input(f"> {[a.name for a in gun.actions]} ")
+class GuardsKey(Item):
+    def __init__(self):
+        self.name = "Guard's Key"
+        self.desc = "This key is used to unlock doors and access restricted areas."
 
+        class Unlock(Action):
+            def __init__(self):
+                self.name = "Unlock"
+                self.desc = "You use the key to unlock doors and access restricted areas."
+                self.actionRollTable = {
+                    "rollType": "knowledge",
+                    "roll": [
+                        ["6", "Successfully unlock the door"],
+                        ["3", "Fail to unlock the door"],
+                    ],
+                }
+
+        class SilentUnlock(Action):
+            def __init__(self):
+                self.name = "Silent Unlock"
+                self.desc = "You use the key to unlock doors silently, avoiding detection."
+                self.actionRollTable = {
+                    "rollType": "stealth",
+                    "roll": [
+                        ["8", "Successfully unlock the door without making any noise"],
+                        ["4", "Make a slight noise while unlocking the door"],
+                    ],
+                }
+
+        class QuickUnlock(Action):
+            def __init__(self):
+                self.name = "Quick Unlock"
+                self.desc = "You quickly use the key to unlock doors, saving time."
+                self.actionRollTable = {
+                    "rollType": "speed",
+                    "roll": [
+                        ["7", "Successfully unlock the door in record time"],
+                        ["5", "Unlock the door, but it takes a bit longer than expected"],
+                    ],
+                }
+
+        self.actions = [Unlock(), SilentUnlock(), QuickUnlock()]
+
+
+class Shovel(Item):
+    def __init__(self):
+        self.name = "Shovel"
+        self.desc = "A sturdy shovel used for digging and excavation."
+
+        class Dig(Action):
+            def __init__(self):
+                self.name = "Dig"
+                self.desc = "You use the shovel to dig holes or trenches."
+                self.actionRollTable = {
+                    "rollType": "strength",
+                    "roll": [
+                        ["8", "Successfully dig the hole or trench"],
+                        ["4", "Struggle to dig, takes more effort"],
+                    ],
+                }
+
+        class ClearPath(Action):
+            def __init__(self):
+                self.name = "Clear Path"
+                self.desc = "You use the shovel to clear obstacles and create a path."
+                self.actionRollTable = {
+                    "rollType": "agility",
+                    "roll": [
+                        ["7", "Successfully clear the path"],
+                        ["5", "Encounter some difficulties while clearing the path"],
+                    ],
+                }
+
+        self.actions = [Dig(), ClearPath()]
+
+class Bed(Item):
+    def __init__(self):
+        self.name = "Bed"
+        self.desc = "A comfortable bed for resting."
+
+        class Rest(Action):
+            def __init__(self):
+                self.name = "Rest"
+                self.desc = "You can rest on the bed to regain energy."
+                self.actionRollTable = {
+                    "rollType": "endurance",
+                    "roll": [
+                        ["8", "Fully rested and rejuvenated"],
+                        ["5", "Partially rested, still feeling tired"],
+                    ],
+                }
+
+        self.actions = [Rest()]
+
+class Food(Item):
+    def __init__(self):
+        self.name = "Food"
+        self.desc = "Delicious food for nourishment."
+
+        class Eat(Action):
+            def __init__(self):
+                self.name = "Eat"
+                self.desc = "You can eat the food to satisfy your hunger."
+                self.actionRollTable = {
+                    "rollType": "skill",
+                    "roll": [
+                        ["6", "Enjoy a delicious meal"],
+                        ["3", "The food is average in taste"],
+                    ],
+                }
+
+        self.actions = [Eat()]
+
+class Toilet(Item):
+    def __init__(self):
+        self.name = "Toilet"
+        self.desc = "A sanitary toilet for personal needs."
+
+        class UseToilet(Action):
+            def __init__(self):
+                self.name = "Use Toilet"
+                self.desc = "You can use the toilet for your personal needs."
+                self.actionRollTable = {
+                    "rollType": "endurance",
+                    "roll": [
+                        ["8", "Successfully use the toilet without any issues"],
+                        ["5", "Encounter some difficulties while using the toilet"],
+                    ],
+                }
+
+        self.actions = [UseToilet()]
+
+class Table(Item):
+    def __init__(self):
+        self.name = "Table"
+        self.desc = "A sturdy table for various purposes."
+
+        class UseTable(Action):
+            def __init__(self):
+                self.name = "Use Table"
+                self.desc = "You can use the table for various activities."
+                self.actionRollTable = {
+                    "rollType": "skill",
+                    "roll": [
+                        ["6", "Successfully use the table"],
+                        ["3", "Encounter some difficulties while using the table"],
+                    ],
+                }
+
+        self.actions = [UseTable()]
 
 # CHARACTERS
 
@@ -129,6 +278,75 @@ class Jailor(Char):
 
         self.actions = [Patrol(), CallBackup()]
 
+class KitchenStaff(Char):
+    def __init__(self):
+        self.name = "KitchenStaff"
+        self.desc = "a member of the kitchen staff"
+        self.listOfItems = []
+        self.actions = []
+
+        class PrepareMeal(Action):
+            def __init__(self):
+                self.name = "Prepare Meal"
+                self.desc = "prepare a meal for the inmates"
+                self.actionRollTable = {
+                    "rollType": "skill",
+                    "roll": [
+                        ["6", "the meal turns out delicious"],
+                        ["4", "the meal is average"],
+                        ["2", "the meal is poorly prepared"],
+                    ],
+                }
+
+        class StealSupplies(Action):
+            def __init__(self):
+                self.name = "Steal Supplies"
+                self.desc = "sneakily take some supplies from the kitchen"
+                self.actionRollTable = {
+                    "rollType": "stealth",
+                    "roll": [
+                        ["6", "successfully steal the supplies without being noticed"],
+                        ["3", "get caught but manage to take some supplies"],
+                        ["1", "get caught and fail to take any supplies"],
+                    ],
+                }
+
+        self.actions = [PrepareMeal(), StealSupplies()]
+
+class Inmate(Char):
+    def __init__(self):
+        self.name = "Inmate"
+        self.desc = "an inmate residing in the prison"
+        self.listOfItems = []
+        self.actions = []
+
+        class PlotEscape(Action):
+            def __init__(self):
+                self.name = "Plot Escape"
+                self.desc = "conspire with other inmates to escape"
+                self.actionRollTable = {
+                    "rollType": "intelligence",
+                    "roll": [
+                        ["6", "escape plan is foolproof"],
+                        ["4", "escape plan has some risks"],
+                        ["2", "escape plan is unlikely to work"],
+                    ],
+                }
+
+        class StartFight(Action):
+            def __init__(self):
+                self.name = "Start a Fight"
+                self.desc = "instigate a fight with another inmate"
+                self.actionRollTable = {
+                    "rollType": "strength",
+                    "roll": [
+                        ["6", "overwhelming victory"],
+                        ["3", "partial success"],
+                        ["1", "defeat"],
+                    ],
+                }
+
+        self.actions = [PlotEscape(), StartFight()]
 
 # GOOD EVENTS
 
@@ -171,6 +389,39 @@ class Patrol(BadEvent):
         self.listOfItems = []
         self.listOfChars = [Jailor()]
 
+class Fight(BadEvent):
+    def __init__(self):
+        self.name = "Fight"
+        self.desc = "a physical altercation between inmates"
+
+        self.eventRollTable = {
+            "rollType": "combat",
+            "roll": [
+                ["6", "inmates peacefully resolve the conflict"],
+                ["4", "minor injuries sustained by both parties"],
+                ["2", "serious injuries and intervention by guards"],
+            ],
+        }
+
+        self.listOfItems = []
+        self.listOfChars = [Inmate()]
+
+class FoodFight(BadEvent):
+    def __init__(self):
+        self.name = "Food Fight"
+        self.desc = "an altercation between inmates involving throwing food"
+
+        self.eventRollTable = {
+            "rollType": "chaos",
+            "roll": [
+                ["6", "inmates quickly stop the food fight"],
+                ["4", "food fight escalates, causing a mess"],
+                ["2", "chaotic food fight with widespread food throwing"],
+            ],
+        }
+
+        self.listOfItems = []
+        self.listOfChars = [Inmate()]
 
 # LOCALES
 
@@ -255,8 +506,35 @@ class Prison(Overworld):
                         jdb.p("heat lower bound", lowerBound)
 
                 self.locales = [WeaponCache(), ArmoryEntrance()]
+        
+        class CellBlock(Biome):
+            def __init__(self):
+                self.biomeName = "Cell Block"
+                self.desc = "the cell block area, where inmates are housed"
 
-        self.biomes = [Armories()]
+                class Cell(Locale):
+                    def __init__(self):
+                        self.localeName = "Cell"
+                        self.desc = "a prison cell where an inmate resides"
+
+                        self.listOfItems = [Bed(), Toilet()]
+                        self.listOfChars = [Inmate()]
+                        self.listOfGoodEvents = []
+                        self.listOfBadEvents = [Fight()]
+
+                class Cafeteria(Locale):
+                    def __init__(self):
+                        self.localeName = "Cafeteria"
+                        self.desc = "the cafeteria where inmates have their meals"
+
+                        self.listOfItems = [Table(), Food()]
+                        self.listOfChars = [Inmate(), KitchenStaff()]
+                        self.listOfGoodEvents = []
+                        self.listOfBadEvents = [FoodFight()]
+
+                self.locales = [Cell(), Cafeteria()]
+
+        self.biomes = [Armories(), CellBlock()]
 
 
 def locale(overworld, size):
