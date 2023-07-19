@@ -136,6 +136,10 @@ class Jailor(Char):
 @dataclass
 class GoodEvent:
     name: str
+    desc: str
+    eventRollTable: dict
+    listOfItems: list[Item]
+    listOfChars: list[Char]
 
 
 # BAD EVENTS
@@ -144,6 +148,28 @@ class GoodEvent:
 @dataclass
 class BadEvent:
     name: str
+    desc: str
+    eventRollTable: dict
+    listOfItems: list[Item]
+    listOfChars: list[Char]
+
+
+class Patrol(BadEvent):
+    def __init__(self):
+        self.name = "Patrol"
+        self.desc = "a patrol of some guards came over, roll to see the guards you get"
+
+        self.eventRollTable = {
+            "rollType": "speed",
+            "roll": [
+                ["6", "no guard found you"],
+                ["4", "one guard found you"],
+                ["3", "lots of guards found you (d4)"],
+            ],
+        }
+
+        self.listOfItems = []
+        self.listOfChars = [Jailor()]
 
 
 # LOCALES
@@ -202,7 +228,7 @@ class Prison(Overworld):
                         self.listOfItems = [Gun()]
                         self.listOfChars = [Jailor()]
                         self.listOfGoodEvents = []
-                        self.listOfBadEvents = []
+                        self.listOfBadEvents = [Patrol()]
 
                 class ArmoryEntrance(Locale):
                     def __init__(self):
@@ -212,7 +238,7 @@ class Prison(Overworld):
                         self.listOfItems = []
                         self.listOfChars = [Jailor()]
                         self.listOfGoodEvents = []
-                        self.listOfBadEvents = []
+                        self.listOfBadEvents = [Patrol()]
 
                 self.locales = [WeaponCache(), ArmoryEntrance()]
 

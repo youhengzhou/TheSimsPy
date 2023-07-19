@@ -208,7 +208,152 @@
                         }
                     ],
                     "listOfGoodEvents": [],
-                    "listOfBadEvents": []
+                    "listOfBadEvents": [
+                        {
+                            "name": "Patrol",
+                            "desc": "a patrol of some guards came over, roll to see the guards you get",
+                            "eventRollTable": {
+                                "rollType": "speed",
+                                "roll": [
+                                    [
+                                        "6",
+                                        "no guard found you"
+                                    ],
+                                    [
+                                        "4",
+                                        "one guard found you"
+                                    ],
+                                    [
+                                        "3",
+                                        "lots of guards found you (d4)"
+                                    ]
+                                ]
+                            },
+                            "listOfItems": [],
+                            "listOfChars": [
+                                {
+                                    "name": "Jailor",
+                                    "desc": "a typical jailor, they might not want to be there, just there for a paycheck, but they still do their jobs",
+                                    "listOfItems": [
+                                        {
+                                            "name": "Gun",
+                                            "desc": "This revolver contains six bullets, but it tends to jam",
+                                            "actions": [
+                                                {
+                                                    "name": "Shoot (Full Clip)",
+                                                    "desc": "you take aim with your finesess and shoot, you can use this once per turn",
+                                                    "actionRollTable": {
+                                                        "rollType": "speed",
+                                                        "roll": [
+                                                            [
+                                                                "4",
+                                                                "incapicate target"
+                                                            ],
+                                                            [
+                                                                "3",
+                                                                "miss"
+                                                            ]
+                                                        ]
+                                                    }
+                                                },
+                                                {
+                                                    "name": "Shoot (Half Clip)",
+                                                    "desc": "you take aim with your finesess and shoot, you can use this once per turn",
+                                                    "actionRollTable": {
+                                                        "rollType": "speed",
+                                                        "roll": [
+                                                            [
+                                                                "8",
+                                                                "incapicate target"
+                                                            ],
+                                                            [
+                                                                "7",
+                                                                "miss"
+                                                            ]
+                                                        ]
+                                                    }
+                                                },
+                                                {
+                                                    "name": "Reload",
+                                                    "desc": "you reload your gun, remove bullets from your inventory",
+                                                    "actionRollTable": {
+                                                        "rollType": "knowledge",
+                                                        "roll": [
+                                                            [
+                                                                "2",
+                                                                "reload succeed"
+                                                            ],
+                                                            [
+                                                                "1",
+                                                                "reload failed, try again"
+                                                            ]
+                                                        ]
+                                                    }
+                                                },
+                                                {
+                                                    "name": "Aim",
+                                                    "desc": "you aim your gun, allowing an easier time to fire",
+                                                    "actionRollTable": {
+                                                        "rollType": "sanity",
+                                                        "roll": [
+                                                            [
+                                                                "8",
+                                                                "increase speed +2 to your next shoot"
+                                                            ],
+                                                            [
+                                                                "4",
+                                                                "increase speed +1 to your next shoot"
+                                                            ]
+                                                        ]
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    ],
+                                    "actions": [
+                                        {
+                                            "name": "Patrol",
+                                            "desc": "the jailor patrols the area, they check for you",
+                                            "actionRollTable": {
+                                                "rollType": "speed",
+                                                "roll": [
+                                                    [
+                                                        "4",
+                                                        "found you"
+                                                    ],
+                                                    [
+                                                        "3",
+                                                        "miss you"
+                                                    ]
+                                                ]
+                                            }
+                                        },
+                                        {
+                                            "name": "Call Backup",
+                                            "desc": "calls for backup, get some extra weapons or help",
+                                            "actionRollTable": {
+                                                "rollType": "sanity",
+                                                "roll": [
+                                                    [
+                                                        "6",
+                                                        "they receive extra weapons and help"
+                                                    ],
+                                                    [
+                                                        "4",
+                                                        "they only receive extra weapons"
+                                                    ],
+                                                    [
+                                                        "3",
+                                                        "nobody comes to help"
+                                                    ]
+                                                ]
+                                            }
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
                 },
                 {
                     "localeName": "Armory Entrance",
@@ -337,7 +482,152 @@
                         }
                     ],
                     "listOfGoodEvents": [],
-                    "listOfBadEvents": []
+                    "listOfBadEvents": [
+                        {
+                            "name": "Patrol",
+                            "desc": "a patrol of some guards came over, roll to see the guards you get",
+                            "eventRollTable": {
+                                "rollType": "speed",
+                                "roll": [
+                                    [
+                                        "6",
+                                        "no guard found you"
+                                    ],
+                                    [
+                                        "4",
+                                        "one guard found you"
+                                    ],
+                                    [
+                                        "3",
+                                        "lots of guards found you (d4)"
+                                    ]
+                                ]
+                            },
+                            "listOfItems": [],
+                            "listOfChars": [
+                                {
+                                    "name": "Jailor",
+                                    "desc": "a typical jailor, they might not want to be there, just there for a paycheck, but they still do their jobs",
+                                    "listOfItems": [
+                                        {
+                                            "name": "Gun",
+                                            "desc": "This revolver contains six bullets, but it tends to jam",
+                                            "actions": [
+                                                {
+                                                    "name": "Shoot (Full Clip)",
+                                                    "desc": "you take aim with your finesess and shoot, you can use this once per turn",
+                                                    "actionRollTable": {
+                                                        "rollType": "speed",
+                                                        "roll": [
+                                                            [
+                                                                "4",
+                                                                "incapicate target"
+                                                            ],
+                                                            [
+                                                                "3",
+                                                                "miss"
+                                                            ]
+                                                        ]
+                                                    }
+                                                },
+                                                {
+                                                    "name": "Shoot (Half Clip)",
+                                                    "desc": "you take aim with your finesess and shoot, you can use this once per turn",
+                                                    "actionRollTable": {
+                                                        "rollType": "speed",
+                                                        "roll": [
+                                                            [
+                                                                "8",
+                                                                "incapicate target"
+                                                            ],
+                                                            [
+                                                                "7",
+                                                                "miss"
+                                                            ]
+                                                        ]
+                                                    }
+                                                },
+                                                {
+                                                    "name": "Reload",
+                                                    "desc": "you reload your gun, remove bullets from your inventory",
+                                                    "actionRollTable": {
+                                                        "rollType": "knowledge",
+                                                        "roll": [
+                                                            [
+                                                                "2",
+                                                                "reload succeed"
+                                                            ],
+                                                            [
+                                                                "1",
+                                                                "reload failed, try again"
+                                                            ]
+                                                        ]
+                                                    }
+                                                },
+                                                {
+                                                    "name": "Aim",
+                                                    "desc": "you aim your gun, allowing an easier time to fire",
+                                                    "actionRollTable": {
+                                                        "rollType": "sanity",
+                                                        "roll": [
+                                                            [
+                                                                "8",
+                                                                "increase speed +2 to your next shoot"
+                                                            ],
+                                                            [
+                                                                "4",
+                                                                "increase speed +1 to your next shoot"
+                                                            ]
+                                                        ]
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    ],
+                                    "actions": [
+                                        {
+                                            "name": "Patrol",
+                                            "desc": "the jailor patrols the area, they check for you",
+                                            "actionRollTable": {
+                                                "rollType": "speed",
+                                                "roll": [
+                                                    [
+                                                        "4",
+                                                        "found you"
+                                                    ],
+                                                    [
+                                                        "3",
+                                                        "miss you"
+                                                    ]
+                                                ]
+                                            }
+                                        },
+                                        {
+                                            "name": "Call Backup",
+                                            "desc": "calls for backup, get some extra weapons or help",
+                                            "actionRollTable": {
+                                                "rollType": "sanity",
+                                                "roll": [
+                                                    [
+                                                        "6",
+                                                        "they receive extra weapons and help"
+                                                    ],
+                                                    [
+                                                        "4",
+                                                        "they only receive extra weapons"
+                                                    ],
+                                                    [
+                                                        "3",
+                                                        "nobody comes to help"
+                                                    ]
+                                                ]
+                                            }
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
                 }
             ]
         }
