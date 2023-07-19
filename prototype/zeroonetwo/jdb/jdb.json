@@ -1,58 +1,50 @@
 {
     "0": {
         "gender": "Miss",
-        "name": "Charlotte Allen",
-        "home": "Queenborough",
-        "role": "extravagant intelligentsia",
-        "clothing": "normal long jacket",
-        "grit": 2,
+        "name": "Eleanor Jones",
+        "home": "Penzance",
+        "role": "simple soldier",
+        "clothing": "old fashioned long shirt",
+        "grit": 4,
         "speed": 3,
-        "knowledge": 4,
+        "knowledge": 1,
         "sanity": 6,
-        "items": [
-            " "
-        ]
+        "items": []
     },
     "1": {
         "gender": "Mr",
-        "name": "Frederick Williams",
-        "home": "Jarrow",
-        "role": "normal build assassin",
-        "clothing": "dirty jacket and shirt",
-        "grit": 5,
-        "speed": 5,
+        "name": "Ernest Wilson",
+        "home": "Epsom",
+        "role": "simple journalist",
+        "clothing": "urban tuxedo",
+        "grit": 3,
+        "speed": 1,
         "knowledge": 3,
-        "sanity": 2,
-        "items": [
-            " "
-        ]
+        "sanity": 5,
+        "items": []
     },
     "2": {
-        "gender": "Miss",
-        "name": "Clara Davis",
+        "gender": "Mr",
+        "name": "Walter King",
         "home": "Penzance",
-        "role": "lean occult member",
-        "clothing": "fine long shirt",
-        "grit": 2,
-        "speed": 1,
+        "role": "soft thief",
+        "clothing": "normal long shirt",
+        "grit": 5,
+        "speed": 4,
         "knowledge": 2,
-        "sanity": 6,
-        "items": [
-            "2"
-        ]
+        "sanity": 1,
+        "items": []
     },
     "3": {
         "gender": "Mr",
-        "name": "Lionel Brown",
-        "home": "Gillingham",
-        "role": "lean shopkeeper",
-        "clothing": "urban coat and vest",
-        "grit": 3,
+        "name": "Sidney Carter",
+        "home": "Penzance",
+        "role": "plain faced investigator",
+        "clothing": "fine long shirt",
+        "grit": 5,
         "speed": 2,
-        "knowledge": 2,
-        "sanity": 2,
-        "items": [
-            "y"
-        ]
+        "knowledge": 3,
+        "sanity": 3,
+        "items": []
     }
 }
