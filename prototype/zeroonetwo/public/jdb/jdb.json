@@ -1,0 +1,51 @@
+{
+  "name": "Gun",
+  "desc": "This revolver contains six bullets, but it tends to jam, you feel stronger with it, grit +2",
+  "actions": [
+    {
+      "name": "Shoot (Full Clip)",
+      "desc": "you take aim with your finesess and shoot, you can use this once per turn",
+      "actionRollTable": {
+        "rollType": "speed",
+        "roll": [
+          ["4", "incapicate target"],
+          ["3", "miss"],
+          ["2", "jam"]
+        ]
+      }
+    },
+    {
+      "name": "Shoot (Half Clip)",
+      "desc": "you take aim with your finesess and shoot, you can use this once per turn",
+      "actionRollTable": {
+        "rollType": "speed",
+        "roll": [
+          ["8", "incapicate target"],
+          ["7", "miss"]
+        ]
+      }
+    },
+    {
+      "name": "Reload",
+      "desc": "you reload your gun, remove bullets from your inventory",
+      "actionRollTable": {
+        "rollType": "knowledge",
+        "roll": [
+          ["2", "reload succeed"],
+          ["1", "reload failed, try again"]
+        ]
+      }
+    },
+    {
+      "name": "Aim",
+      "desc": "you aim your gun, allowing an easier time to fire",
+      "actionRollTable": {
+        "rollType": "sanity",
+        "roll": [
+          ["8", "increase speed +2 to your next shoot"],
+          ["4", "increase speed +1 to your next shoot"]
+        ]
+      }
+    }
+  ]
+}
