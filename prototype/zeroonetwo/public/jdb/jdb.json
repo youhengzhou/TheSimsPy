@@ -1,9 +1,9 @@
 {
-    "heat lower bound": 3,
-    "heat upper bound": 1,
-    "escape chance": 10,
-    "current events": "a physical altercation between inmates",
-    "victory": "yes",
+    "heat lower bound": 109,
+    "heat upper bound": 237,
+    "escape chance": 8,
+    "current events": [],
+    "victory": "no",
     "overworldName": "Imperial Irelandia Prison",
     "desc": "none shall leave here without penance",
     "biomes": [

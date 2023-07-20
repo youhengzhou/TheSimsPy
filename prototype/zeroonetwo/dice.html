@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Dice Rolling Simulation</title>
+  </head>
+  <body>
+    Number of Dice: <input type="number" id="numOfDice" min="0" />
+    <button id="rollButton" onclick="handleButtonClick()">Roll</button>
+    <div id="results"></div>
+    <img id="diceImage" src="" style="display: none" />
+
+    <script>
+      var num = 0; // total number of rolls
+      var currentRoll = 0; // current roll
+      var total = 0; // total sum of rolls
+
+      function handleButtonClick() {
+        // If this is the first click, get the number of rolls
+        if (currentRoll === 0) {
+          num = document.getElementById("numOfDice").value;
+          if (num <= 0) {
+            alert("Please enter a positive number.");
+            return;
+          }
+          document.getElementById("rollButton").innerHTML = "Roll Again";
+        }
+
+        var curr = Math.floor(Math.random() * 3); // roll dice
+        total += curr; // add to total
+
+        // Print roll message
+        var results = document.getElementById("results");
+        results.innerHTML +=
+          "Roll " +
+          (currentRoll + 1) +
+          " of " +
+          num +
+          ": " +
+          curr +
+          ". Total so far: " +
+          total +
+          "<br>";
+
+        // Show dice image
+        var diceImage = document.getElementById("diceImage");
+        diceImage.src = curr + ".png"; // assuming you have 0.png, 1.png, and 2.png in the same directory
+        diceImage.style.display = "block";
+
+        currentRoll++; // increment roll count
+
+        // If all rolls have been performed, disable button and reset state
+        if (currentRoll >= num) {
+          document.getElementById("rollButton").innerHTML = "Roll";
+          document.getElementById("rollButton").disabled = true;
+          currentRoll = 0;
+          total = 0;
+          //   diceImage.style.display = "none"; // hide dice image
+        }
+      }
+    </script>
+  </body>
+</html>
