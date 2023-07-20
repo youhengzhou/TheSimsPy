@@ -80,7 +80,7 @@ class Gun(Item):
         self.actions = [ShootFullClip(), ShootHalfClip(), Reload(), Aim()]
 
 
-gun = Gun()
+# gun = Gun()
 
 
 # choice = input(f"> {[a.name for a in gun.actions]} ")
@@ -249,6 +249,97 @@ class Table(Item):
 
 # CHARACTERS
 
+names = {
+    "male": [
+        "Alfred",
+        "Arthur",
+        "Benjamin",
+        "Charles",
+        "Edgar",
+        "Edmund",
+        "Ernest",
+        "Frederick",
+        "George",
+        "Harold",
+        "Herbert",
+        "Leonard",
+        "Lionel",
+        "Percy",
+        "Reginald",
+        "Sidney",
+        "Stanley",
+        "Thomas",
+        "Walter",
+        "Wilfred",
+    ],
+    "female": [
+        "Ada",
+        "Agnes",
+        "Alice",
+        "Amelia",
+        "Beatrice",
+        "Catherine",
+        "Charlotte",
+        "Clara",
+        "Edith",
+        "Eleanor",
+        "Elizabeth",
+        "Emma",
+        "Florence",
+        "Frances",
+        "Grace",
+        "Harriet",
+        "Isabella",
+        "Jane",
+        "Louisa",
+        "Mary",
+    ],
+    "last": [
+        "Smith",
+        "Johnson",
+        "Williams",
+        "Brown",
+        "Jones",
+        "Miller",
+        "Davis",
+        "Wilson",
+        "Taylor",
+        "Clark",
+        "Hall",
+        "Lee",
+        "Allen",
+        "Young",
+        "Walker",
+        "Wright",
+        "Morris",
+        "King",
+        "Carter",
+        "Baker",
+    ],
+    "place": [
+        "Ashbourne",
+        "Bexhill",
+        "Cheltenham",
+        "Dorking",
+        "Epsom",
+        "Farnham",
+        "Gillingham",
+        "Harrogate",
+        "Ilfracombe",
+        "Jarrow",
+        "Kendal",
+        "Louth",
+        "Matlock",
+        "Newark",
+        "Ormskirk",
+        "Penzance",
+        "Queenborough",
+        "Rye",
+        "Scarborough",
+        "Tewkesbury",
+    ],
+}
+
 
 @dataclass
 class Char:
@@ -260,7 +351,11 @@ class Char:
 
 class Jailor(Char):
     def __init__(self):
-        self.name = "Jailor"
+        import random
+
+        self.name = (
+            f"Jailor {random.choice(names['male'])} {random.choice(names['last'])}"
+        )
         self.desc = "a typical jailor, they might not want to be there, just there for a paycheck, but they still do their jobs"
         self.listOfItems = [Gun()]
 
@@ -294,7 +389,10 @@ class Jailor(Char):
 
 class KitchenStaff(Char):
     def __init__(self):
-        self.name = "KitchenStaff"
+        import random
+
+        self.name = f"Kitchen Staff {random.choice(names['male'])} {random.choice(names['last'])}"
+
         self.desc = "a member of the kitchen staff"
         self.listOfItems = []
         self.actions = []
@@ -330,7 +428,11 @@ class KitchenStaff(Char):
 
 class Inmate(Char):
     def __init__(self):
-        self.name = "Inmate"
+        import random
+
+        self.name = (
+            f"Inmate {random.choice(names['male'])} {random.choice(names['last'])}"
+        )
         self.desc = "an inmate residing in the prison"
         self.listOfItems = []
         self.actions = []
@@ -598,7 +700,7 @@ class Prison(Overworld):
         self.biomes = [Armories(), CellBlock()]
 
 
-def locale(overworld, size):
+def journey(overworld, size):
     import random
     from termcolor import colored
 
@@ -643,12 +745,21 @@ def locale(overworld, size):
         print(f"escape chance: {colored(jdb.r('escape chance'), 'red')}")
         print(f"current events: {colored(jdb.r('current events'), 'red')}")
         print(f"{locale}")
+        print(
+            f"inmates: {colored([inmate['name'] for inmate in jdb.r('inmates')], 'red')}"
+        )
+        print(
+            f"jailors: {colored([jailor['name'] for jailor in jdb.r('jailors')], 'red')}"
+        )
+        print(
+            f"kitchen staffs: {colored([kitchenStaff['name'] for kitchenStaff in jdb.r('kitchenStaffs')], 'red')}"
+        )
 
 
 def setup():
     from termcolor import colored
 
-    def prisonHeat():
+    def prisonInfo():
         import random
 
         heatLowerBound = random.randint(100, 120)
@@ -661,14 +772,29 @@ def setup():
         jdb.p("current events", [])
         jdb.p("victory", "no")
 
-    prisonHeat()
+        inmates = []
+        for _ in range(random.randint(5, 10)):
+            inmates.append(asdict(Inmate()))
+        jdb.p(f"inmates", inmates)
+
+        jailors = []
+        for _ in range(random.randint(2, 4)):
+            jailors.append(asdict(Jailor()))
+        jdb.p(f"jailors", jailors)
+
+        kitchenStaffs = []
+        for _ in range(random.randint(2, 4)):
+            kitchenStaffs.append(asdict(KitchenStaff()))
+        jdb.p(f"kitchenStaffs", kitchenStaffs)
+
+    prisonInfo()
 
     p = Prison()
 
-    jdb.patch(asdict(p))
+    # jdb.patch(asdict(p))
 
     while jdb.r("victory") == "no":
-        locale(p, 4)
+        journey(p, 4)
 
     print(
         colored(
@@ -744,7 +870,7 @@ def setup():
         ],
     }
 
-    def journey(dictionary, size):
+    def escaped(dictionary, size):
         import random
 
         steps = 0
@@ -765,7 +891,7 @@ def setup():
             print(f"steps: {steps}")
             print(f"{locale}")
 
-    journey(overworld, 4)
+    escaped(overworld, 4)
 
 
 setup()

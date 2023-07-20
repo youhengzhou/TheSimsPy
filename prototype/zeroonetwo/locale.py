@@ -276,8 +276,8 @@ def series(dictionary, size):
         print(f"{locale}")
 
 
-# locale(overworld, 6)
+locale(overworld, 4)
 
-locale(roomsGala, 6)
+# locale(roomsGala, 6)
 
 # series(overworld, 4)
