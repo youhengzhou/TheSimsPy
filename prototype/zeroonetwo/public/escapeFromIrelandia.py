@@ -755,6 +755,8 @@ def journey(overworld, size):
             f"kitchen staffs: {colored([kitchenStaff['name'] for kitchenStaff in jdb.r('kitchenStaffs')], 'red')}"
         )
 
+        print("event is now in stage {stage}")
+
 
 def setup():
     from termcolor import colored
@@ -786,6 +788,9 @@ def setup():
         for _ in range(random.randint(2, 4)):
             kitchenStaffs.append(asdict(KitchenStaff()))
         jdb.p(f"kitchenStaffs", kitchenStaffs)
+
+        prisonQuest = PrisonQuest()
+        jdb.p()
 
     prisonInfo()
 
