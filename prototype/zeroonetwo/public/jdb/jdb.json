@@ -1,12 +1,12 @@
 {
-    "heat lower bound": 113,
-    "heat upper bound": 241,
-    "escape chance": 25,
+    "heat lower bound": 95,
+    "heat upper bound": 254,
+    "escape chance": 9,
     "current events": "a patrol of some guards came over, roll to see the guards you get",
     "victory": "no",
     "inmates": [
         {
-            "name": "Inmate Alfred Young",
+            "name": "Inmate Arthur Lee",
             "desc": "an inmate residing in the prison",
             "listOfItems": [],
             "actions": [
@@ -55,7 +55,7 @@
             ]
         },
         {
-            "name": "Inmate George King",
+            "name": "Inmate Thomas Lee",
             "desc": "an inmate residing in the prison",
             "listOfItems": [],
             "actions": [
@@ -104,7 +104,7 @@
             ]
         },
         {
-            "name": "Inmate Sidney Miller",
+            "name": "Inmate Lionel Wright",
             "desc": "an inmate residing in the prison",
             "listOfItems": [],
             "actions": [
@@ -153,7 +153,7 @@
             ]
         },
         {
-            "name": "Inmate Charles King",
+            "name": "Inmate Leonard Taylor",
             "desc": "an inmate residing in the prison",
             "listOfItems": [],
             "actions": [
@@ -202,154 +202,7 @@
             ]
         },
         {
-            "name": "Inmate George Baker",
-            "desc": "an inmate residing in the prison",
-            "listOfItems": [],
-            "actions": [
-                {
-                    "name": "Plot Escape",
-                    "desc": "conspire with other inmates to escape",
-                    "actionRollTable": {
-                        "rollType": "intelligence",
-                        "roll": [
-                            [
-                                "6",
-                                "escape plan is foolproof"
-                            ],
-                            [
-                                "4",
-                                "escape plan has some risks"
-                            ],
-                            [
-                                "2",
-                                "escape plan is unlikely to work"
-                            ]
-                        ]
-                    }
-                },
-                {
-                    "name": "Start a Fight",
-                    "desc": "instigate a fight with another inmate",
-                    "actionRollTable": {
-                        "rollType": "strength",
-                        "roll": [
-                            [
-                                "6",
-                                "overwhelming victory"
-                            ],
-                            [
-                                "3",
-                                "partial success"
-                            ],
-                            [
-                                "1",
-                                "defeat"
-                            ]
-                        ]
-                    }
-                }
-            ]
-        },
-        {
-            "name": "Inmate Charles King",
-            "desc": "an inmate residing in the prison",
-            "listOfItems": [],
-            "actions": [
-                {
-                    "name": "Plot Escape",
-                    "desc": "conspire with other inmates to escape",
-                    "actionRollTable": {
-                        "rollType": "intelligence",
-                        "roll": [
-                            [
-                                "6",
-                                "escape plan is foolproof"
-                            ],
-                            [
-                                "4",
-                                "escape plan has some risks"
-                            ],
-                            [
-                                "2",
-                                "escape plan is unlikely to work"
-                            ]
-                        ]
-                    }
-                },
-                {
-                    "name": "Start a Fight",
-                    "desc": "instigate a fight with another inmate",
-                    "actionRollTable": {
-                        "rollType": "strength",
-                        "roll": [
-                            [
-                                "6",
-                                "overwhelming victory"
-                            ],
-                            [
-                                "3",
-                                "partial success"
-                            ],
-                            [
-                                "1",
-                                "defeat"
-                            ]
-                        ]
-                    }
-                }
-            ]
-        },
-        {
-            "name": "Inmate Benjamin Carter",
-            "desc": "an inmate residing in the prison",
-            "listOfItems": [],
-            "actions": [
-                {
-                    "name": "Plot Escape",
-                    "desc": "conspire with other inmates to escape",
-                    "actionRollTable": {
-                        "rollType": "intelligence",
-                        "roll": [
-                            [
-                                "6",
-                                "escape plan is foolproof"
-                            ],
-                            [
-                                "4",
-                                "escape plan has some risks"
-                            ],
-                            [
-                                "2",
-                                "escape plan is unlikely to work"
-                            ]
-                        ]
-                    }
-                },
-                {
-                    "name": "Start a Fight",
-                    "desc": "instigate a fight with another inmate",
-                    "actionRollTable": {
-                        "rollType": "strength",
-                        "roll": [
-                            [
-                                "6",
-                                "overwhelming victory"
-                            ],
-                            [
-                                "3",
-                                "partial success"
-                            ],
-                            [
-                                "1",
-                                "defeat"
-                            ]
-                        ]
-                    }
-                }
-            ]
-        },
-        {
-            "name": "Inmate Reginald Baker",
+            "name": "Inmate Walter Williams",
             "desc": "an inmate residing in the prison",
             "listOfItems": [],
             "actions": [
@@ -400,7 +253,7 @@
     ],
     "jailors": [
         {
-            "name": "Jailor Percy Lee",
+            "name": "Jailor Harold Johnson",
             "desc": "a typical jailor, they might not want to be there, just there for a paycheck, but they still do their jobs",
             "listOfItems": [
                 {
@@ -520,7 +373,247 @@
             ]
         },
         {
-            "name": "Jailor Reginald Wright",
+            "name": "Jailor Edmund Morris",
+            "desc": "a typical jailor, they might not want to be there, just there for a paycheck, but they still do their jobs",
+            "listOfItems": [
+                {
+                    "name": "Gun",
+                    "desc": "This revolver contains six bullets, but it tends to jam",
+                    "actions": [
+                        {
+                            "name": "Shoot (Full Clip)",
+                            "desc": "you take aim with your finesess and shoot, you can use this once per turn",
+                            "actionRollTable": {
+                                "rollType": "speed",
+                                "roll": [
+                                    [
+                                        "4",
+                                        "incapicate target"
+                                    ],
+                                    [
+                                        "3",
+                                        "miss"
+                                    ]
+                                ]
+                            }
+                        },
+                        {
+                            "name": "Shoot (Half Clip)",
+                            "desc": "you take aim with your finesess and shoot, you can use this once per turn",
+                            "actionRollTable": {
+                                "rollType": "speed",
+                                "roll": [
+                                    [
+                                        "8",
+                                        "incapicate target"
+                                    ],
+                                    [
+                                        "7",
+                                        "miss"
+                                    ]
+                                ]
+                            }
+                        },
+                        {
+                            "name": "Reload",
+                            "desc": "you reload your gun, remove bullets from your inventory",
+                            "actionRollTable": {
+                                "rollType": "knowledge",
+                                "roll": [
+                                    [
+                                        "2",
+                                        "reload succeed"
+                                    ],
+                                    [
+                                        "1",
+                                        "reload failed, try again"
+                                    ]
+                                ]
+                            }
+                        },
+                        {
+                            "name": "Aim",
+                            "desc": "you aim your gun, allowing an easier time to fire",
+                            "actionRollTable": {
+                                "rollType": "sanity",
+                                "roll": [
+                                    [
+                                        "8",
+                                        "increase speed +2 to your next shoot"
+                                    ],
+                                    [
+                                        "4",
+                                        "increase speed +1 to your next shoot"
+                                    ]
+                                ]
+                            }
+                        }
+                    ]
+                }
+            ],
+            "actions": [
+                {
+                    "name": "Patrol",
+                    "desc": "the jailor patrols the area, they check for you",
+                    "actionRollTable": {
+                        "rollType": "speed",
+                        "roll": [
+                            [
+                                "4",
+                                "found you"
+                            ],
+                            [
+                                "3",
+                                "miss you"
+                            ]
+                        ]
+                    }
+                },
+                {
+                    "name": "Call Backup",
+                    "desc": "calls for backup, get some extra weapons or help",
+                    "actionRollTable": {
+                        "rollType": "sanity",
+                        "roll": [
+                            [
+                                "6",
+                                "they receive extra weapons and help"
+                            ],
+                            [
+                                "4",
+                                "they only receive extra weapons"
+                            ],
+                            [
+                                "3",
+                                "nobody comes to help"
+                            ]
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Jailor Edmund Morris",
+            "desc": "a typical jailor, they might not want to be there, just there for a paycheck, but they still do their jobs",
+            "listOfItems": [
+                {
+                    "name": "Gun",
+                    "desc": "This revolver contains six bullets, but it tends to jam",
+                    "actions": [
+                        {
+                            "name": "Shoot (Full Clip)",
+                            "desc": "you take aim with your finesess and shoot, you can use this once per turn",
+                            "actionRollTable": {
+                                "rollType": "speed",
+                                "roll": [
+                                    [
+                                        "4",
+                                        "incapicate target"
+                                    ],
+                                    [
+                                        "3",
+                                        "miss"
+                                    ]
+                                ]
+                            }
+                        },
+                        {
+                            "name": "Shoot (Half Clip)",
+                            "desc": "you take aim with your finesess and shoot, you can use this once per turn",
+                            "actionRollTable": {
+                                "rollType": "speed",
+                                "roll": [
+                                    [
+                                        "8",
+                                        "incapicate target"
+                                    ],
+                                    [
+                                        "7",
+                                        "miss"
+                                    ]
+                                ]
+                            }
+                        },
+                        {
+                            "name": "Reload",
+                            "desc": "you reload your gun, remove bullets from your inventory",
+                            "actionRollTable": {
+                                "rollType": "knowledge",
+                                "roll": [
+                                    [
+                                        "2",
+                                        "reload succeed"
+                                    ],
+                                    [
+                                        "1",
+                                        "reload failed, try again"
+                                    ]
+                                ]
+                            }
+                        },
+                        {
+                            "name": "Aim",
+                            "desc": "you aim your gun, allowing an easier time to fire",
+                            "actionRollTable": {
+                                "rollType": "sanity",
+                                "roll": [
+                                    [
+                                        "8",
+                                        "increase speed +2 to your next shoot"
+                                    ],
+                                    [
+                                        "4",
+                                        "increase speed +1 to your next shoot"
+                                    ]
+                                ]
+                            }
+                        }
+                    ]
+                }
+            ],
+            "actions": [
+                {
+                    "name": "Patrol",
+                    "desc": "the jailor patrols the area, they check for you",
+                    "actionRollTable": {
+                        "rollType": "speed",
+                        "roll": [
+                            [
+                                "4",
+                                "found you"
+                            ],
+                            [
+                                "3",
+                                "miss you"
+                            ]
+                        ]
+                    }
+                },
+                {
+                    "name": "Call Backup",
+                    "desc": "calls for backup, get some extra weapons or help",
+                    "actionRollTable": {
+                        "rollType": "sanity",
+                        "roll": [
+                            [
+                                "6",
+                                "they receive extra weapons and help"
+                            ],
+                            [
+                                "4",
+                                "they only receive extra weapons"
+                            ],
+                            [
+                                "3",
+                                "nobody comes to help"
+                            ]
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Jailor Alfred King",
             "desc": "a typical jailor, they might not want to be there, just there for a paycheck, but they still do their jobs",
             "listOfItems": [
                 {
@@ -642,7 +735,7 @@
     ],
     "kitchenStaffs": [
         {
-            "name": "Kitchen Staff Ernest Williams",
+            "name": "Kitchen Staff Leonard Carter",
             "desc": "a member of the kitchen staff",
             "listOfItems": [],
             "actions": [
@@ -691,7 +784,56 @@
             ]
         },
         {
-            "name": "Kitchen Staff Benjamin Smith",
+            "name": "Kitchen Staff Thomas Brown",
+            "desc": "a member of the kitchen staff",
+            "listOfItems": [],
+            "actions": [
+                {
+                    "name": "Prepare Meal",
+                    "desc": "prepare a meal for the inmates",
+                    "actionRollTable": {
+                        "rollType": "skill",
+                        "roll": [
+                            [
+                                "6",
+                                "the meal turns out delicious"
+                            ],
+                            [
+                                "4",
+                                "the meal is average"
+                            ],
+                            [
+                                "2",
+                                "the meal is poorly prepared"
+                            ]
+                        ]
+                    }
+                },
+                {
+                    "name": "Steal Supplies",
+                    "desc": "sneakily take some supplies from the kitchen",
+                    "actionRollTable": {
+                        "rollType": "stealth",
+                        "roll": [
+                            [
+                                "6",
+                                "successfully steal the supplies without being noticed"
+                            ],
+                            [
+                                "3",
+                                "get caught but manage to take some supplies"
+                            ],
+                            [
+                                "1",
+                                "get caught and fail to take any supplies"
+                            ]
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Kitchen Staff Sidney Williams",
             "desc": "a member of the kitchen staff",
             "listOfItems": [],
             "actions": [
@@ -739,5 +881,51 @@
                 }
             ]
         }
-    ]
+    ],
+    "prisonQuest": {
+        "stages": [
+            {
+                "stage_name": "Introduction",
+                "description": "You wake up groggily in a dimly lit prison cell. The smell of dampness fills the air, and you can hear distant echoes of guards patrolling the hallways.",
+                "actions": [
+                    {
+                        "name": "Explore Cell",
+                        "desc": "You search your cell for any useful items that might aid in your escape."
+                    },
+                    {
+                        "name": "Talk to Fellow Prisoner",
+                        "desc": "You strike up a conversation with a fellow prisoner."
+                    }
+                ]
+            },
+            {
+                "stage_name": "Escape from Cell",
+                "description": "You realize that the cell door is unlocked, but there are guards nearby. You must make a decision quickly.",
+                "actions": [
+                    {
+                        "name": "Pick Lock",
+                        "desc": "You attempt to pick the lock on your cell door."
+                    },
+                    {
+                        "name": "Distract Guards",
+                        "desc": "You create a distraction to divert the guards' attention."
+                    }
+                ]
+            },
+            {
+                "stage_name": "Navigate the Prison",
+                "description": "You venture into the prison corridors. The flickering lights make it difficult to see, but you can hear faint whispers and the sound of footsteps.",
+                "actions": [
+                    {
+                        "name": "Sneak Past Guards",
+                        "desc": "You quietly move through the prison, trying to avoid detection by the patrolling guards."
+                    },
+                    {
+                        "name": "Find Map",
+                        "desc": "You search for a map to help you navigate the complex prison layout."
+                    }
+                ]
+            }
+        ]
+    }
 }
