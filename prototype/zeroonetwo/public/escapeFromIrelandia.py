@@ -246,6 +246,280 @@ class Table(Item):
 
         self.actions = [UseTable()]
 
+class Gate(Item):
+    def __init__(self):
+        self.name = "Gate"
+        self.desc = "A heavy gate used for access control."
+
+        class Open(Action):
+            def __init__(self):
+                self.name = "Open"
+                self.desc = "You open the gate to allow entry."
+                self.actionRollTable = {
+                    "rollType": "strength",
+                    "roll": [
+                        ["9", "Smoothly open the gate"],
+                        ["5", "Struggle to open the gate"],
+                    ],
+                }
+
+        class Close(Action):
+            def __init__(self):
+                self.name = "Close"
+                self.desc = "You close the gate to restrict access."
+                self.actionRollTable = {
+                    "rollType": "strength",
+                    "roll": [
+                        ["8", "Easily close the gate"],
+                        ["4", "Require more effort to close the gate"],
+                    ],
+                }
+
+        self.actions = [Open(), Close()]
+
+class SecurityDesk(Item):
+    def __init__(self):
+        self.name = "Security Desk"
+        self.desc = "A control station for monitoring and managing security."
+
+        class Monitor(Action):
+            def __init__(self):
+                self.name = "Monitor"
+                self.desc = "You monitor the security cameras for surveillance."
+                self.actionRollTable = {
+                    "rollType": "perception",
+                    "roll": [
+                        ["10", "Observe all activities with great detail"],
+                        ["6", "Notice some important events"],
+                    ],
+                }
+
+        class ActivateAlarm(Action):
+            def __init__(self):
+                self.name = "Activate Alarm"
+                self.desc = "You activate the alarm system in case of emergencies."
+                self.actionRollTable = {
+                    "rollType": "intelligence",
+                    "roll": [
+                        ["9", "Efficiently activate the alarm"],
+                        ["5", "Struggle to activate the alarm"],
+                    ],
+                }
+
+        self.actions = [Monitor(), ActivateAlarm()]
+
+class CCTVCamera(Item):
+    def __init__(self):
+        self.name = "CCTV Camera"
+        self.desc = "A surveillance camera for monitoring activities."
+
+        class Record(Action):
+            def __init__(self):
+                self.name = "Record"
+                self.desc = "The camera starts recording the surveillance footage."
+                self.actionRollTable = {
+                    "rollType": "intelligence",
+                    "roll": [
+                        ["10", "Capture high-quality footage"],
+                        ["6", "Capture average quality footage"],
+                    ],
+                }
+
+        class PanAndTilt(Action):
+            def __init__(self):
+                self.name = "Pan and Tilt"
+                self.desc = "You can control the camera's movement to adjust its view."
+                self.actionRollTable = {
+                    "rollType": "agility",
+                    "roll": [
+                        ["9", "Precisely adjust the camera view"],
+                        ["5", "Slightly struggle to adjust the camera view"],
+                    ],
+                }
+
+        self.actions = [Record(), PanAndTilt()]
+
+class Computer(Item):
+    def __init__(self):
+        self.name = "Computer"
+        self.desc = "A device for processing information and performing tasks."
+
+        class AccessFiles(Action):
+            def __init__(self):
+                self.name = "Access Files"
+                self.desc = "You use the computer to access and view files."
+                self.actionRollTable = {
+                    "rollType": "intelligence",
+                    "roll": [
+                        ["10", "Effortlessly access and view files"],
+                        ["6", "Encounter minor difficulties while accessing files"],
+                    ],
+                }
+
+        class RunProgram(Action):
+            def __init__(self):
+                self.name = "Run Program"
+                self.desc = "You run a software program on the computer."
+                self.actionRollTable = {
+                    "rollType": "intelligence",
+                    "roll": [
+                        ["9", "Successfully run the program"],
+                        ["5", "Face some issues while running the program"],
+                    ],
+                }
+
+        self.actions = [AccessFiles(), RunProgram()]
+
+class Chair(Item):
+    def __init__(self):
+        self.name = "Chair"
+        self.desc = "A comfortable chair for sitting."
+
+        class Sit(Action):
+            def __init__(self):
+                self.name = "Sit"
+                self.desc = "You can sit on the chair to rest or relax."
+                self.actionRollTable = {
+                    "rollType": "comfort",
+                    "roll": [
+                        ["8", "Sit comfortably on the chair"],
+                        ["4", "Experience slight discomfort while sitting"],
+                    ],
+                }
+
+        self.actions = [Sit()]
+
+class Notebook(Item):
+    def __init__(self):
+        self.name = "Notebook"
+        self.desc = "A small notebook for taking notes and keeping track of information"
+
+        class WriteNotes(Action):
+            def __init__(self):
+                self.name = "Write Notes"
+                self.desc = "You write down important information in your notebook"
+                self.actionRollTable = {
+                    "rollType": "intelligence",
+                    "roll": [
+                        ["5", "you gather valuable information"],
+                        ["3", "you gather some information"],
+                        ["2", "you don't gather much information"],
+                    ],
+                }
+
+        class DrawSketches(Action):
+            def __init__(self):
+                self.name = "Draw Sketches"
+                self.desc = "You draw sketches of people or places in your notebook"
+                self.actionRollTable = {
+                    "rollType": "dexterity",
+                    "roll": [
+                        ["4", "your sketches turn out great"],
+                        ["2", "your sketches turn out average"],
+                        ["1", "your sketches are not very accurate"],
+                    ],
+                }
+
+        self.actions = [WriteNotes(), DrawSketches()]
+
+class Flashlight(Item):
+    def __init__(self):
+        self.name = "Flashlight"
+        self.desc = "A small flashlight that provides light in dark areas"
+
+        class Illuminate(Action):
+            def __init__(self):
+                self.name = "Illuminate"
+                self.desc = "You use the flashlight to illuminate the surroundings"
+                self.actionRollTable = {
+                    "rollType": "perception",
+                    "roll": [
+                        ["5", "you spot something important"],
+                        ["3", "you don't notice anything unusual"],
+                        ["2", "the light flickers and you can't see clearly"],
+                    ],
+                }
+
+        class Signal(Action):
+            def __init__(self):
+                self.name = "Signal"
+                self.desc = "You use the flashlight to send a signal or communicate"
+                self.actionRollTable = {
+                    "rollType": "charisma",
+                    "roll": [
+                        ["4", "your signal is received and understood"],
+                        ["2", "your signal is received but not understood"],
+                        ["1", "your signal is not received or noticed"],
+                    ],
+                }
+
+        self.actions = [Illuminate(), Signal()]
+
+class Taser(Item):
+    def __init__(self):
+        self.name = "Taser"
+        self.desc = "A handheld device that delivers an electric shock to incapacitate targets"
+
+        class Shock(Action):
+            def __init__(self):
+                self.name = "Shock"
+                self.desc = "You use the taser to deliver an electric shock to a target"
+                self.actionRollTable = {
+                    "rollType": "dexterity",
+                    "roll": [
+                        ["6", "the target is incapacitated"],
+                        ["4", "the target is partially incapacitated"],
+                        ["2", "the target is unaffected"],
+                    ],
+                }
+
+        class Stun(Action):
+            def __init__(self):
+                self.name = "Stun"
+                self.desc = "You use the taser to stun a target temporarily"
+                self.actionRollTable = {
+                    "rollType": "intelligence",
+                    "roll": [
+                        ["5", "the target is stunned for a significant duration"],
+                        ["3", "the target is stunned for a short duration"],
+                        ["1", "the target is not affected"],
+                    ],
+                }
+
+        self.actions = [Shock(), Stun()]
+
+class ContrabandItem(Item):
+    def __init__(self):
+        self.name = "Contraband Item"
+        self.desc = "An illegal item that is prohibited in the prison"
+
+        class Hide(Action):
+            def __init__(self):
+                self.name = "Hide"
+                self.desc = "You attempt to hide the contraband item"
+                self.actionRollTable = {
+                    "rollType": "dexterity",
+                    "roll": [
+                        ["6", "you successfully hide the contraband item"],
+                        ["4", "the contraband item is partially concealed"],
+                        ["2", "the contraband item is easily visible"],
+                    ],
+                }
+
+        class Use(Action):
+            def __init__(self):
+                self.name = "Use"
+                self.desc = "You use the contraband item for your advantage"
+                self.actionRollTable = {
+                    "rollType": "intelligence",
+                    "roll": [
+                        ["5", "you successfully utilize the contraband item"],
+                        ["3", "the contraband item provides limited benefit"],
+                        ["1", "the contraband item backfires or fails to work"],
+                    ],
+                }
+
+        self.actions = [Hide(), Use()]
 
 # CHARACTERS
 
@@ -465,7 +739,158 @@ class Inmate(Char):
 
         self.actions = [PlotEscape(), StartFight()]
 
+class Visitor(Char):
+    def __init__(self):
+        import random
 
+        self.name = (
+            f"Visitor {random.choice(names['male'])} {random.choice(names['last'])}"
+        )
+        self.desc = "a curious visitor, they are here to see the prison and learn about the inmates"
+        self.listOfItems = [Notebook()]
+
+        class AskQuestions(Action):
+            def __init__(self):
+                self.name = "Ask Questions"
+                self.desc = "the visitor asks questions to learn more about the prison and the inmates"
+                self.actionRollTable = {
+                    "rollType": "intelligence",
+                    "roll": [
+                        ["5", "they learn valuable information"],
+                        ["3", "they learn some information"],
+                        ["2", "they don't learn much"],
+                        ["1", "they receive incorrect information"],
+                    ],
+                }
+
+        class TakePhotos(Action):
+            def __init__(self):
+                self.name = "Take Photos"
+                self.desc = "the visitor takes photos of the prison and the inmates"
+                self.actionRollTable = {
+                    "rollType": "dexterity",
+                    "roll": [
+                        ["4", "they take great photos"],
+                        ["2", "they take average photos"],
+                        ["1", "they take blurry photos"],
+                        ["0", "they accidentally delete all the photos"],
+                    ],
+                }
+
+        self.actions = [AskQuestions(), TakePhotos()]
+
+class Guard(Char):
+    def __init__(self):
+        import random
+
+        self.name = (
+            f"Guard {random.choice(names['male'])} {random.choice(names['last'])}"
+        )
+        self.desc = "a vigilant guard, they are responsible for maintaining security and order in the prison"
+        self.listOfItems = [Flashlight()]
+
+        class Patrol(Action):
+            def __init__(self):
+                self.name = "Patrol"
+                self.desc = "the guard patrols the area, keeping an eye out for any suspicious activity"
+                self.actionRollTable = {
+                    "rollType": "perception",
+                    "roll": [
+                        ["5", "they notice something suspicious"],
+                        ["3", "they don't notice anything unusual"],
+                        ["2", "they miss something important"],
+                        ["1", "they get distracted and miss everything"],
+                    ],
+                }
+
+        class Search(Action):
+            def __init__(self):
+                self.name = "Search"
+                self.desc = "the guard searches an area for contraband or hidden items"
+                self.actionRollTable = {
+                    "rollType": "intelligence",
+                    "roll": [
+                        ["4", "they find contraband"],
+                        ["2", "they don't find anything"],
+                        ["1", "they accidentally damage something valuable"],
+                        ["0", "they get injured during the search"],
+                    ],
+                }
+
+        self.actions = [Patrol(), Search()]
+
+class SecurityOfficer(Char):
+    def __init__(self):
+        import random
+
+        self.name = (
+            f"Security Officer {random.choice(names['male'])} {random.choice(names['last'])}"
+        )
+        self.desc = "a highly trained security officer, they are responsible for maintaining the highest level of security in the prison"
+        self.listOfItems = [Gun(), Taser()]
+
+        class MonitorCameras(Action):
+            def __init__(self):
+                self.name = "Monitor Cameras"
+                self.desc = "the security officer monitors the security cameras for any suspicious activity"
+                self.actionRollTable = {
+                    "rollType": "perception",
+                    "roll": [
+                        ["5", "they notice something suspicious"],
+                        ["3", "they don't notice anything unusual"],
+                        ["2", "they misinterpret the camera feed"],
+                        ["1", "they accidentally trigger a false alarm"],
+                    ],
+                }
+
+        class ConductSearch(Action):
+            def __init__(self):
+                self.name = "Conduct Search"
+                self.desc = "the security officer conducts a thorough search of an area for contraband or hidden items"
+                self.actionRollTable = {
+                    "rollType": "intelligence",
+                    "roll": [
+                        ["6", "they find contraband"],
+                        ["4", "they don't find anything"],
+                        ["3", "they find a hidden passage"],
+                        ["0", "they trigger a trap during the search"],
+                    ],
+                }
+
+        self.actions = [MonitorCameras(), ConductSearch()]
+
+class Dealer(Char):
+    def __init__(self):
+        self.name = "Dealer"
+        self.desc = "A skilled inmate who specializes in trading contraband items"
+
+        class Trade(Action):
+            def __init__(self):
+                self.name = "Trade"
+                self.desc = "You engage in a trade with the dealer"
+                self.actionRollTable = {
+                    "rollType": "charisma",
+                    "roll": [
+                        ["6", "you successfully negotiate a favorable trade"],
+                        ["4", "the trade is fair and mutually beneficial"],
+                        ["2", "the dealer takes advantage of you in the trade"],
+                    ],
+                }
+
+        class GatherInfo(Action):
+            def __init__(self):
+                self.name = "Gather Info"
+                self.desc = "You gather information from the dealer"
+                self.actionRollTable = {
+                    "rollType": "intelligence",
+                    "roll": [
+                        ["5", "you obtain valuable information"],
+                        ["3", "you gather some information"],
+                        ["2", "the dealer is uncooperative or doesn't know much"],
+                    ],
+                }
+
+        self.actions = [Trade(), GatherInfo()]
 # GOOD EVENTS
 
 
@@ -543,6 +968,97 @@ class FoodFight(BadEvent):
         self.listOfItems = []
         self.listOfChars = [Inmate()]
 
+class ContrabandFound(BadEvent):
+    def __init__(self):
+        self.name = "Contraband Found"
+        self.desc = "Your hidden contraband has been discovered"
+
+        self.eventRollTable = {
+            "rollType": "intelligence",
+            "roll": [
+                ["6", "you successfully hide the contraband"],
+                ["4", "some contraband is confiscated"],
+                ["2", "all contraband is discovered and confiscated"],
+            ],
+        }
+
+        self.listOfItems = [ContrabandItem()]
+        self.listOfChars = [Guard()]
+
+class SecurityBreach(BadEvent):
+    def __init__(self):
+        self.name = "Security Breach"
+        self.desc = "There has been a breach in the prison's security"
+
+        self.eventRollTable = {
+            "rollType": "speed",
+            "roll": [
+                ["6", "you exploit the breach and escape undetected"],
+                ["4", "you escape but attract attention"],
+                ["2", "the breach is contained and guards are alerted"],
+            ],
+        }
+
+        self.listOfItems = []
+        self.listOfChars = [Guard(), Inmate()]
+
+class ContrabandExchange(BadEvent):
+    def __init__(self):
+        self.name = "Contraband Exchange"
+        self.desc = "A clandestine exchange of contraband items is taking place"
+
+        self.eventRollTable = {
+            "rollType": "perception",
+            "roll": [
+                ["6", "you successfully obtain the desired contraband"],
+                ["4", "you receive only a portion of the desired contraband"],
+                ["2", "the exchange is disrupted and contraband is lost"],
+            ],
+        }
+
+        self.listOfItems = [ContrabandItem()]
+        self.listOfChars = [Inmate(), Dealer()]
+
+# PrisonQuest
+
+@dataclass
+class Stage:
+    stage_name: str
+    description: str
+    actions: list[dict]
+
+    def add_action(self, action: dict):
+        self.actions.append(action)
+
+    def execute_stage(self):
+        for action in self.actions:
+            print(f"\nAction: {action['name']}\n")
+            print(action['desc'])
+            print("-----")
+            self.perform_action(action)
+
+    def perform_action(self, action: dict):
+        # Add the logic for each action here
+        if action['name'] == "Explore Cell":
+            print("You search your cell and find a key.")
+        elif action['name'] == "Pick Lock":
+            print("You attempt to pick the lock on your cell door.")
+        elif action['name'] == "Sneak Past Guards":
+            print("You carefully navigate through the prison to avoid detection.")
+
+@dataclass
+class PrisonQuest:
+    stages: list[Stage]
+
+    def add_stage(self, stage: Stage):
+        self.stages.append(stage)
+
+    def play(self):
+        for stage in self.stages:
+            print(f"\nPlaying stage: {stage.stage_name}\n")
+            print(stage.description)
+            print("=====")
+            stage.execute_stage()
 
 # LOCALES
 
@@ -696,8 +1212,83 @@ class Prison(Overworld):
                         jdb.p("current events", currEvent.desc)
 
                 self.locales = [Cell(), Cafeteria()]
+        
+        class PrisonEntrance(Biome):
+            def __init__(self):
+                self.biomeName = "Prison Entrance"
+                self.desc = "the entrance area of the prison"
+                
+                class Entrance(Locale):
+                    def __init__(self):
+                        self.localeName = "Entrance"
+                        self.desc = "the entrance of the prison"
+                        self.listOfItems = [Gate(), SecurityDesk()]
+                        self.listOfChars = [Guard(), Visitor()]
+                        self.listOfGoodEvents = []
+                        self.listOfBadEvents = [ContrabandFound()]
 
-        self.biomes = [Armories(), CellBlock()]
+                    def localeAffect(self):
+                        import random
+                        lowerBound = jdb.r("heat lower bound")
+                        lowerBound -= random.randint(1, 3)
+                        jdb.p("heat lower bound", lowerBound)
+
+                        upperBound = jdb.r("heat upper bound")
+                        upperBound -= random.randint(1, 3)
+                        jdb.p("heat upper bound", upperBound)
+
+                        currEvent = random.choice(self.listOfBadEvents)
+                        jdb.p("current events", currEvent.desc)
+
+                class SecurityRoom(Locale):
+                    def __init__(self):
+                        self.localeName = "Security Room"
+                        self.desc = "the security room where surveillance is monitored"
+                        self.listOfItems = [CCTVCamera(), Computer()]
+                        self.listOfChars = [SecurityOfficer()]
+                        self.listOfGoodEvents = []
+                        self.listOfBadEvents = [SecurityBreach()]
+
+                    def localeAffect(self):
+                        import random
+                        lowerBound = jdb.r("heat lower bound")
+                        lowerBound -= random.randint(1, 2)
+                        jdb.p("heat lower bound", lowerBound)
+
+                        upperBound = jdb.r("heat upper bound")
+                        upperBound -= random.randint(1, 2)
+                        jdb.p("heat upper bound", upperBound)
+
+                        currEvent = random.choice(self.listOfBadEvents)
+                        jdb.p("current events", currEvent.desc)
+
+
+                class VisitorArea(Locale):
+                    def __init__(self):
+                        self.localeName = "Visitor Area"
+                        self.desc = "the area where visitors meet with inmates"
+                        self.listOfItems = [Table(), Chair()]
+                        self.listOfChars = [Visitor()]
+                        self.listOfGoodEvents = []
+                        self.listOfBadEvents = [ContrabandExchange()]
+
+                    def localeAffect(self):
+                        import random
+                        lowerBound = jdb.r("heat lower bound")
+                        lowerBound -= random.randint(1, 2)
+                        jdb.p("heat lower bound", lowerBound)
+
+                        upperBound = jdb.r("heat upper bound")
+                        upperBound -= random.randint(1, 2)
+                        jdb.p("heat upper bound", upperBound)
+
+                        currEvent = random.choice(self.listOfBadEvents)
+                        jdb.p("current events", currEvent.desc)
+
+                self.locales = [Entrance(), SecurityRoom(), VisitorArea()]
+
+
+        self.biomes = [Armories(), CellBlock(), PrisonEntrance()]
 
 
 def journey(overworld, size):
@@ -789,8 +1380,42 @@ def setup():
             kitchenStaffs.append(asdict(KitchenStaff()))
         jdb.p(f"kitchenStaffs", kitchenStaffs)
 
-        prisonQuest = PrisonQuest()
-        jdb.p()
+        # Create an instance of the PrisonQuest class
+        prison_quest = PrisonQuest(stages=[])
+
+        # Define the stages
+        stage1 = Stage(
+            stage_name="Introduction",
+            description="You wake up groggily in a dimly lit prison cell. The smell of dampness fills the air, and you can hear distant echoes of guards patrolling the hallways.",
+            actions=[
+                {"name": "Explore Cell", "desc": "You search your cell for any useful items that might aid in your escape."},
+                {"name": "Talk to Fellow Prisoner", "desc": "You strike up a conversation with a fellow prisoner."},
+            ]
+        )
+        stage2 = Stage(
+            stage_name="Escape from Cell",
+            description="You realize that the cell door is unlocked, but there are guards nearby. You must make a decision quickly.",
+            actions=[
+                {"name": "Pick Lock", "desc": "You attempt to pick the lock on your cell door."},
+                {"name": "Distract Guards", "desc": "You create a distraction to divert the guards' attention."},
+            ]
+        )
+        stage3 = Stage(
+            stage_name="Navigate the Prison",
+            description="You venture into the prison corridors. The flickering lights make it difficult to see, but you can hear faint whispers and the sound of footsteps.",
+            actions=[
+                {"name": "Sneak Past Guards", "desc": "You quietly move through the prison, trying to avoid detection by the patrolling guards."},
+                {"name": "Find Map", "desc": "You search for a map to help you navigate the complex prison layout."},
+            ]
+        )
+
+        # Add the stages to the PrisonQuest instance
+        prison_quest.add_stage(stage1)
+        prison_quest.add_stage(stage2)
+        prison_quest.add_stage(stage3)
+
+        # prisonQuest = PrisonQuest()
+        jdb.p(f"prisonQuest", asdict(prison_quest))
 
     prisonInfo()
 
