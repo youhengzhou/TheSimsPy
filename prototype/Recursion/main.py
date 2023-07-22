@@ -14,8 +14,7 @@ jdb.create({})
 def journey(world, size):
     selectedPlace = world
     displayPlaces = world.subPlaces
-    stay = True
-    while stay:
+    while True:
         choice = input(f"locale to visit: ")
 
         if choice == "":
@@ -27,6 +26,9 @@ def journey(world, size):
             )
             print(f"{colored(selectedPlace.stats, 'green')}")
             continue
+
+        if choice == "quit":
+            break
 
         if choice == "leave":
             selectedPlace = world

@@ -1,31 +1,217 @@
 {
     "hero": {
-        "location": 1
+        "location": 0
     },
     "kingdom": {
         "desc": {
-            "name": "Kingdom of Farnham",
+            "name": "Kingdom of Rye",
             "desc": ""
         },
-        "ruler": {},
+        "ruler": {
+            "desc": {
+                "name": "King Harold King",
+                "desc": ""
+            }
+        },
         "stats": {
-            "pop": 0,
-            "dip": 0,
-            "mil": 0,
-            "prd": 0
+            "pop": 81,
+            "dip": 45,
+            "mil": 68,
+            "prd": 70
         },
         "subPlaces": [
             {
                 "desc": {
-                    "name": "Plains Duchy of Farnham",
+                    "name": "Plains Duchy of Jarrow",
                     "desc": ""
                 },
-                "ruler": {},
+                "ruler": {
+                    "desc": {
+                        "name": "Duke Ernest Clark",
+                        "desc": ""
+                    }
+                },
                 "stats": {
-                    "pop": 0,
-                    "dip": 0,
-                    "mil": 0,
-                    "prd": 0
+                    "pop": 40,
+                    "dip": 19,
+                    "mil": 27,
+                    "prd": 36
+                },
+                "subPlaces": [
+                    {
+                        "desc": {
+                            "name": "Farmland of Ilfracombe",
+                            "desc": ""
+                        },
+                        "ruler": {
+                            "desc": {
+                                "name": "Count Ernest Miller",
+                                "desc": ""
+                            }
+                        },
+                        "stats": {
+                            "pop": 11,
+                            "dip": 5,
+                            "mil": 6,
+                            "prd": 10
+                        },
+                        "subPlaces": [
+                            {
+                                "desc": {
+                                    "name": "Plains City of Epsom",
+                                    "desc": ""
+                                },
+                                "ruler": {
+                                    "desc": {
+                                        "name": "Baron Herbert Miller",
+                                        "desc": ""
+                                    }
+                                },
+                                "stats": {
+                                    "pop": 11,
+                                    "dip": 5,
+                                    "mil": 6,
+                                    "prd": 10
+                                },
+                                "subPlaces": []
+                            }
+                        ]
+                    },
+                    {
+                        "desc": {
+                            "name": "Farmland of Farnham",
+                            "desc": ""
+                        },
+                        "ruler": {
+                            "desc": {
+                                "name": "Count Edgar Hall",
+                                "desc": ""
+                            }
+                        },
+                        "stats": {
+                            "pop": 11,
+                            "dip": 5,
+                            "mil": 6,
+                            "prd": 10
+                        },
+                        "subPlaces": [
+                            {
+                                "desc": {
+                                    "name": "Plains City of Epsom",
+                                    "desc": ""
+                                },
+                                "ruler": {
+                                    "desc": {
+                                        "name": "Baron Herbert Miller",
+                                        "desc": ""
+                                    }
+                                },
+                                "stats": {
+                                    "pop": 11,
+                                    "dip": 5,
+                                    "mil": 6,
+                                    "prd": 10
+                                },
+                                "subPlaces": []
+                            }
+                        ]
+                    },
+                    {
+                        "desc": {
+                            "name": "Farmland of Kendal",
+                            "desc": ""
+                        },
+                        "ruler": {
+                            "desc": {
+                                "name": "Count Charles Hall",
+                                "desc": ""
+                            }
+                        },
+                        "stats": {
+                            "pop": 11,
+                            "dip": 5,
+                            "mil": 6,
+                            "prd": 10
+                        },
+                        "subPlaces": [
+                            {
+                                "desc": {
+                                    "name": "Plains City of Epsom",
+                                    "desc": ""
+                                },
+                                "ruler": {
+                                    "desc": {
+                                        "name": "Baron Herbert Miller",
+                                        "desc": ""
+                                    }
+                                },
+                                "stats": {
+                                    "pop": 11,
+                                    "dip": 5,
+                                    "mil": 6,
+                                    "prd": 10
+                                },
+                                "subPlaces": []
+                            }
+                        ]
+                    },
+                    {
+                        "desc": {
+                            "name": "Grassland County of Cheltenham",
+                            "desc": ""
+                        },
+                        "ruler": {
+                            "desc": {
+                                "name": "Count Walter Baker",
+                                "desc": ""
+                            }
+                        },
+                        "stats": {
+                            "pop": 7,
+                            "dip": 4,
+                            "mil": 9,
+                            "prd": 6
+                        },
+                        "subPlaces": [
+                            {
+                                "desc": {
+                                    "name": "Plains Castle of Matlock",
+                                    "desc": ""
+                                },
+                                "ruler": {
+                                    "desc": {
+                                        "name": "Baron Arthur Walker",
+                                        "desc": ""
+                                    }
+                                },
+                                "stats": {
+                                    "pop": 7,
+                                    "dip": 4,
+                                    "mil": 9,
+                                    "prd": 6
+                                },
+                                "subPlaces": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "desc": {
+                    "name": "Plains Duchy of Queenborough",
+                    "desc": ""
+                },
+                "ruler": {
+                    "desc": {
+                        "name": "Duke Lionel Johnson",
+                        "desc": ""
+                    }
+                },
+                "stats": {
+                    "pop": 10,
+                    "dip": 5,
+                    "mil": 9,
+                    "prd": 7
                 },
                 "subPlaces": [
                     {
@@ -33,199 +219,235 @@
                             "name": "Grassland County of Matlock",
                             "desc": ""
                         },
-                        "ruler": {},
+                        "ruler": {
+                            "desc": {
+                                "name": "Count Frederick Hall",
+                                "desc": ""
+                            }
+                        },
                         "stats": {
-                            "pop": 0,
-                            "dip": 0,
-                            "mil": 0,
-                            "prd": 0
+                            "pop": 10,
+                            "dip": 5,
+                            "mil": 9,
+                            "prd": 7
                         },
-                        "subPlaces": []
-                    },
-                    {
-                        "desc": {
-                            "name": "Farmland of Jarrow",
-                            "desc": ""
-                        },
-                        "ruler": {},
-                        "stats": {
-                            "pop": 0,
-                            "dip": 0,
-                            "mil": 0,
-                            "prd": 0
-                        },
-                        "subPlaces": []
-                    },
-                    {
-                        "desc": {
-                            "name": "Grassland County of Ashbourne",
-                            "desc": ""
-                        },
-                        "ruler": {},
-                        "stats": {
-                            "pop": 0,
-                            "dip": 0,
-                            "mil": 0,
-                            "prd": 0
-                        },
-                        "subPlaces": []
+                        "subPlaces": [
+                            {
+                                "desc": {
+                                    "name": "Plains Castle of Cheltenham",
+                                    "desc": ""
+                                },
+                                "ruler": {
+                                    "desc": {
+                                        "name": "Baron Arthur Johnson",
+                                        "desc": ""
+                                    }
+                                },
+                                "stats": {
+                                    "pop": 10,
+                                    "dip": 5,
+                                    "mil": 9,
+                                    "prd": 7
+                                },
+                                "subPlaces": []
+                            }
+                        ]
                     }
                 ]
             },
             {
                 "desc": {
-                    "name": "Coastal Duchy of Rye",
+                    "name": "Plains Duchy of Penzance",
                     "desc": ""
                 },
-                "ruler": {},
+                "ruler": {
+                    "desc": {
+                        "name": "Duke Benjamin Baker",
+                        "desc": ""
+                    }
+                },
                 "stats": {
-                    "pop": 0,
-                    "dip": 0,
-                    "mil": 0,
-                    "prd": 0
+                    "pop": 19,
+                    "dip": 11,
+                    "mil": 14,
+                    "prd": 15
                 },
                 "subPlaces": [
                     {
                         "desc": {
-                            "name": "Shore County of Jarrow",
+                            "name": "Grassland County of Gillingham",
                             "desc": ""
                         },
-                        "ruler": {},
-                        "stats": {
-                            "pop": 0,
-                            "dip": 0,
-                            "mil": 0,
-                            "prd": 0
+                        "ruler": {
+                            "desc": {
+                                "name": "Count Thomas Hall",
+                                "desc": ""
+                            }
                         },
-                        "subPlaces": []
+                        "stats": {
+                            "pop": 10,
+                            "dip": 6,
+                            "mil": 8,
+                            "prd": 6
+                        },
+                        "subPlaces": [
+                            {
+                                "desc": {
+                                    "name": "Plains Castle of Bexhill",
+                                    "desc": ""
+                                },
+                                "ruler": {
+                                    "desc": {
+                                        "name": "Baron Percy Hall",
+                                        "desc": ""
+                                    }
+                                },
+                                "stats": {
+                                    "pop": 10,
+                                    "dip": 6,
+                                    "mil": 8,
+                                    "prd": 6
+                                },
+                                "subPlaces": []
+                            }
+                        ]
                     },
                     {
                         "desc": {
-                            "name": "Shore County of Ormskirk",
+                            "name": "Grassland County of Dorking",
                             "desc": ""
                         },
-                        "ruler": {},
+                        "ruler": {
+                            "desc": {
+                                "name": "Count George Smith",
+                                "desc": ""
+                            }
+                        },
                         "stats": {
-                            "pop": 0,
-                            "dip": 0,
-                            "mil": 0,
-                            "prd": 0
+                            "pop": 9,
+                            "dip": 5,
+                            "mil": 6,
+                            "prd": 9
                         },
-                        "subPlaces": []
-                    },
-                    {
-                        "desc": {
-                            "name": "Shore County of Scarborough",
-                            "desc": ""
-                        },
-                        "ruler": {},
-                        "stats": {
-                            "pop": 0,
-                            "dip": 0,
-                            "mil": 0,
-                            "prd": 0
-                        },
-                        "subPlaces": []
-                    },
-                    {
-                        "desc": {
-                            "name": "Shore County of Newark",
-                            "desc": ""
-                        },
-                        "ruler": {},
-                        "stats": {
-                            "pop": 0,
-                            "dip": 0,
-                            "mil": 0,
-                            "prd": 0
-                        },
-                        "subPlaces": []
+                        "subPlaces": [
+                            {
+                                "desc": {
+                                    "name": "Plains City of Farnham",
+                                    "desc": ""
+                                },
+                                "ruler": {
+                                    "desc": {
+                                        "name": "Baron Thomas Brown",
+                                        "desc": ""
+                                    }
+                                },
+                                "stats": {
+                                    "pop": 9,
+                                    "dip": 5,
+                                    "mil": 6,
+                                    "prd": 9
+                                },
+                                "subPlaces": []
+                            }
+                        ]
                     }
                 ]
             },
             {
                 "desc": {
-                    "name": "Forest Duchy of Gillingham",
+                    "name": "Plains Duchy of Bexhill",
                     "desc": ""
                 },
-                "ruler": {},
-                "stats": {
-                    "pop": 0,
-                    "dip": 0,
-                    "mil": 0,
-                    "prd": 0
-                },
-                "subPlaces": [
-                    {
-                        "desc": {
-                            "name": "Deep Woods County of Jarrow",
-                            "desc": ""
-                        },
-                        "ruler": {},
-                        "stats": {
-                            "pop": 0,
-                            "dip": 0,
-                            "mil": 0,
-                            "prd": 0
-                        },
-                        "subPlaces": []
-                    },
-                    {
-                        "desc": {
-                            "name": "Woods County of Louth",
-                            "desc": ""
-                        },
-                        "ruler": {},
-                        "stats": {
-                            "pop": 0,
-                            "dip": 0,
-                            "mil": 0,
-                            "prd": 0
-                        },
-                        "subPlaces": []
-                    },
-                    {
-                        "desc": {
-                            "name": "Woods County of Cheltenham",
-                            "desc": ""
-                        },
-                        "ruler": {},
-                        "stats": {
-                            "pop": 0,
-                            "dip": 0,
-                            "mil": 0,
-                            "prd": 0
-                        },
-                        "subPlaces": []
+                "ruler": {
+                    "desc": {
+                        "name": "Duke George Allen",
+                        "desc": ""
                     }
-                ]
-            },
-            {
-                "desc": {
-                    "name": "Coastal Duchy of Cheltenham",
-                    "desc": ""
                 },
-                "ruler": {},
                 "stats": {
-                    "pop": 0,
-                    "dip": 0,
-                    "mil": 0,
-                    "prd": 0
+                    "pop": 12,
+                    "dip": 10,
+                    "mil": 18,
+                    "prd": 12
                 },
                 "subPlaces": [
                     {
                         "desc": {
-                            "name": "Cliff County of Newark",
+                            "name": "Grassland County of Gillingham",
                             "desc": ""
                         },
-                        "ruler": {},
-                        "stats": {
-                            "pop": 0,
-                            "dip": 0,
-                            "mil": 0,
-                            "prd": 0
+                        "ruler": {
+                            "desc": {
+                                "name": "Count Benjamin Lee",
+                                "desc": ""
+                            }
                         },
-                        "subPlaces": []
+                        "stats": {
+                            "pop": 6,
+                            "dip": 5,
+                            "mil": 9,
+                            "prd": 6
+                        },
+                        "subPlaces": [
+                            {
+                                "desc": {
+                                    "name": "Plains Castle of Tewkesbury",
+                                    "desc": ""
+                                },
+                                "ruler": {
+                                    "desc": {
+                                        "name": "Baron Walter Johnson",
+                                        "desc": ""
+                                    }
+                                },
+                                "stats": {
+                                    "pop": 6,
+                                    "dip": 5,
+                                    "mil": 9,
+                                    "prd": 6
+                                },
+                                "subPlaces": []
+                            }
+                        ]
+                    },
+                    {
+                        "desc": {
+                            "name": "Farmland of Cheltenham",
+                            "desc": ""
+                        },
+                        "ruler": {
+                            "desc": {
+                                "name": "Count Edmund Taylor",
+                                "desc": ""
+                            }
+                        },
+                        "stats": {
+                            "pop": 6,
+                            "dip": 5,
+                            "mil": 9,
+                            "prd": 6
+                        },
+                        "subPlaces": [
+                            {
+                                "desc": {
+                                    "name": "Plains Castle of Tewkesbury",
+                                    "desc": ""
+                                },
+                                "ruler": {
+                                    "desc": {
+                                        "name": "Baron Walter Johnson",
+                                        "desc": ""
+                                    }
+                                },
+                                "stats": {
+                                    "pop": 6,
+                                    "dip": 5,
+                                    "mil": 9,
+                                    "prd": 6
+                                },
+                                "subPlaces": []
+                            }
+                        ]
                     }
                 ]
             }

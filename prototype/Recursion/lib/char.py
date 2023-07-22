@@ -96,7 +96,7 @@ class Char:
 
 
 @dataclass
-class Ruler:
+class Ruler(Char):
     def __init__(self, type):
         self.desc = CharDesc(
             type, f"{random.choice(names['male'])} {random.choice(names['last'])}"
