@@ -105,6 +105,8 @@ names = {
 
 @dataclass
 class Char:
+    gender: str
+    title: str
     name: str
     desc: str
     actions: list[Action]
@@ -120,8 +122,21 @@ humanPost = {
 }
 
 
+class Human(Char):
+    def __init__(self, gender="male", title=""):
+        self.gender = gender
+        self.title = title
+        self.name = (
+            f"{title} {random.choice(names[gender])} {random.choice(names['last'])}"
+        )
+        self.desc = ""
+        self.actions = []
+
+
 class Commoner(Char):
     def __init__(self, gender="male"):
+        self.gender = gender
+        self.title = ""
         self.name = (
             f"Commoner {random.choice(names[gender])} {random.choice(names['last'])}"
         )

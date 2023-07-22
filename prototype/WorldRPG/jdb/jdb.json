@@ -1,3 +1,178 @@
 {
-    "hero": {}
+    "hero": {},
+    "kingdom": {
+        "worldName": "Kingdom of Louth",
+        "desc": "kingdom",
+        "ruler": {
+            "gender": "male",
+            "title": "King",
+            "name": "King Leonard Lee",
+            "desc": "",
+            "actions": []
+        },
+        "biomes": [
+            {
+                "biomeName": "Forest Duchy of Dorking",
+                "desc": "forest",
+                "ruler": {
+                    "gender": "male",
+                    "title": "Duke",
+                    "name": "Duke Herbert Baker",
+                    "desc": "",
+                    "actions": []
+                },
+                "locales": [
+                    {
+                        "localeName": "deep woods",
+                        "desc": "deep woods",
+                        "ruler": {
+                            "gender": "male",
+                            "title": "Count",
+                            "name": "Count Alfred Johnson",
+                            "desc": "",
+                            "actions": []
+                        }
+                    },
+                    {
+                        "localeName": "deep woods",
+                        "desc": "deep woods",
+                        "ruler": {
+                            "gender": "male",
+                            "title": "Count",
+                            "name": "Count Alfred Johnson",
+                            "desc": "",
+                            "actions": []
+                        }
+                    },
+                    {
+                        "localeName": "deep woods",
+                        "desc": "deep woods",
+                        "ruler": {
+                            "gender": "male",
+                            "title": "Count",
+                            "name": "Count Alfred Johnson",
+                            "desc": "",
+                            "actions": []
+                        }
+                    },
+                    {
+                        "localeName": "deep woods",
+                        "desc": "deep woods",
+                        "ruler": {
+                            "gender": "male",
+                            "title": "Count",
+                            "name": "Count Alfred Johnson",
+                            "desc": "",
+                            "actions": []
+                        }
+                    }
+                ]
+            },
+            {
+                "biomeName": "Forest Duchy of Rye",
+                "desc": "forest",
+                "ruler": {
+                    "gender": "male",
+                    "title": "Duke",
+                    "name": "Duke Harold Baker",
+                    "desc": "",
+                    "actions": []
+                },
+                "locales": [
+                    {
+                        "localeName": "woods",
+                        "desc": "woods",
+                        "ruler": {
+                            "gender": "male",
+                            "title": "Count",
+                            "name": "Count Stanley Walker",
+                            "desc": "",
+                            "actions": []
+                        }
+                    },
+                    {
+                        "localeName": "deep woods",
+                        "desc": "deep woods",
+                        "ruler": {
+                            "gender": "male",
+                            "title": "Count",
+                            "name": "Count Alfred Johnson",
+                            "desc": "",
+                            "actions": []
+                        }
+                    }
+                ]
+            },
+            {
+                "biomeName": "Plains Duchy of Kendal",
+                "desc": "plains",
+                "ruler": {
+                    "gender": "male",
+                    "title": "Duke",
+                    "name": "Duke Stanley Williams",
+                    "desc": "",
+                    "actions": []
+                },
+                "locales": [
+                    {
+                        "localeName": "grassy field",
+                        "desc": "grassy field",
+                        "ruler": {
+                            "gender": "male",
+                            "title": "Count",
+                            "name": "Count Wilfred Clark",
+                            "desc": "",
+                            "actions": []
+                        }
+                    },
+                    {
+                        "localeName": "farm lands",
+                        "desc": "farm lands",
+                        "ruler": {
+                            "gender": "male",
+                            "title": "Count",
+                            "name": "Count Leonard Smith",
+                            "desc": "",
+                            "actions": []
+                        }
+                    }
+                ]
+            },
+            {
+                "biomeName": "Plains Duchy of Matlock",
+                "desc": "plains",
+                "ruler": {
+                    "gender": "male",
+                    "title": "Duke",
+                    "name": "Duke Stanley Johnson",
+                    "desc": "",
+                    "actions": []
+                },
+                "locales": [
+                    {
+                        "localeName": "farm lands",
+                        "desc": "farm lands",
+                        "ruler": {
+                            "gender": "male",
+                            "title": "Count",
+                            "name": "Count Leonard Smith",
+                            "desc": "",
+                            "actions": []
+                        }
+                    },
+                    {
+                        "localeName": "grassy field",
+                        "desc": "grassy field",
+                        "ruler": {
+                            "gender": "male",
+                            "title": "Count",
+                            "name": "Count Wilfred Clark",
+                            "desc": "",
+                            "actions": []
+                        }
+                    }
+                ]
+            }
+        ]
+    }
 }

@@ -11,6 +11,25 @@ jdb = jsoneng.JsonDB()
 jdb.create({})
 
 
+def civGen(seed, size):
+    kingdom = World(seed.genName(), "kingdom", seed.genRuler(), [])
+
+    for _ in range(size):
+        biomeSeed = random.choice(seed.biomes)
+        biome = Biome(biomeSeed.genName(), biomeSeed.desc, seed.genDuke(), [])
+
+        localesSize = random.randint(1, 4)
+        for _ in range(localesSize):
+            locale = random.choice(biomeSeed.locales)
+            locale.ruler = seed.genCount()
+
+            biome.locales.append(locale)
+
+        kingdom.biomes.append(biome)
+
+    return kingdom
+
+
 def journey(overworld, size):
     day = 0
     locales = []
@@ -44,7 +63,10 @@ def journey(overworld, size):
 def main():
     hero = {}
     jdb.p("hero", hero)
-    journey(Overworld(), 4)
+    seed = Overworld()
+    world = civGen(seed, 4)
+    jdb.p("kingdom", asdict(world))
+    journey(world, 4)
 
 
 if __name__ == "__main__":
