@@ -1,7 +1,13 @@
 import random
 from dataclasses import *
-from action import Action
-from item import Item
+
+
+@dataclass
+class Action:
+    name: str
+    desc: str
+    actionRollTable: dict
+
 
 # CHARACTERS
 

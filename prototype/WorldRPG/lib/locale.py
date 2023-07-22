@@ -1,14 +1,10 @@
 from dataclasses import dataclass
-from action import Action
-from item import Item
-from char import Char
 
 
 @dataclass
 class Locale:
     localeName: str
     desc: str
-    listOfChars: list[Char]
 
 
 @dataclass
@@ -32,7 +28,7 @@ class Overworld(World):
 
         class Coast(Biome):
             def __init__(self):
-                self.biomeName = "the coast"
+                self.biomeName = "coast"
                 self.desc = "the coast"
 
                 class Beach(Locale):
@@ -47,4 +43,16 @@ class Overworld(World):
 
                 self.locales = [Beach(), Marsh()]
 
-        self.biomes = [Coast()]
+        class Plains(Biome):
+            def __init__(self):
+                self.biomeName = "plains"
+                self.desc = "the plains"
+
+                class GrassyField(Locale):
+                    def __init__(self):
+                        self.localeName = "grassy field"
+                        self.desc = "grassy field"
+
+                self.locales = [GrassyField()]
+
+        self.biomes = [Coast(), Plains()]
