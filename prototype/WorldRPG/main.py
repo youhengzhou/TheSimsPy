@@ -12,21 +12,24 @@ jdb.create({})
 
 
 def civGen(seed, size):
-    kingdom = World(seed.genName(), "kingdom", seed.genRuler(), [])
+    kingdom = World(seed.genName(), "kingdom", seed.genRuler())
 
     for _ in range(size):
         biomeSeed = random.choice(seed.biomes)
-        biome = Biome(biomeSeed.genName(), biomeSeed.desc, seed.genDuke(), [])
+        biome = Biome(biomeSeed.genName(), biomeSeed.desc, seed.genDuke())
 
         localesSize = random.randint(1, 4)
         for _ in range(localesSize):
             locale = random.choice(biomeSeed.locales)
             locale.ruler = seed.genCount()
+            locale.stats = seed.genCountyStats()
 
             biome.locales.append(locale)
 
+        biome.stats = seed.genDuchyStats(biome)
         kingdom.biomes.append(biome)
 
+    kingdom.stats = seed.genKingdomStats(kingdom)
     return kingdom
 
 
@@ -35,33 +38,67 @@ def journey(overworld, size):
     locales = []
     stay = True
     while stay:
-        biomeType = input(f"create next locale... locale type: ")
+        choice = input(f"locale to visit: ")
 
-        if biomeType == "":
-            print(f"{colored([biome.biomeName for biome in overworld.biomes], 'red')}")
+        if choice == "":
+            if jdb.r("hero")["location"] == None:
+                print(
+                    f"{colored(overworld.worldName, 'red')}, ruled by {colored(overworld.ruler.name, 'blue')}"
+                )
+                print(
+                    f"{colored([biome.biomeName for biome in overworld.biomes], 'yellow')}"
+                )
+                print(f"{colored(overworld.stats, 'green')}")
+            else:
+                print(
+                    f"{colored(selectedBiome.biomeName, 'red')}, ruled by {colored(selectedBiome.ruler.name, 'blue')}"
+                )
+                print(f"{colored([locale.localeName for locale in locales], 'yellow')}")
+                print(f"{colored(selectedBiome.stats, 'green')}")
             continue
 
-        if biomeType == "escape":
-            stay = False
+        if choice == "leave":
+            jdb.p(
+                "hero",
+                {
+                    "location": None,
+                },
+            )
             continue
 
-        day += 1
+        # day += 1
 
-        for biome in overworld.biomes:
-            if biomeType == biome.biomeName:
-                selectedLocale = random.choice(biome.locales)
-                locales.append(selectedLocale.localeName)
-                # selectedLocale.localeAffect()
+        selectedBiome = overworld.biomes[int(choice)]
 
-        if len(locales) > size:
-            locales.pop(0)
+        locales = selectedBiome.locales
 
-        print(f"day: {colored(day, 'red')}")
-        print(f"{locales}")
+        jdb.p(
+            "hero",
+            {
+                "location": int(choice),
+            },
+        )
+
+        # for biome in overworld.biomes:
+        #     if biomeType == biome.biomeName:
+        #         selectedLocale = random.choice(biome.locales)
+        #         locales.append(selectedLocale.localeName)
+        #         # selectedLocale.localeAffect()
+
+        # if len(locales) > size:
+        #     locales.pop(0)
+
+        # print(f"day: {colored(day, 'red')}")
+        # print(
+        #     f"{colored(selectedBiome.biomeName, 'red')}, ruled by {colored(selectedBiome.ruler.name, 'blue')}"
+        # )
+        # print(f"{colored([locale.localeName for locale in locales], 'yellow')}")
 
 
 def main():
-    hero = {}
+    hero = {
+        "location": None,
+    }
     jdb.p("hero", hero)
     seed = Overworld()
     world = civGen(seed, 4)

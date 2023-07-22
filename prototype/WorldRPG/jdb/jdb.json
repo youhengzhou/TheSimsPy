@@ -1,82 +1,39 @@
 {
-    "hero": {},
+    "hero": {
+        "location": 2
+    },
     "kingdom": {
-        "worldName": "Kingdom of Louth",
+        "worldName": "Kingdom of Farnham",
         "desc": "kingdom",
         "ruler": {
             "gender": "male",
             "title": "King",
-            "name": "King Leonard Lee",
+            "name": "King Arthur Carter",
             "desc": "",
             "actions": []
         },
+        "stats": {
+            "pop": 28,
+            "dip": 32,
+            "mil": 27,
+            "prd": 24
+        },
         "biomes": [
             {
-                "biomeName": "Forest Duchy of Dorking",
+                "biomeName": "Forest Duchy of Harrogate",
                 "desc": "forest",
                 "ruler": {
                     "gender": "male",
                     "title": "Duke",
-                    "name": "Duke Herbert Baker",
+                    "name": "Duke Edgar Allen",
                     "desc": "",
                     "actions": []
                 },
-                "locales": [
-                    {
-                        "localeName": "deep woods",
-                        "desc": "deep woods",
-                        "ruler": {
-                            "gender": "male",
-                            "title": "Count",
-                            "name": "Count Alfred Johnson",
-                            "desc": "",
-                            "actions": []
-                        }
-                    },
-                    {
-                        "localeName": "deep woods",
-                        "desc": "deep woods",
-                        "ruler": {
-                            "gender": "male",
-                            "title": "Count",
-                            "name": "Count Alfred Johnson",
-                            "desc": "",
-                            "actions": []
-                        }
-                    },
-                    {
-                        "localeName": "deep woods",
-                        "desc": "deep woods",
-                        "ruler": {
-                            "gender": "male",
-                            "title": "Count",
-                            "name": "Count Alfred Johnson",
-                            "desc": "",
-                            "actions": []
-                        }
-                    },
-                    {
-                        "localeName": "deep woods",
-                        "desc": "deep woods",
-                        "ruler": {
-                            "gender": "male",
-                            "title": "Count",
-                            "name": "Count Alfred Johnson",
-                            "desc": "",
-                            "actions": []
-                        }
-                    }
-                ]
-            },
-            {
-                "biomeName": "Forest Duchy of Rye",
-                "desc": "forest",
-                "ruler": {
-                    "gender": "male",
-                    "title": "Duke",
-                    "name": "Duke Harold Baker",
-                    "desc": "",
-                    "actions": []
+                "stats": {
+                    "pop": 6,
+                    "dip": 14,
+                    "mil": 5,
+                    "prd": 11
                 },
                 "locales": [
                     {
@@ -85,9 +42,32 @@
                         "ruler": {
                             "gender": "male",
                             "title": "Count",
-                            "name": "Count Stanley Walker",
+                            "name": "Count Stanley Johnson",
                             "desc": "",
                             "actions": []
+                        },
+                        "stats": {
+                            "pop": 1,
+                            "dip": 4,
+                            "mil": 1,
+                            "prd": 3
+                        }
+                    },
+                    {
+                        "localeName": "woods",
+                        "desc": "woods",
+                        "ruler": {
+                            "gender": "male",
+                            "title": "Count",
+                            "name": "Count Stanley Johnson",
+                            "desc": "",
+                            "actions": []
+                        },
+                        "stats": {
+                            "pop": 1,
+                            "dip": 4,
+                            "mil": 1,
+                            "prd": 3
                         }
                     },
                     {
@@ -96,68 +76,121 @@
                         "ruler": {
                             "gender": "male",
                             "title": "Count",
-                            "name": "Count Alfred Johnson",
+                            "name": "Count Percy Taylor",
                             "desc": "",
                             "actions": []
+                        },
+                        "stats": {
+                            "pop": 3,
+                            "dip": 2,
+                            "mil": 2,
+                            "prd": 2
+                        }
+                    },
+                    {
+                        "localeName": "woods",
+                        "desc": "woods",
+                        "ruler": {
+                            "gender": "male",
+                            "title": "Count",
+                            "name": "Count Stanley Johnson",
+                            "desc": "",
+                            "actions": []
+                        },
+                        "stats": {
+                            "pop": 1,
+                            "dip": 4,
+                            "mil": 1,
+                            "prd": 3
                         }
                     }
                 ]
             },
             {
-                "biomeName": "Plains Duchy of Kendal",
+                "biomeName": "Seaside Duchy of Gillingham",
+                "desc": "the coast",
+                "ruler": {
+                    "gender": "male",
+                    "title": "Duke",
+                    "name": "Duke Stanley Wilson",
+                    "desc": "",
+                    "actions": []
+                },
+                "stats": {
+                    "pop": 10,
+                    "dip": 6,
+                    "mil": 10,
+                    "prd": 2
+                },
+                "locales": [
+                    {
+                        "localeName": "cliff",
+                        "desc": "cliff",
+                        "ruler": {
+                            "gender": "male",
+                            "title": "Count",
+                            "name": "Count Herbert Jones",
+                            "desc": "",
+                            "actions": []
+                        },
+                        "stats": {
+                            "pop": 2,
+                            "dip": 3,
+                            "mil": 3,
+                            "prd": 1
+                        }
+                    },
+                    {
+                        "localeName": "cliff",
+                        "desc": "cliff",
+                        "ruler": {
+                            "gender": "male",
+                            "title": "Count",
+                            "name": "Count Herbert Jones",
+                            "desc": "",
+                            "actions": []
+                        },
+                        "stats": {
+                            "pop": 2,
+                            "dip": 3,
+                            "mil": 3,
+                            "prd": 1
+                        }
+                    }
+                ]
+            },
+            {
+                "biomeName": "Plains Duchy of Cheltenham",
                 "desc": "plains",
                 "ruler": {
                     "gender": "male",
                     "title": "Duke",
-                    "name": "Duke Stanley Williams",
+                    "name": "Duke Charles Carter",
                     "desc": "",
                     "actions": []
                 },
+                "stats": {
+                    "pop": 6,
+                    "dip": 6,
+                    "mil": 8,
+                    "prd": 6
+                },
                 "locales": [
-                    {
-                        "localeName": "grassy field",
-                        "desc": "grassy field",
-                        "ruler": {
-                            "gender": "male",
-                            "title": "Count",
-                            "name": "Count Wilfred Clark",
-                            "desc": "",
-                            "actions": []
-                        }
-                    },
                     {
                         "localeName": "farm lands",
                         "desc": "farm lands",
                         "ruler": {
                             "gender": "male",
                             "title": "Count",
-                            "name": "Count Leonard Smith",
+                            "name": "Count Herbert Johnson",
                             "desc": "",
                             "actions": []
-                        }
-                    }
-                ]
-            },
-            {
-                "biomeName": "Plains Duchy of Matlock",
-                "desc": "plains",
-                "ruler": {
-                    "gender": "male",
-                    "title": "Duke",
-                    "name": "Duke Stanley Johnson",
-                    "desc": "",
-                    "actions": []
-                },
-                "locales": [
-                    {
-                        "localeName": "farm lands",
-                        "desc": "farm lands",
-                        "ruler": {
-                            "gender": "male",
-                            "title": "Count",
-                            "name": "Count Leonard Smith",
-                            "desc": "",
-                            "actions": []
+                        },
+                        "stats": {
+                            "pop": 1,
+                            "dip": 4,
+                            "mil": 5,
+                            "prd": 2
                         }
                     },
                     {
@@ -166,9 +199,68 @@
                         "ruler": {
                             "gender": "male",
                             "title": "Count",
-                            "name": "Count Wilfred Clark",
+                            "name": "Count Stanley Carter",
                             "desc": "",
                             "actions": []
+                        },
+                        "stats": {
+                            "pop": 5,
+                            "dip": 2,
+                            "mil": 3,
+                            "prd": 4
+                        }
+                    }
+                ]
+            },
+            {
+                "biomeName": "Seaside Duchy of Louth",
+                "desc": "the coast",
+                "ruler": {
+                    "gender": "male",
+                    "title": "Duke",
+                    "name": "Duke Sidney Lee",
+                    "desc": "",
+                    "actions": []
+                },
+                "stats": {
+                    "pop": 6,
+                    "dip": 6,
+                    "mil": 4,
+                    "prd": 5
+                },
+                "locales": [
+                    {
+                        "localeName": "cliff",
+                        "desc": "cliff",
+                        "ruler": {
+                            "gender": "male",
+                            "title": "Count",
+                            "name": "Count Herbert Jones",
+                            "desc": "",
+                            "actions": []
+                        },
+                        "stats": {
+                            "pop": 2,
+                            "dip": 3,
+                            "mil": 3,
+                            "prd": 1
+                        }
+                    },
+                    {
+                        "localeName": "marsh",
+                        "desc": "marsh",
+                        "ruler": {
+                            "gender": "male",
+                            "title": "Count",
+                            "name": "Count Reginald Taylor",
+                            "desc": "",
+                            "actions": []
+                        },
+                        "stats": {
+                            "pop": 4,
+                            "dip": 3,
+                            "mil": 1,
+                            "prd": 4
                         }
                     }
                 ]
