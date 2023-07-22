@@ -1415,7 +1415,7 @@ def setup():
         prison_quest.add_stage(stage3)
 
         # prisonQuest = PrisonQuest()
-        jdb.p(f"prisonQuest", asdict(prison_quest))
+        jdb.p("prisonQuest", asdict(prison_quest))
 
     prisonInfo()
 
