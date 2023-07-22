@@ -1,0 +1,234 @@
+{
+    "hero": {
+        "location": 1
+    },
+    "kingdom": {
+        "desc": {
+            "name": "Kingdom of Farnham",
+            "desc": ""
+        },
+        "ruler": {},
+        "stats": {
+            "pop": 0,
+            "dip": 0,
+            "mil": 0,
+            "prd": 0
+        },
+        "subPlaces": [
+            {
+                "desc": {
+                    "name": "Plains Duchy of Farnham",
+                    "desc": ""
+                },
+                "ruler": {},
+                "stats": {
+                    "pop": 0,
+                    "dip": 0,
+                    "mil": 0,
+                    "prd": 0
+                },
+                "subPlaces": [
+                    {
+                        "desc": {
+                            "name": "Grassland County of Matlock",
+                            "desc": ""
+                        },
+                        "ruler": {},
+                        "stats": {
+                            "pop": 0,
+                            "dip": 0,
+                            "mil": 0,
+                            "prd": 0
+                        },
+                        "subPlaces": []
+                    },
+                    {
+                        "desc": {
+                            "name": "Farmland of Jarrow",
+                            "desc": ""
+                        },
+                        "ruler": {},
+                        "stats": {
+                            "pop": 0,
+                            "dip": 0,
+                            "mil": 0,
+                            "prd": 0
+                        },
+                        "subPlaces": []
+                    },
+                    {
+                        "desc": {
+                            "name": "Grassland County of Ashbourne",
+                            "desc": ""
+                        },
+                        "ruler": {},
+                        "stats": {
+                            "pop": 0,
+                            "dip": 0,
+                            "mil": 0,
+                            "prd": 0
+                        },
+                        "subPlaces": []
+                    }
+                ]
+            },
+            {
+                "desc": {
+                    "name": "Coastal Duchy of Rye",
+                    "desc": ""
+                },
+                "ruler": {},
+                "stats": {
+                    "pop": 0,
+                    "dip": 0,
+                    "mil": 0,
+                    "prd": 0
+                },
+                "subPlaces": [
+                    {
+                        "desc": {
+                            "name": "Shore County of Jarrow",
+                            "desc": ""
+                        },
+                        "ruler": {},
+                        "stats": {
+                            "pop": 0,
+                            "dip": 0,
+                            "mil": 0,
+                            "prd": 0
+                        },
+                        "subPlaces": []
+                    },
+                    {
+                        "desc": {
+                            "name": "Shore County of Ormskirk",
+                            "desc": ""
+                        },
+                        "ruler": {},
+                        "stats": {
+                            "pop": 0,
+                            "dip": 0,
+                            "mil": 0,
+                            "prd": 0
+                        },
+                        "subPlaces": []
+                    },
+                    {
+                        "desc": {
+                            "name": "Shore County of Scarborough",
+                            "desc": ""
+                        },
+                        "ruler": {},
+                        "stats": {
+                            "pop": 0,
+                            "dip": 0,
+                            "mil": 0,
+                            "prd": 0
+                        },
+                        "subPlaces": []
+                    },
+                    {
+                        "desc": {
+                            "name": "Shore County of Newark",
+                            "desc": ""
+                        },
+                        "ruler": {},
+                        "stats": {
+                            "pop": 0,
+                            "dip": 0,
+                            "mil": 0,
+                            "prd": 0
+                        },
+                        "subPlaces": []
+                    }
+                ]
+            },
+            {
+                "desc": {
+                    "name": "Forest Duchy of Gillingham",
+                    "desc": ""
+                },
+                "ruler": {},
+                "stats": {
+                    "pop": 0,
+                    "dip": 0,
+                    "mil": 0,
+                    "prd": 0
+                },
+                "subPlaces": [
+                    {
+                        "desc": {
+                            "name": "Deep Woods County of Jarrow",
+                            "desc": ""
+                        },
+                        "ruler": {},
+                        "stats": {
+                            "pop": 0,
+                            "dip": 0,
+                            "mil": 0,
+                            "prd": 0
+                        },
+                        "subPlaces": []
+                    },
+                    {
+                        "desc": {
+                            "name": "Woods County of Louth",
+                            "desc": ""
+                        },
+                        "ruler": {},
+                        "stats": {
+                            "pop": 0,
+                            "dip": 0,
+                            "mil": 0,
+                            "prd": 0
+                        },
+                        "subPlaces": []
+                    },
+                    {
+                        "desc": {
+                            "name": "Woods County of Cheltenham",
+                            "desc": ""
+                        },
+                        "ruler": {},
+                        "stats": {
+                            "pop": 0,
+                            "dip": 0,
+                            "mil": 0,
+                            "prd": 0
+                        },
+                        "subPlaces": []
+                    }
+                ]
+            },
+            {
+                "desc": {
+                    "name": "Coastal Duchy of Cheltenham",
+                    "desc": ""
+                },
+                "ruler": {},
+                "stats": {
+                    "pop": 0,
+                    "dip": 0,
+                    "mil": 0,
+                    "prd": 0
+                },
+                "subPlaces": [
+                    {
+                        "desc": {
+                            "name": "Cliff County of Newark",
+                            "desc": ""
+                        },
+                        "ruler": {},
+                        "stats": {
+                            "pop": 0,
+                            "dip": 0,
+                            "mil": 0,
+                            "prd": 0
+                        },
+                        "subPlaces": []
+                    }
+                ]
+            }
+        ]
+    }
+}
