@@ -1,9 +1,12 @@
 col = {"1": [100, 1], "2": [10, 2]}
 
 print(col.get("1"))
-# print(max(col))
-max_col = max(col, key=lambda k: col[k][1])
-print(max_col)
+
+def getKey(key):
+    return col[key][1]
+
+max_col = max(col, key=getKey)
+
 
 fruitExample = {
     "dict1": {"apple": 3, "banana": 7},
