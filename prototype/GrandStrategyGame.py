@@ -961,7 +961,7 @@ class Pilgrim(Role):
                         "desc": "DESC",
                         "stats": [["STAT", 1], ["STAT", 1]],
                     },
-                ],
+                mm],
             },
             {
                 "title": "divine contact",
