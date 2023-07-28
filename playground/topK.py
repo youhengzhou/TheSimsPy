@@ -1,20 +1,27 @@
-from collections import defaultdict
-
-nums = [1, 1, 1, 2, 2, 3]
-k = 2
+from collections import Counter
 
 
-freqDict = defaultdict(int)
+def get_top_k(nums, k):
+    """
+    Return the top k most frequent elements in the given list of numbers.
 
-for n in nums:
-    freqDict[n] += 1
+    Parameters:
+    - nums (List[int]): A list of integers.
+    - k (int): The number of most frequent elements to return.
 
-out = []
-while k > 0:
-    nextKey = max(freqDict, key=lambda k: freqDict[k])
-    out.append(nextKey)
-    freqDict.pop(nextKey)
-    k -= 1
+    Returns:
+    - List[int]: A list of the top k most frequent elements.
+    """
+    freqDict = Counter(nums)
 
-print(freqDict)
-print(out)
+    out = []
+    while k > 0:
+        nextKey = freqDict.most_common(1)[0][0]
+        out.append(nextKey)
+        freqDict.pop(nextKey)
+        k -= 1
+
+    return out
+
+
+hello = lambda: "hello world"
