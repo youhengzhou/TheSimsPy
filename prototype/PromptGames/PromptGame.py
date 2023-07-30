@@ -27,16 +27,46 @@ def create(textFile, game):
 
 
 def play(game, output):
+    """
+    Generates a function comment for the given function body in a markdown code block with the correct language syntax.
+
+    Args:
+        game (str): The name of the game.
+        output (str): The output file path.
+
+    Returns:
+        dict: The dictionary containing the prompts and answers.
+    """
     import jsoneng
     from termcolor import colored
 
     def randomRoll(dictionary):
+        """
+        Generates a dictionary with randomly assigned values based on the rolls of two dice.
+
+        Parameters:
+        - dictionary (dict): A dictionary containing the parts and their corresponding values.
+
+        Returns:
+        - out (dict): A dictionary containing the randomly assigned parts and their corresponding values.
+        """
         import random
 
         def roll_dice():
             return random.randint(1, 10) - random.randint(1, 6)
 
         def assign_part(counts, roll):
+            """
+            Assigns a part to a given roll.
+
+            Parameters:
+            - counts (dict): A dictionary containing roll as key and the current count as value.
+            - roll (any): The roll to assign a part to.
+
+            Returns:
+            - str: The assigned part represented by the roll and a letter corresponding to the current count.
+
+            """
             current_count = counts.get(roll, 0) + 1
             counts[roll] = current_count
             return f"{roll}{chr(ord('a')+current_count-1)}"
@@ -48,6 +78,8 @@ def play(game, output):
             roll = roll_dice() + roll + 5
             part = assign_part(counts, roll)
 
+            # This code snippet checks if the variable part is a key in the dictionary.
+            # If it is, it assigns the corresponding value to the out dictionary with the same key.
             if part in dictionary:
                 out[part] = dictionary[part]
 
