@@ -52,10 +52,13 @@ def play(game, output):
         """
         import random
 
-        def roll_dice():
+        def rollDice():
             return random.randint(1, 10) - random.randint(1, 6)
 
-        def assign_part(counts, roll):
+        def updateRoll(roll, increment=0):
+            return rollDice() + roll + increment
+
+        def assignPart(countsOfRoll, roll):
             """
             Assigns a part to a given roll.
 
@@ -67,16 +70,17 @@ def play(game, output):
             - str: The assigned part represented by the roll and a letter corresponding to the current count.
 
             """
-            current_count = counts.get(roll, 0) + 1
-            counts[roll] = current_count
-            return f"{roll}{chr(ord('a')+current_count-1)}"
+            currentCount = countsOfRoll.get(roll, 0) + 1
+            countsOfRoll[roll] = currentCount
+            return f"{roll}{chr(ord('a')+currentCount-1)}"
 
-        counts = {}
         out = {}
+        countsOfRoll = {}
+
         roll = 0
         while roll <= 80:
-            roll = roll_dice() + roll + 5
-            part = assign_part(counts, roll)
+            roll = updateRoll(roll, 2)
+            part = assignPart(countsOfRoll, roll)
 
             # This code snippet checks if the variable part is a key in the dictionary.
             # If it is, it assigns the corresponding value to the out dictionary with the same key.
