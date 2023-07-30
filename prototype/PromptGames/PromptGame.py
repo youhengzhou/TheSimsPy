@@ -74,7 +74,7 @@ def play(game, output):
             countsOfRoll[roll] = currentCount
             return f"{roll}{chr(ord('a')+currentCount-1)}"
 
-        out = {}
+        out = {} # key+letter: value
         countsOfRoll = {}
 
         roll = 0
