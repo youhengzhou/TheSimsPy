@@ -27,6 +27,7 @@
             "key": "sm_entrance",
             "name": "Supermarket Entrance",
             "neighbors": [
+                "street",
                 "sm_checkout",
                 "sm_aisle"
             ]
@@ -79,5 +80,33 @@
                 "sm_entrance"
             ]
         }
+    },
+    "1": {
+        "prompt": "What do you do when you are bored?",
+        "answer": "I stay chill"
+    },
+    "2": {
+        "prompt": "Your mom calls for dinner, what do you do?",
+        "answer": "I go to dinner"
+    },
+    "3": {
+        "prompt": "Your mom calls for dinner, what do you do?",
+        "answer": "I go to dinner but im not that hungry"
+    },
+    "5": {
+        "prompt": "You spot some good deals at the supermarket?",
+        "answer": "I spot some ramen"
+    },
+    "6": {
+        "prompt": "What do you do when you need to pee at the supermarket?",
+        "answer": "I run to the plastic bags"
+    },
+    "7": {
+        "prompt": "You spot some good deals at the supermarket?",
+        "answer": "I saw some bread"
+    },
+    "8": {
+        "prompt": "What do you do when you need to pee at the supermarket?",
+        "answer": "cujo"
     }
 }
