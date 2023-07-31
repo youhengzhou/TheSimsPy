@@ -1,0 +1,84 @@
+{
+    "key": "w_map",
+    "placeMap": {
+        "h_livingroom": {
+            "key": "h_livingroom",
+            "name": "Living Room",
+            "neighbors": [
+                "h_hallway"
+            ]
+        },
+        "h_hallway": {
+            "key": "h_hallway",
+            "name": "Hallway",
+            "neighbors": [
+                "h_livingroom",
+                "h_door"
+            ]
+        },
+        "h_door": {
+            "key": "h_door",
+            "name": "House Front Door",
+            "neighbors": [
+                "h_hallway",
+                "street"
+            ]
+        },
+        "sm_entrance": {
+            "key": "sm_entrance",
+            "name": "Supermarket Entrance",
+            "neighbors": [
+                "sm_checkout",
+                "sm_aisle"
+            ]
+        },
+        "sm_checkout": {
+            "key": "sm_checkout",
+            "name": "Supermarket Checkout",
+            "neighbors": [
+                "sm_entrance",
+                "sm_aisle"
+            ]
+        },
+        "sm_aisle": {
+            "key": "sm_aisle",
+            "name": "Supermarket Aisle",
+            "neighbors": [
+                "sm_entrance",
+                "sm_checkout",
+                "sm_bakery",
+                "sm_butchers",
+                "sm_vegetables"
+            ]
+        },
+        "sm_bakery": {
+            "key": "sm_bakery",
+            "name": "Bakery",
+            "neighbors": [
+                "sm_aisle"
+            ]
+        },
+        "sm_butchers": {
+            "key": "sm_butchers",
+            "name": "Butchers",
+            "neighbors": [
+                "sm_aisle"
+            ]
+        },
+        "sm_vegetables": {
+            "key": "sm_vegetables",
+            "name": "Vegetables",
+            "neighbors": [
+                "sm_aisle"
+            ]
+        },
+        "street": {
+            "key": "street",
+            "name": "Street",
+            "neighbors": [
+                "h_door",
+                "sm_entrance"
+            ]
+        }
+    }
+}

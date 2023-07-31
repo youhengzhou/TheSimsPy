@@ -1,11 +1,11 @@
-from dataclasses import dataclass
+from dataclasses import dataclass, asdict
+import jsoneng
 
 
 @dataclass
 class Place:
     key: str
     name: str
-    exit: bool
     neighbors: list
 
 
@@ -13,51 +13,45 @@ class Place:
 class PlaceMap:
     key: str
     placeMap: dict
-    neighbors: list
 
 
-h_livingroom = Place("h_livingroom", "Living Room", False, ["h_hallway"])
-h_hallway = Place("h_hallway", "Hallway", False, ["h_livingroom", "h_door"])
-h_door = Place("h_door", "Door", True, ["h_hallway"])
+h_livingroom = Place("h_livingroom", "Living Room", ["h_hallway"])
+h_hallway = Place("h_hallway", "Hallway", ["h_livingroom", "h_door"])
+h_door = Place("h_door", "House Front Door", ["h_hallway", "street"])
 
-h_map = PlaceMap(
-    "h_map",
-    {
-        "h_livingroom": h_livingroom,
-        "h_hallway": h_hallway,
-        "h_door": h_door,
-    },
-    ["street_map"],
+sm_entrance = Place("sm_entrance", "Supermarket Entrance", ["sm_checkout", "sm_aisle"])
+sm_checkout = Place("sm_checkout", "Supermarket Checkout", ["sm_entrance", "sm_aisle"])
+sm_aisle = Place(
+    "sm_aisle",
+    "Supermarket Aisle",
+    [
+        "sm_entrance",
+        "sm_checkout",
+        "sm_bakery",
+        "sm_butchers",
+        "sm_vegetables",
+    ],
 )
+sm_bakery = Place("sm_bakery", "Bakery", ["sm_aisle"])
+sm_butchers = Place("sm_butchers", "Butchers", ["sm_aisle"])
+sm_vegetables = Place("sm_vegetables", "Vegetables", ["sm_aisle"])
 
-sm_aisle = Place("sm_aisle", "Aisle", False, [])
-sm_bakery = Place("sm_bakery", "Bakery", False, ["sm_aisle"])
-sm_butchers = Place("sm_butchers", "Butchers", False, ["sm_aisle"])
-sm_vegetables = Place("sm_vegetables", "Vegetables", False, ["sm_aisle"])
-
-sm_map = PlaceMap(
-    "sm_map",
-    {
-        "sm_aisle": sm_aisle,
-        "sm_bakery": sm_bakery,
-        "sm_butchers": sm_butchers,
-        "sm_vegetables": sm_vegetables,
-    },
-    ["street_map"],
-)
-
-street = Place("street", "Street", False, [])
-
-street_map = PlaceMap("street_map", {}, [h_map, sm_map])
+street = Place("street", "Street", ["h_door", "sm_entrance"])
 
 w_map = PlaceMap(
     "w_map",
     {
-        "h_map": h_map,
-        "sm_map": sm_map,
-        "street_map": street_map,
+        "h_livingroom": h_livingroom,
+        "h_hallway": h_hallway,
+        "h_door": h_door,
+        "sm_entrance": sm_entrance,
+        "sm_checkout": sm_checkout,
+        "sm_aisle": sm_aisle,
+        "sm_bakery": sm_bakery,
+        "sm_butchers": sm_butchers,
+        "sm_vegetables": sm_vegetables,
+        "street": street,
     },
-    [],
 )
 
 
@@ -66,15 +60,12 @@ def traverse(place_map, place_key):
     Traverses through the place map starting from the given place key.
     """
 
-    if place_key not in place_map:
+    if place_key not in place_map.placeMap:
         print(f"Invalid place key: {place_key}")
         return
 
     current_place = place_map.placeMap[place_key]
     print(f"You are in {current_place.name}.")
-
-    if current_place.exit:
-        print("This place has an exit.")
 
     if current_place.neighbors:
         print("Neighbors: ")
@@ -103,8 +94,11 @@ def main():
 
     # Example usage: Traverse through the w_map starting from the "street_map"
 
+    jdb = jsoneng.JsonDB()
+    jdb.create({})
 
-traverse(h_map, "h_livingroom")
+    jdb.update(asdict(w_map))
+    traverse(w_map, "h_livingroom")
 
 
 if __name__ == "__main__":
