@@ -1,4 +1,5 @@
 from dataclasses import dataclass, asdict
+from termcolor import cprint
 import jsoneng
 
 
@@ -11,7 +12,6 @@ class Place:
 
 @dataclass
 class PlaceMap:
-    key: str
     placeMap: dict
 
 
@@ -36,10 +36,9 @@ sm_bakery = Place("sm_bakery", "Bakery", ["sm_aisle"])
 sm_butchers = Place("sm_butchers", "Butchers", ["sm_aisle"])
 sm_vegetables = Place("sm_vegetables", "Vegetables", ["sm_aisle"])
 
-street = Place("street", "Street", ["h_door", "sm_entrance"])
+street = Place("street", "A Quiet Street", ["h_door", "sm_entrance"])
 
 w_map = PlaceMap(
-    "w_map",
     {
         "h_livingroom": h_livingroom,
         "h_hallway": h_hallway,
@@ -65,13 +64,13 @@ def traverse(place_map, place_key):
         return
 
     current_place = place_map.placeMap[place_key]
-    print(f"You are in {current_place.name}.")
+    cprint(f"You are in {current_place.name}.", "red")
 
     if current_place.neighbors:
-        print("Neighbors: ")
+        print("Places You Can Visit: ")
         for i, neighbor_key in enumerate(current_place.neighbors):
             neighbor = place_map.placeMap[neighbor_key]
-            print(f"{i+1}. {neighbor.name}")
+            cprint(f"{i+1}. {neighbor.name}", "red")
 
         choice = int(input("Enter the number of the neighbor you want to go to: "))
         if choice >= 1 and choice <= len(current_place.neighbors):

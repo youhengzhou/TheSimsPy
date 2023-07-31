@@ -1,5 +1,4 @@
 {
-    "key": "w_map",
     "placeMap": {
         "h_livingroom": {
             "key": "h_livingroom",
@@ -74,7 +73,7 @@
         },
         "street": {
             "key": "street",
-            "name": "Street",
+            "name": "A Quiet Street",
             "neighbors": [
                 "h_door",
                 "sm_entrance"
