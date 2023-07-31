@@ -35,9 +35,9 @@ square = Place("square", {"close range": 10, "mid range": 10}, [])
 
 park = [waterfountain, square]
 
-for place in park:
-    for otherPlace in park:
-        if place != otherPlace:
-            place.neighbors.append(otherPlace)
+# for place in park:
+#     for otherPlace in park:
+#         if place != otherPlace:
+#             place.neighbors.append(otherPlace)
 
-jdb.p(asdict(square))
+# jdb.p(asdict(square))
