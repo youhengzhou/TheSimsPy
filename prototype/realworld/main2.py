@@ -37,21 +37,75 @@ class Item:
     description: str
 
 
-h_livingroom = Place("h_livingroom", "Living Room", ["h_hallway"], [Item("Key", "A small key"), Item("Note", "A mysterious note")])
-h_hallway = Place("h_hallway", "Hallway", ["h_livingroom", "h_door"], [Item("Lamp", "A table lamp"), Item("Coat", "A coat")])
-h_door = Place("h_door", "House Front Door", ["h_hallway", "street"], [Item("Mail", "A letter"), Item("Shoes", "A pair of shoes")])
-sm_entrance = Place("sm_entrance", "Supermarket Entrance", ["street", "sm_checkout", "sm_aisle"], [Item("Cart", "A shopping cart"), Item("Flyer", "A supermarket flyer")])
-sm_checkout = Place("sm_checkout", "Supermarket Checkout", ["sm_entrance", "sm_aisle"], [Item("Groceries", "A bag of groceries"), Item("Receipt", "A receipt")])
-sm_aisle = Place("sm_aisle", "Supermarket Aisle", ["sm_entrance", "sm_checkout", "sm_bakery", "sm_butchers", "sm_vegetables"], [Item("Bread", "A loaf of bread"), Item("Meat", "A pack of meat")])
-sm_bakery = Place("sm_bakery", "Bakery", ["sm_aisle"], [Item("Cake", "A delicious cake"), Item("Croissant", "A freshly baked croissant")])
-sm_butchers = Place("sm_butchers", "Butchers", ["sm_aisle"], [Item("Steak", "A juicy steak"), Item("Sausages", "A pack of sausages")])
-sm_vegetables = Place("sm_vegetables", "Vegetables", ["sm_aisle"], [Item("Carrots", "A bunch of carrots"), Item("Lettuce", "A head of lettuce")])
-street = Place("street", "A Quiet Street", ["h_door", "sm_entrance"], [Item("Newspaper", "A newspaper"), Item("Bike", "A bicycle")])
+h_livingroom = Place(
+    "h_livingroom",
+    "Living Room",
+    ["h_hallway"],
+    [Item("Key", "A small key"), Item("Note", "A mysterious note")],
+)
+h_hallway = Place(
+    "h_hallway",
+    "Hallway",
+    ["h_livingroom", "h_door"],
+    [Item("Lamp", "A table lamp"), Item("Coat", "A coat")],
+)
+h_door = Place(
+    "h_door",
+    "House Front Door",
+    ["h_hallway", "street"],
+    [Item("Mail", "A letter"), Item("Shoes", "A pair of shoes")],
+)
+sm_entrance = Place(
+    "sm_entrance",
+    "Supermarket Entrance",
+    ["street", "sm_checkout", "sm_aisle"],
+    [Item("Cart", "A shopping cart"), Item("Flyer", "A supermarket flyer")],
+)
+sm_checkout = Place(
+    "sm_checkout",
+    "Supermarket Checkout",
+    ["sm_entrance", "sm_aisle"],
+    [Item("Groceries", "A bag of groceries"), Item("Receipt", "A receipt")],
+)
+sm_aisle = Place(
+    "sm_aisle",
+    "Supermarket Aisle",
+    ["sm_entrance", "sm_checkout", "sm_bakery", "sm_butchers", "sm_vegetables"],
+    [Item("Bread", "A loaf of bread"), Item("Meat", "A pack of meat")],
+)
+sm_bakery = Place(
+    "sm_bakery",
+    "Bakery",
+    ["sm_aisle"],
+    [Item("Cake", "A delicious cake"), Item("Croissant", "A freshly baked croissant")],
+)
+sm_butchers = Place(
+    "sm_butchers",
+    "Butchers",
+    ["sm_aisle"],
+    [Item("Steak", "A juicy steak"), Item("Sausages", "A pack of sausages")],
+)
+sm_vegetables = Place(
+    "sm_vegetables",
+    "Vegetables",
+    ["sm_aisle"],
+    [Item("Carrots", "A bunch of carrots"), Item("Lettuce", "A head of lettuce")],
+)
+street = Place(
+    "street",
+    "A Quiet Street",
+    ["h_door", "sm_entrance"],
+    [Item("Newspaper", "A newspaper"), Item("Bike", "A bicycle")],
+)
 
 
 h_dinner = Event("h_dinner", "You are hungry. What do you do?")
-h_momcallsfordinner = Event("h_momcallsfordinner", "Your mom calls for dinner, what do you do?")
-h_momcallsforlunch = Event("h_momcallsforlunch", "Your mom calls for lunch, what do you do?")
+h_momcallsfordinner = Event(
+    "h_momcallsfordinner", "Your mom calls for dinner, what do you do?"
+)
+h_momcallsforlunch = Event(
+    "h_momcallsforlunch", "Your mom calls for lunch, what do you do?"
+)
 h_pee = Event("h_pee", "What do you do when you pee?")
 h_boredom = Event("h_boredom", "What do you do when you are bored?")
 sm_deal = Event("sm_deal", "You spot some good deals at the supermarket?")
@@ -124,12 +178,18 @@ def traverse(place_map, place_key):
                 for i, item in enumerate(current_place.items):
                     print(f"{i+1}. {item.name} - {item.description}")
 
-                item_choice = input("Enter the number of the item you want to interact with (or '0' to skip): ")
-                if item_choice.isdigit() and 1 <= int(item_choice) <= len(current_place.items):
+                item_choice = input(
+                    "Enter the number of the item you want to interact with (or '0' to skip): "
+                )
+                if item_choice.isdigit() and 1 <= int(item_choice) <= len(
+                    current_place.items
+                ):
                     chosen_item = current_place.items[int(item_choice) - 1]
-                    print(f"You interact with {chosen_item.name} - {chosen_item.description}\n")
+                    print(
+                        f"You interact with {chosen_item.name} - {chosen_item.description}\n"
+                    )
                     # Implement the logic for the interaction with the chosen item
-                elif item_choice == '0':
+                elif item_choice == "0":
                     print("You choose not to interact with any item.\n")
                 else:
                     print("Invalid item choice.\n")
@@ -138,12 +198,17 @@ def traverse(place_map, place_key):
             for i, neighbor in enumerate(current_place.neighbors):
                 print(f"{i+1}. {neighbor}")
 
-            neighbor_choice = input("Enter the number of the neighbor you want to go to: ")
-            if neighbor_choice.isdigit() and 1 <= int(neighbor_choice) <= len(current_place.neighbors):
+            neighbor_choice = input(
+                "Enter the number of the neighbor you want to go to: "
+            )
+            if neighbor_choice.isdigit() and 1 <= int(neighbor_choice) <= len(
+                current_place.neighbors
+            ):
                 place_key = current_place.neighbors[int(neighbor_choice) - 1]
                 print("\n")
             else:
                 print("Invalid neighbor choice.\n")
+
 
 def main():
     print("begins program")
@@ -153,6 +218,7 @@ def main():
     jdb.update(asdict(w_map))
 
     traverse(w_map, "h_livingroom")
+
 
 if __name__ == "__main__":
     main()

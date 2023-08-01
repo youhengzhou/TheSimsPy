@@ -112,20 +112,16 @@ w_map = PlaceMap(
     },
 )
 
-e_map = EventMap(
-    {
-        "h_livingroom": h_events,
-        "h_hallway": h_events,
-        "h_door": h_events,
-        "sm_entrance": sm_events,
-        "sm_checkout": sm_events,
-        "sm_aisle": sm_events,
-        "sm_bakery": sm_events,
-        "sm_butchers": sm_events,
-        "sm_vegetables": sm_events,
-        "street": street_events,
-    }
-)
+h_livingroom.event = h_events
+h_hallway.event = h_events
+h_door.event = h_events
+sm_entrance.event = sm_events
+sm_checkout.event = sm_events
+sm_aisle.event = sm_events
+sm_bakery.event = sm_events
+sm_butchers.event = sm_events
+sm_vegetables.event = sm_events
+street.event = street_events
 
 
 def traverse(place_map, place_key):
@@ -144,7 +140,7 @@ def traverse(place_map, place_key):
             cprint(f"You are in {current_place.name}.", "red")
             cprint(f"The time is {time}.", "blue")
 
-            events = e_map.eventMap.get(current_place.key, [])
+            events = current_place.event or []
 
             if events:
                 event = random.choice(events)
@@ -182,10 +178,8 @@ def traverse(place_map, place_key):
 def main():
     print("begins program")
 
-    # Example usage: Traverse through the w_map starting from the "street_map"
-
-    jdb.update(asdict(w_map))
-    traverse(w_map, "h_livingroom")
+    # jdb.update(asdict(w_map))
+    # traverse(w_map, "h_livingroom")
 
 
 if __name__ == "__main__":
