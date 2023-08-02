@@ -90,7 +90,6 @@ sm_pee = Event(
     "What do you do when you need to pee at the supermarket?",
 )
 
-
 h_events = [h_dinner, h_momcallsfordinner, h_momcallsforlunch, h_pee, h_boredom]
 
 sm_events = [sm_deal, sm_pee]
