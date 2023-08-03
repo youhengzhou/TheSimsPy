@@ -43,6 +43,7 @@ def testAction():
 
 test = Event("test", "you have a test coming up, what do you do?", testAction)
 
+military_sacking = Event()
 
 home = Place("home", "your home", ["school"], [])
 school = Place("school", "your school", ["home"], [test])
@@ -96,29 +97,121 @@ def getEvents(time, currentPlace):
 
 def main(time, currentPlace):
     while True:
-        action = newDay(time, currentPlace)
+        userChoice = newDay(time, currentPlace)
 
-        if action == "exit":
+        if userChoice == "exit":
             print("thank you for playing")
             break
 
-        if action == "0":
+        if userChoice == "0":
             print("you rested")
 
-        elif action == "1":
+        elif userChoice == "1":
             print("move where?")
 
             currentPlace = changeCurrentPlace(time, currentPlace)
 
-        elif action == "2":
+        elif userChoice == "2":
             getEvents(time, currentPlace)
 
         else:
-            cprint("invalid action", "red")
+            cprint("invalid choice", "red")
 
         input("time passes...\n")
         time += 1
 
 
+ideal = ["revenge"]
+
+
+@dataclass
+class Foe:
+    name: str
+    drives: list
+    risks: list
+    obstacles: list
+
+
+@dataclass
+class Risk:
+    hinders: list
+    attention: list
+    resources: list
+    delay: list
+
+
+"""
+sanity
+perspicacity
+tenacity
+personality
+dexterity
+
+close quarters
+open field
+foilage
+dense foilage
+urban
+
+attack
+defense
+shock
+
+sword/axe/mace
+greatsword/axe/mace
+short sword/dagger/knife
+polearm
+staff
+
+bow
+long bow
+crossbow
+hand gun
+long gun
+
+light shield
+tower shield
+cloth armor
+torso armor
+full armor
+
+sanity/perspicacity
+
+militia
+recruit
+regular
+veteran
+mastery
+
+bedroom
+living room
+dining room
+kitchen
+washroom
+
+office
+game rooom
+lab
+trophy room
+library
+
+attic
+basement
+hallway
+doorway
+yard
+
+military
+church
+business
+school
+country club
+gang bar
+fence
+farm
+"""
+
+
 if __name__ == "__main__":
-    main(0, p_map["home"])
+    print("hi")
+    # main(0, p_map["home"])
