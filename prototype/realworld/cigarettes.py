@@ -141,6 +141,15 @@ class Risk:
 
 
 """
+Thing
+name
+desc
+stats
+things
+
+name
+federation
+
 sanity
 perspicacity
 tenacity
@@ -152,6 +161,15 @@ open field
 foilage
 dense foilage
 urban
+
+drives
+attacks
+defenses
+
+hinderance
+alarm
+supply
+delay
 
 attack
 defense
@@ -211,6 +229,32 @@ fence
 farm
 """
 
+ideal = ["altruism", "survival", "mayhem"]
+raised = ["cultist", "isolate", "raider", "sheltered", "pariah", "settler"]
+trademark = [
+    "outlandish hair",
+    "tire pauldron",
+    "glasses",
+    "goggle eyepatch",
+    "cryo-stasis burns",
+    "old-timey voice",
+    "mechanical augment",
+    "facepaint",
+    "tattoos",
+    "jaunty hat",
+]
+goods = [
+    "ammo box",
+    "armored coat",
+    "bedroll",
+    "crowbar",
+    "flashlight",
+    "knife",
+    "meds",
+    "rifle",
+    "rope",
+    "pistol",
+]
 
 if __name__ == "__main__":
     print("hi")

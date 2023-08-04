@@ -65,7 +65,7 @@ def TYOV():
         def assignPart(countsOfRoll, roll):
             currentCount = countsOfRoll.get(roll, 0) + 1
             countsOfRoll[roll] = currentCount
-            return f"{roll}{chr(ord('a')+currentC          ount-1)}"
+            return f"{roll}{chr(ord('a')+currentCount-1)}"
 
         out = []
         countsOfRoll = {}
