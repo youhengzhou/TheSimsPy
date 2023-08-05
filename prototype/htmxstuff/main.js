@@ -15,6 +15,14 @@ class Place {
   }
 }
 
+home = new Place("home", "home", ["school"], []);
+school = new Place("school", "school", ["home"], []);
+
+p_map = {
+  home: home,
+  school: school,
+};
+
 // function handleKeyPress(event) {
 //   if (event.keyCode === 13) {
 //     // Check if the pressed key is Enter (key code 13)
@@ -27,66 +35,91 @@ class Place {
 //   document.getElementById("output").textContent = userInput;
 // }
 
-function getUserInput() {
-  return document.getElementById("userInput").value;
-}
-
-function updateView(info) {
-  document.getElementById("output").textContent = info;
-}
-
-function waitForButtonClick() {
-  return new Promise(function (resolve) {
-    const button = document.getElementById("userInputButton");
-    const input = document.getElementById("userInput");
-
-    let isClicking = false;
-
-    const clickHandler = function () {
-      isClicking = true;
-      resolve();
-    };
-
-    const keyHandler = function (event) {
-      if (event.key === "Enter" && !isClicking) {
-        isClicking = true;
-        button.click();
-        resolve();
-      }
-    };
-
-    button.addEventListener("click", clickHandler);
-    input.addEventListener("keydown", keyHandler);
-  });
-}
-
 async function view(info) {
+  function getUserInput() {
+    return document.getElementById("userInput").value;
+  }
+
+  function updateView(info) {
+    document.getElementById("userInput").value = "";
+    document.getElementById("output").innerHTML = info;
+  }
+
+  function waitForButtonClick() {
+    return new Promise(function (resolve) {
+      const button = document.getElementById("userInputButton");
+      const input = document.getElementById("userInput");
+
+      let isClicking = false;
+
+      const clickHandler = function () {
+        isClicking = true;
+        resolve();
+      };
+
+      const keyHandler = function (event) {
+        if (event.key === "Enter" && !isClicking) {
+          isClicking = true;
+          button.click();
+          resolve();
+        }
+      };
+
+      button.addEventListener("click", clickHandler);
+      input.addEventListener("keydown", keyHandler);
+    });
+  }
+
   updateView(info);
+  console.log(info);
   await waitForButtonClick();
   return getUserInput();
 }
 
+async function changeCurrentPlace(time, currentPlace) {
+  let out = `available neighbors:<br>`;
+  for (let i = 0; i < currentPlace.neighbors.length; i++) {
+    out += `${i}. ${p_map[currentPlace.neighbors[i]].name}.<br>`;
+  }
+
+  let choice = await view(out);
+
+  if (
+    !isNaN(choice) &&
+    parseInt(choice) >= 0 &&
+    parseInt(choice) <= currentPlace.neighbors.length - 1
+  ) {
+    let chosen_neighbor = currentPlace.neighbors[parseInt(choice)];
+    currentPlace = p_map[chosen_neighbor];
+  } else {
+    await view("Invalid neighbor choice.", "red");
+  }
+
+  return currentPlace;
+}
+
 async function main() {
   time = 0;
-  place = new Place("test", "test", []);
+  place = home;
 
   await view("welcome to the game, do anything here!");
   while (true) {
-    text = await view(`it is day ${time}
-you are in the ${place.name}
-available actions:
-0. rest
-1. move
-2. events
+    text = await view(`it is day ${time}<br>
+you are in ${place.name}<br>
+available actions:<br>
+0. rest<br>
+1. move<br>
+2. events<br>
 `);
     if (text == "quit") {
       await view("thank you for playing");
       break;
     } else if (text == "0") {
     } else if (text == "1") {
-      await view("ok");
+      place = await changeCurrentPlace(time, place);
     }
-    console.log("Update action performed");
+    time += 1;
+    console.log(`day ${time}`);
   }
 }
 
