@@ -60,16 +60,34 @@ function waitForButtonClick() {
   });
 }
 
-async function update() {
-  updateView("welcome to the game, do anything here!");
-  while (true) {
-    await waitForButtonClick();
-    // Perform your update action here
+async function view(info) {
+  updateView(info);
+  await waitForButtonClick();
+  return getUserInput();
+}
 
-    text = getUserInput();
-    updateView(text);
+async function main() {
+  time = 0;
+  place = new Place("test", "test", []);
+
+  await view("welcome to the game, do anything here!");
+  while (true) {
+    text = await view(`it is day ${time}
+you are in the ${place.name}
+available actions:
+0. rest
+1. move
+2. events
+`);
+    if (text == "quit") {
+      await view("thank you for playing");
+      break;
+    } else if (text == "0") {
+    } else if (text == "1") {
+      await view("ok");
+    }
     console.log("Update action performed");
   }
 }
 
-update();
+main();
