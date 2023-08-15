@@ -71,7 +71,7 @@ async function view(info) {
   }
 
   updateView(info);
-  console.log(info);
+  // console.log(info);
   await waitForButtonClick();
   return getUserInput();
 }
@@ -103,6 +103,7 @@ async function main() {
   place = home;
 
   await view("welcome to the game, do anything here!");
+  
   while (true) {
     text = await view(`it is day ${time}<br>
 you are in ${place.name}<br>
